@@ -1,0 +1,7 @@
+<div>
+    <div *ngFor="let product of products">
+        {{ product.name }} <a [title]="product.name + ' details'" [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute]">
+    {{ product.name }}
+</a>
+    </div>
+</div>
