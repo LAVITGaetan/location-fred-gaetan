@@ -1,9 +1,27 @@
 .toolbar {
-    height: 60px;
+  color: #64748b;
+    font-weight: 600;
+  }
+
+  .page-header {
+    padding: 20px 10%;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
     justify-content: space-between;
-    width: 100%;
-    font-weight: 600;
+    background-color: #FFF;
+    height: 92px;
+  }
+
+  .toolbar a {
+    color: #64748b;
+    text-decoration: none;
+  }
+
+  .toolbar-annonce {
+    background-color: #FCE9F1;
+    color: #D92465;
+    font-size: 16px;
+    padding: 16px 24px;
+    border-radius: 4px;
+    font-weight: bold;
   }

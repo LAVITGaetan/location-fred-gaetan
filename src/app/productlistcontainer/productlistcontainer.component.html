@@ -1,7 +1,49 @@
-<div>
+<div class="page-product">
+    <div class="page-product-element-recherche">
+            <h1 class="page-product-recherche-title"><span>À vous la route,</span><br>
+                <span>À vous la liberté</span>
+            </h1>
+            <h2 class="page-product-recherche-subtitle">Louez votre matériel de Bivouac, Surf ou encore de Vélo et partez à l'exploration de la Réunion
+            </h2>
+        <div class="page-product-recherche-bar">
+
+            <div class="page-product-recherche-bar-location">
+                <label class="bar-label">Lieu de prise en charge</label>
+                <input type="text" class="bar-input" placeholder="D'où partez vous ?">
+            </div>
+
+            <div class="page-product-recherche-bar-date">
+                <label class="bar-label">Départ / Retour</label>
+                <input type="date" placeholder="Vos dates de voyages" class="bar-input">
+            </div>
+
+            <div class="page-product-recherche-bar-bouton">Rechercher</div>
+        </div>
+        <div class="page-product-recherche-image"></div>
+    </div>
+
+
+</div>
+<div class="page-product-categorie">
+    <div class="page-product-categorie-item">
+        <div class="page-product-categorie-item-bouton"></div>
+        <span class="page-product-categorie-item-text">Surf</span>
+    </div>
+    <div class="page-product-categorie-item">
+        <div class="page-product-categorie-item-bouton"></div>
+        <span class="page-product-categorie-item-text">Bivouac</span>
+    </div>
+    <div class="page-product-categorie-item">
+        <div class="page-product-categorie-item-bouton"></div>
+        <span class="page-product-categorie-item-text">Autres</span>
+    </div>
+</div>
+
+
+<!-- <div>
     <div *ngFor="let product of products">
         {{ product.name }} <a [title]="product.name + ' details'" [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute]">
     {{ product.name }}
 </a>
     </div>
-</div>
+</div> -->

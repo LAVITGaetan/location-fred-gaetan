@@ -11,24 +11,22 @@ import { products, Product } from 'src/assets/files/product';
 })
 export class ProductdetailComponent {
 
+
+
+
+  constructor(private route: ActivatedRoute, private seo: SeoService, private sanitizer: DomSanitizer) { }
   product: Product | undefined;
-  quantity: number = 1;
-  compteur_image: number = 0
   ngOnInit() {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
     //const productIdFromRoute = Number(routeParams.get('productId'));
     const productIdFromRoute = routeParams.get('productNameRoute');
     // Find the product that correspond with the nameRoute provided in route.
-    this.product = products.find(product => product.nameRoute === productIdFromRoute);
-    this.seo.setTitle(productIdFromRoute || 'Article Dtente.re');
+    this.product = products.find(product => product.nameRoute === productIdFromRoute) || undefined;
+    this.seo.setTitle(`Location ile de la réunion `);
     this.seo.setDescription(
-      'île de la réunion, Tentes Qaou , hamac, matelas gonflables, couteau, siflet, tour de cou'
+      'île de la réunion, Location'
     );
   }
-
-
-  constructor(private route: ActivatedRoute, private seo: SeoService, private sanitizer: DomSanitizer) { }
-
 }
 
