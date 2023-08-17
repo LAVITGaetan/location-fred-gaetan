@@ -175,6 +175,7 @@ padding: 12px;
     padding: 20px 10%;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .page-product-categorie-item {

@@ -16,6 +16,7 @@
             "outputPath": "dist/location",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "baseHref": "/newversion",
             "polyfills": [
               "zone.js"
             ],
