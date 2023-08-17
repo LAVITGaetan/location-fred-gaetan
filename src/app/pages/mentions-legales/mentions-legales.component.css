@@ -1,0 +1,23 @@
+.mentions-page-title {
+    font-size: 28px;
+    color: #222;
+    font-weight: 700;
+    margin: 20px 10% 40px 10%;
+
+}
+
+.mentions-page-subtitle {
+    font-size: 22px;
+    color: #222;
+    font-weight: 700;
+    margin: 20px 10%;
+    border-left: 4px solid #24b5d9;
+    padding-left: 4px;
+}
+
+.mentions-page-text {
+    font-size: 16px;
+    padding: 8px 0px;
+    margin: 0 10%;
+    color: #333;
+}

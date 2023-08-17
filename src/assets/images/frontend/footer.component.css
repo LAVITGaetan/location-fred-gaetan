@@ -1,22 +1,18 @@
 footer {
-    background: #f1f5f9;
-    color: #64748b;
+    background: linear-gradient(#041830,#080117);
+    border-bottom: 40px solid #080117;
+    color: #fff;
     position: relative;
-    padding-top: 40px;
-    margin-top: 50px;
+    padding: 20px 0 45px;
     }
 
 
 .footer.index {
     padding-top : 2px;
-    background-image: url(../../../assets/images/frontend/footer.svg);
+    background-image: url(../../assets/images/footer/footer.svg);
     background-position: top;
     background-size: cover;
     z-index: 5;
-}
-
-.footer-title {
-    padding-left: 10px;
 }
 
 @media screen and (min-width: 40em){
@@ -30,7 +26,8 @@ footer {
 }
 .wrapper {
     display: grid;
-    padding: 0 10%;
+    padding-left:10px;
+    padding-right:10px;
 }
 
 .wrapper p {
@@ -41,6 +38,7 @@ footer {
 @media screen and (min-width: 78em){
 .wrapper {
     margin: 0 auto;
+    padding: 0 4rem;
 }
 }
 .wrapper {
@@ -54,14 +52,28 @@ footer {
     font-size: 1,2em;
 }
 
+
+
 .fontawesomeicon::before {
     display: inline-block;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
  }
 
+.Facebook::before {
+   font: var(--fa-font-brands);
+    content: ' \f09a';
+ }
+
  .nav1-element{
     padding: 5px 20px 5px 0px;
+ }
+ .nav1-element a {
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:20px;
+    margin-bottom:20px;
+
  }
  .nav2 h1 {
     padding-left:10px;
@@ -81,11 +93,16 @@ footer {
   height:28px;
   opacity: .4;
  }
+ .icon--facebook{
+    background-color: blue;
+  }
 
-  .footer-extra{
-    background-color: #041830;
-    color: #fff; 
-    padding: 20px;
+  .delphine{
+    background-color: #006400;
+    color: white; 
+    font-weight: 80o;
+    line-height: 1rem;
+    padding : 20px 0px 20px 20px;
  }
 
  .image_performance_google_web_speed{
@@ -97,15 +114,4 @@ footer {
         align-items: baseline;
         align-content: flex-start;
     
- }
-
- a {
-    text-decoration: none;
-    color: #64748b;
- }
-
- .footer-extra-text {
-    font-size: 17px;
-    font-weight: 600;
-    text-align: center;
  }

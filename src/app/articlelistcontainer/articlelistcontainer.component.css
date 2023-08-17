@@ -1,0 +1,121 @@
+.article-title {
+    font-size: 28px;
+    color: #222;
+    font-weight: 700;
+    margin: 20px 10%;
+    border-left: 4px solid #24b5d9;
+    padding-left: 4px;
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 10%;
+
+}
+
+.article-card {
+    width: calc(33% - 20px);
+    max-width: 600px;
+    margin-right: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 7px 1px #00000010;
+    margin-bottom: 40px;
+    height: fit-content
+}
+
+.article-card-header {
+    width: 100%;
+    height: 160px;
+    background-color: #64748b;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.article-card-timer {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 0px 0px 2px #222;
+    padding: 6px;
+    border-radius: 100px;
+}
+
+.article-card-title {
+    font-size: 18px;
+    padding: 8px 20px;
+    color: #222;
+}
+
+.article-card-description {
+    font-size: 15px;
+    padding: 8px 20px;
+    margin-bottom: 8px;
+    color: #333;
+
+}
+
+.article-card-tags {
+    transition: .3s ease-in;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.article-card:hover .article-card-tags {
+    opacity: 1;
+}
+
+.article-card-tags-item {
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 50px;
+    background-color: #f1f5f9;
+    color: #64748b;
+    font-weight: 600;
+    margin: 0 0 6px 6px;
+    cursor: pointer;
+}
+
+.article-card-header-image {
+    width: 100%;
+    height: 160px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    object-fit: cover;
+}
+
+.article-card-link {
+    color: #24b5d9;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline 2px solid #24b5d9;
+    display: block;
+    padding: 0 20px 20px 20px;
+}
+
+@media screen and (max-width:1300px) {
+
+    .article-card {
+        width: calc(50% - 20px);
+    }
+}
+
+
+@media screen and (max-width:760px) {
+
+    .article-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}

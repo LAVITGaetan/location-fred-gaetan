@@ -1,0 +1,24 @@
+<h1 class="article-title">Liste des articles</h1>
+<div class="article-container">
+    <div class="article-card" *ngFor="let article of articles">
+        <div class="article-card-header">
+            <img class="article-card-header-image" src="../../assets/images/frontend/{{ article.image_large}}"
+                alt="hiking image">
+                <div class="article-card-timer"> {{ article.temps_de_lecture }}</div>
+            <div class="article-card-tags">
+                <div class="article-card-tags-item" *ngIf="article.hashtags[0]">{{article.hashtags[0] }}</div>
+                <div class="article-card-tags-item" *ngIf="article.hashtags[1]">{{ article.hashtags[1] }}</div>
+                <div class="article-card-tags-item" *ngIf="article.hashtags[2]">{{ article.hashtags[2] }}</div>
+            </div>
+        </div>
+        <h3 class="article-card-title">{{ article.titre }}</h3>
+        <div class="text-wrapper">
+            <p class="article-card-description">{{ article.description }}</p>
+            <a class="article-card-link" [title]="article.titre + ' details'"
+                [routerLink]="['/article-bivouac-rando-ile-reunion', article.nameRoute, article.id]">
+                Lire l'article
+            </a>
+        </div>
+
+    </div>
+</div>
