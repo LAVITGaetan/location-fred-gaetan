@@ -1,0 +1,62 @@
+<div class="page-cart">
+    <div *ngIf="longueur==0; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock>
+        <div>
+            <p>Le panier est vide</p>
+        </div>
+        <div>
+            <button [routerLink]="['/boutique-bivouac-rando-ile-reunion']">Retour à la boutique</button>
+        </div>
+    </ng-template>
+    <ng-template #elseBlock>
+        <!--
+      <mat-card>
+        <mat-card-content>Simulation Devis : 06 92 74 29 58 - Livraison gratuite en point Relais - octroi de mer offert</mat-card-content>
+      </mat-card>
+    -->
+        <div *ngFor="let item of items let i=index" class="cart-item">
+            <div class="cart-element-remove">
+                <button aria-label="Remove" (click)="clearOrderElement(i)">
+                    x
+                </button>
+            </div>
+            <div class="cart-element-thumbnail">
+                <a [routerLink]="['/boutique-bivouac-rando-ile-reunion', item.nameRoute]">
+                    <img src="{{item.thumbnail}}" width="90px" height="90px" alt="{{ item.name }}">
+                </a>
+            </div>
+            <div class="cart-element-name">{{ item.name }}</div>
+            <div *ngIf="item.price; else elseBlock" class="cart-element-price">
+                {{ item.price | currency:'EUR' }}
+            </div>
+            <ng-template #elseBlock class="cart-item-element">
+                {{ item.promo | currency:'EUR'}}
+            </ng-template>
+            <div class="quantity_item">
+                <button class="quantity_element" (click)="decrease(i, item.quantity)">-</button>
+                <span class="quantity_element">{{ item.quantity }} </span>
+                <button class="quantity_element" (click)="increase(i, item.quantity)">+</button>
+            </div>
+            <div class="cart-element-promo">{{ item.priceTotal | currency:'EUR'}} </div>
+            <div class="cart-element-promo">{{ item.weightTotal}} kg</div>
+</div>
+<div class="panier">
+    <div>
+        <h1>Total Panier</h1>
+    </div>
+    <div class="panier-element">
+        <div class="panier-libelle">Sous total </div>
+        <div> {{totalTtc}}</div>
+    </div>
+    <div class="panier-element">
+        <div class="panier-libelle">Expédition</div>
+        <div>0</div>
+    </div>
+    <div class="panier-element">
+        <div class="panier-libelle">Total TTC</div>
+        <div>{{totalTtc}}</div>
+    </div>
+</div>
+
+</ng-template>
+</div>

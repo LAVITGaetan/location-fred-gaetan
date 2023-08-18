@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { products } from "../../assets/files/product";
 import { SeoService } from '../shared/services/seo.service';
 
@@ -8,12 +8,21 @@ import { SeoService } from '../shared/services/seo.service';
   styleUrls: ['./productlistcontainer.component.css']
 })
 export class ProductlistcontainerComponent {
+  @Input() produit_depart: number = 0; // nombre de départ
+  @Input() produit_arrivee: number = 10; // nombre d'arrivé
+
   constructor(private seo: SeoService) { }
   products = products
   ngOnInit(): void {
+    console.log(this.produit_depart);
     this.seo.setTitle('location-materiel-bivouac-ile-de-la-reunion-974');
     this.seo.setDescription(
       'Tentes Qaou , hamac, matelas gonflables, couteau, siflet, tour de cou'
     );
   }
+
+  changeParam() {
+    this.produit_arrivee = 10;
+  }
+
 }

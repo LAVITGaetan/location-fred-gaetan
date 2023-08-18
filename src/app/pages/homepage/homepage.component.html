@@ -1,1 +1,33 @@
-<p>homepage works!</p>
+<div class="page-product">
+    <div class="page-product-element-recherche">
+        <h1 class="page-product-recherche-title"><span>À vous la route,</span><br>
+            <span>À vous la liberté</span>
+        </h1>
+        <h2 class="page-product-recherche-subtitle">Louez votre matériel de Bivouac, Surf ou encore de Vélo et partez à
+            l'exploration de la Réunion
+        </h2>
+        <div class="page-product-recherche-bar">
+
+            <div class="page-product-recherche-bar-location">
+                <label class="bar-label">Lieu de prise en charge</label>
+                <input type="text" class="bar-input" placeholder="D'où partez vous ?">
+            </div>
+
+            <div class="page-product-recherche-bar-date">
+                <label class="bar-label">Départ</label>
+                <input type="date" placeholder="Départ" class="bar-input">
+            </div>
+            <div class="page-product-recherche-bar-date">
+                <label class="bar-label"> Retour</label>
+                <input type="date" placeholder="Retour" class="bar-input">
+            </div>
+
+            <div class="page-product-recherche-bar-bouton">Rechercher</div>
+        </div>
+        <div class="page-product-recherche-image"></div>
+    </div>
+
+
+</div>
+
+<app-productlistcontainer [produit_depart]="0" [produit_arrivee]="5"></app-productlistcontainer>

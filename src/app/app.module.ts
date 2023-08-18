@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { ArticledetailComponent } from './articlelistcontainer/articledetail/art
 import { ContactComponent } from './pages/contact/contact.component';
 import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
 import { CgvComponent } from './pages/cgv/cgv.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { PanierComponent } from './panier/panier.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import { CgvComponent } from './pages/cgv/cgv.component';
     ArticledetailComponent,
     ContactComponent,
     MentionsLegalesComponent,
-    CgvComponent
+    CgvComponent,
+    NotfoundComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
