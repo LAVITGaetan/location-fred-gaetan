@@ -1,8 +1,8 @@
 <h1 class="article-title">Liste des articles</h1>
-<div class="article-container">
-    <div class="article-card" *ngFor="let article of articles">
+<section class="article-container">
+    <article class="article-card" *ngFor="let article of articles.slice(article_depart, article_arrivee)">
         <div class="article-card-header">
-            <img class="article-card-header-image" src="../../assets/images/frontend/{{ article.image_large}}"
+            <img class="article-card-header-image" src="../assets/images/frontend/{{ article.image_large}}"
                 alt="hiking image">
                 <div class="article-card-timer"> {{ article.temps_de_lecture }}</div>
             <div class="article-card-tags">
@@ -20,5 +20,6 @@
             </a>
         </div>
 
-    </div>
-</div>
+    </article>
+</section>
+<button class="article-show-more" (click)="changeArticleParam()">+</button>

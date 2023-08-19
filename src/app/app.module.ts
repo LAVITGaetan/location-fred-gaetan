@@ -16,6 +16,9 @@ import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-lega
 import { CgvComponent } from './pages/cgv/cgv.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { PanierComponent } from './panier/panier.component';
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import { GalerieimageComponent } from './galerieimage/galerieimage.component';
+import { GalerievideoComponent } from './galerievideo/galerievideo.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { PanierComponent } from './panier/panier.component';
     MentionsLegalesComponent,
     CgvComponent,
     NotfoundComponent,
-    PanierComponent
+    PanierComponent,
+    GoogleMapsComponent,
+    GalerieimageComponent,
+    GalerievideoComponent
   ],
   imports: [
     BrowserModule,

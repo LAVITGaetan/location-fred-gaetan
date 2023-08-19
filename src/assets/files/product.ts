@@ -97,7 +97,7 @@ export const products: Product[] = [
     poids: 80
   },
   {
-    id: 2,
+    id: 3,
     name: 'Tente de toit: L=240 l=140 H=95 ',
     nameRoute: 'Tente-de-toit-de-voiture-soft',
     categorie_tente: true,
@@ -129,7 +129,7 @@ export const products: Product[] = [
     poids: 75
   },
   {
-    id: 3,
+    id: 4,
     name: 'Tente Qaou V5 pack 3 en 1',
     nameRoute: 'Tente-Qaou-V5-pack-3en1 ',
     categorie_tente: true,
@@ -161,7 +161,7 @@ export const products: Product[] = [
     poids: 2.4
   },
   {
-    id: 4,
+    id: 5,
     name: 'Adventure V5 - 6 en 1',
     nameRoute: 'Tente-Qaou-Adventure-V5-pack-6-en-1',
     categorie_tente: true,
@@ -193,7 +193,7 @@ export const products: Product[] = [
     poids: 3.3
   },
   {
-    id: 4,
+    id: 6,
     name: 'Bâton de marche ergonomique',
     nameRoute: 'Paire-de-bâtons-de-marche-ergonomiques',
     categorie_tente: true,

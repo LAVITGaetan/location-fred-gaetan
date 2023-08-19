@@ -22,7 +22,16 @@ export class ProductlistcontainerComponent {
   }
 
   changeParam() {
-    this.produit_arrivee = 10;
+    // Afficher moins de produits
+    if (this.produit_arrivee == 10) {
+      this.produit_arrivee = 5
+      document.getElementsByClassName('product-show-more')[0].innerHTML = '+'
+    } 
+    // Afficher plus de produits
+    else {
+      this.produit_arrivee = 10;
+      document.getElementsByClassName('product-show-more')[0].innerHTML = '-'
+    }
   }
 
 }

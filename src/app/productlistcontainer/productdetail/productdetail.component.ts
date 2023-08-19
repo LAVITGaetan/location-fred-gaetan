@@ -16,6 +16,8 @@ export class ProductdetailComponent {
 
   constructor(private route: ActivatedRoute, private seo: SeoService, private sanitizer: DomSanitizer) { }
   product: Product | undefined;
+  products = products
+  id_product = 0;
   ngOnInit() {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
@@ -27,6 +29,11 @@ export class ProductdetailComponent {
     this.seo.setDescription(
       'île de la réunion, Location'
     );
+    this.route.params.subscribe(params => {
+      const id_product = params['id'];
+      console.log('Valeur du paramètre:', id_product);
+      this.id_product = id_product
+    });
   }
 }
 

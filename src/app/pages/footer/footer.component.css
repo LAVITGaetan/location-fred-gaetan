@@ -109,3 +109,9 @@ footer {
     font-weight: 600;
     text-align: center;
  }
+
+ .footer-extra-link {
+    text-decoration: underline 2px solid #fff;
+    color: #fff;
+    padding-bottom: 4px;
+ }

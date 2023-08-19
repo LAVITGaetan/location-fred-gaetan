@@ -1,26 +1,16 @@
-
-<!-- <div class="page-product-categorie">
-    <div class="page-product-categorie-item">
-        <div class="page-product-categorie-item-bouton"></div>
-        <span class="page-product-categorie-item-text">Surf</span>
-    </div>
-    <div class="page-product-categorie-item">
-        <div class="page-product-categorie-item-bouton"></div>
-        <span class="page-product-categorie-item-text">Bivouac</span>
-    </div>
-    <div class="page-product-categorie-item">
-        <div class="page-product-categorie-item-bouton"></div>
-        <span class="page-product-categorie-item-text">Autres</span>
-    </div>
-</div> -->
-
-
-<div>
-    <div *ngFor="let product of products.slice(produit_depart, produit_arrivee)">
-        {{ product.name }} <a [title]="product.name + ' details'"
-            [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute]">
-            {{ product.name }}
+<h2 class="product-title">Liste des produits</h2>
+<div class="product-container">
+    <div class="product-card" *ngFor="let product of products.slice(produit_depart, produit_arrivee)">
+        <img [src]=product.image alt="" class="product-card-image">
+    <h3 class="product-card-title">{{ product.name }}</h3>
+    <div class="text-wrapper">
+        <p class="product-card-description">{{ product.price_sell }}</p>
+        <a class="product-card-link" [title]="product.name + ' details'"
+        [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute, product.id]">
+            Louer
         </a>
     </div>
-        <button (click)="changeParam()">+</button>
+
 </div>
+</div>
+<button class="product-show-more" (click)="changeParam()">+</button>

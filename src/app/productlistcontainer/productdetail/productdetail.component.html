@@ -1,0 +1,7 @@
+<div class="product-detail-container" *ngFor="let product of products">
+    <div *ngIf="(product.id == id_product)">
+        <h1 class="product-detail-title">{{ product.name }}</h1>
+        <h2 class="product-detail-subtitle">{{ product.price_sell }}</h2>
+
+    </div>
+</div>
