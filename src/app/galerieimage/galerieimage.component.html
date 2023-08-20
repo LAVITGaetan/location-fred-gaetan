@@ -1,21 +1,101 @@
+<h2 class="galerie-page-title">Partez à l'exploration de notre Île</h2>
 <div class="galerie-container">
-    <div class="galerie-image1"><img [src]=galeries[0].src [alt]=galeries[0].alt>
-        <a [href]=galeries[0].google_maps target="_blank">
-            <svg viewBox="0 0 24 24" fill="none"
-                xmlns="http://www.w3.org/2000/svg" class="galerie-icon-position">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M3 9.801C3.005 4.943 7.032 1.005 12 1c4.968.005 8.995 3.943 9 8.801 0 6.069-6.158 11.581-8.129 13.11a1.436 1.436 0 0 1-1.818 0C9.158 21.381 3 15.87 3 9.8Zm4.578-.21a4.548 4.548 0 1 0 9.096 0 4.548 4.548 0 0 0-9.096 0Z"
-                    fill="#d92465">
-                </path>
-            </svg>
-            Test
-        </a>
-    </div>
-    <div class="galerie-image2"><img [src]=galeries[1].src [alt]=galeries[1].alt></div>
-    <div class="galerie-image3"><img [src]=galeries[2].src [alt]=galeries[2].alt></div>
-    <div class="galerie-image4"><img [src]=galeries[3].src [alt]=galeries[3].alt></div>
-    <div class="galerie-image5"><img [src]=galeries[4].src [alt]=galeries[4].alt></div>
-    <div class="galerie-image6"><img [src]=galeries[5].src [alt]=galeries[5].alt></div>
-    <div class="galerie-image7"><img [src]=galeries[6].src [alt]=galeries[6].alt></div>
-
+    <a [href]=galeries[0].google_maps target="_blank" class="galerie-card1 galerie-card">
+        <img class="galerie-card-image" [src]=galeries[0].src [alt]=galeries[0].alt>
+        <div class="galerie-row">
+            <div class="galerie-row-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="galerie-icon-position">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 9.801C3.005 4.943 7.032 1.005 12 1c4.968.005 8.995 3.943 9 8.801 0 6.069-6.158 11.581-8.129 13.11a1.436 1.436 0 0 1-1.818 0C9.158 21.381 3 15.87 3 9.8Zm4.578-.21a4.548 4.548 0 1 0 9.096 0 4.548 4.548 0 0 0-9.096 0Z"
+                        fill="#d92465">
+                    </path>
+                </svg>
+            </div>
+            <h5 class="galerie-row-title">{{ galeries[0].titre }}</h5>
+        </div>
+    </a>
+    <a [href]=galeries[1].google_maps target="_blank" class="galerie-card2 galerie-card">
+        <img class="galerie-card-image" [src]=galeries[1].src [alt]=galeries[1].alt>
+        <div class="galerie-row">
+            <div class="galerie-row-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="galerie-icon-position">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 9.801C3.005 4.943 7.032 1.005 12 1c4.968.005 8.995 3.943 9 8.801 0 6.069-6.158 11.581-8.129 13.11a1.436 1.436 0 0 1-1.818 0C9.158 21.381 3 15.87 3 9.8Zm4.578-.21a4.548 4.548 0 1 0 9.096 0 4.548 4.548 0 0 0-9.096 0Z"
+                        fill="#d92465">
+                    </path>
+                </svg>
+            </div>
+            <h5 class="galerie-row-title">{{ galeries[1].titre }}</h5>
+        </div>
+    </a>
+    <a [href]=galeries[2].google_maps target="_blank" class="galerie-card3 galerie-card">
+        <img class="galerie-card-image" [src]=galeries[2].src [alt]=galeries[2].alt>
+        <div class="galerie-row">
+            <div class="galerie-row-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="galerie-icon-position">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 9.801C3.005 4.943 7.032 1.005 12 1c4.968.005 8.995 3.943 9 8.801 0 6.069-6.158 11.581-8.129 13.11a1.436 1.436 0 0 1-1.818 0C9.158 21.381 3 15.87 3 9.8Zm4.578-.21a4.548 4.548 0 1 0 9.096 0 4.548 4.548 0 0 0-9.096 0Z"
+                        fill="#d92465">
+                    </path>
+                </svg>
+            </div>
+            <h5 class="galerie-row-title">{{ galeries[2].titre }}</h5>
+        </div>
+    </a>
+    <a [href]=galeries[3].google_maps target="_blank" class="galerie-card4 galerie-card">
+        <img class="galerie-card-image" [src]=galeries[3].src [alt]=galeries[3].alt>
+        <div class="galerie-row">
+            <div class="galerie-row-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="galerie-icon-position">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 9.801C3.005 4.943 7.032 1.005 12 1c4.968.005 8.995 3.943 9 8.801 0 6.069-6.158 11.581-8.129 13.11a1.436 1.436 0 0 1-1.818 0C9.158 21.381 3 15.87 3 9.8Zm4.578-.21a4.548 4.548 0 1 0 9.096 0 4.548 4.548 0 0 0-9.096 0Z"
+                        fill="#d92465">
+                    </path>
+                </svg>
+            </div>
+            <h5 class="galerie-row-title">{{ galeries[3].titre }}</h5>
+        </div>
+    </a>
+    <a [href]=galeries[4].google_maps target="_blank" class="galerie-card5 galerie-card">
+        <img class="galerie-card-image" [src]=galeries[4].src [alt]=galeries[4].alt>
+        <div class="galerie-row">
+            <div class="galerie-row-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="galerie-icon-position">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 9.801C3.005 4.943 7.032 1.005 12 1c4.968.005 8.995 3.943 9 8.801 0 6.069-6.158 11.581-8.129 13.11a1.436 1.436 0 0 1-1.818 0C9.158 21.381 3 15.87 3 9.8Zm4.578-.21a4.548 4.548 0 1 0 9.096 0 4.548 4.548 0 0 0-9.096 0Z"
+                        fill="#d92465">
+                    </path>
+                </svg>
+            </div>
+            <h5 class="galerie-row-title">{{ galeries[4].titre }}</h5>
+        </div>
+    </a>
+    <a [href]=galeries[5].google_maps target="_blank" class="galerie-card6 galerie-card">
+        <img class="galerie-card-image" [src]=galeries[5].src [alt]=galeries[5].alt>
+        <div class="galerie-row">
+            <div class="galerie-row-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="galerie-icon-position">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 9.801C3.005 4.943 7.032 1.005 12 1c4.968.005 8.995 3.943 9 8.801 0 6.069-6.158 11.581-8.129 13.11a1.436 1.436 0 0 1-1.818 0C9.158 21.381 3 15.87 3 9.8Zm4.578-.21a4.548 4.548 0 1 0 9.096 0 4.548 4.548 0 0 0-9.096 0Z"
+                        fill="#d92465">
+                    </path>
+                </svg>
+            </div>
+            <h5 class="galerie-row-title">{{ galeries[5].titre }}</h5>
+        </div>
+    </a>
+    <a [href]=galeries[6].google_maps target="_blank" class="galerie-card7 galerie-card">
+        <img class="galerie-card-image" [src]=galeries[6].src [alt]=galeries[6].alt>
+        <div class="galerie-row">
+            <div class="galerie-row-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="galerie-icon-position">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 9.801C3.005 4.943 7.032 1.005 12 1c4.968.005 8.995 3.943 9 8.801 0 6.069-6.158 11.581-8.129 13.11a1.436 1.436 0 0 1-1.818 0C9.158 21.381 3 15.87 3 9.8Zm4.578-.21a4.548 4.548 0 1 0 9.096 0 4.548 4.548 0 0 0-9.096 0Z"
+                        fill="#d92465">
+                    </path>
+                </svg>
+            </div>
+            <h5 class="galerie-row-title">{{ galeries[6].titre }}</h5>
+        </div>
+    </a>
 </div>

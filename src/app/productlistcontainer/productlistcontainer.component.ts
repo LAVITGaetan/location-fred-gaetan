@@ -9,7 +9,7 @@ import { SeoService } from '../shared/services/seo.service';
 })
 export class ProductlistcontainerComponent {
   @Input() produit_depart: number = 0; // nombre de départ
-  @Input() produit_arrivee: number = 10; // nombre d'arrivé
+  @Input() produit_arrivee: number = 8; // nombre d'arrivé
 
   constructor(private seo: SeoService) { }
   products = products
@@ -23,13 +23,13 @@ export class ProductlistcontainerComponent {
 
   changeParam() {
     // Afficher moins de produits
-    if (this.produit_arrivee == 10) {
-      this.produit_arrivee = 5
+    if (this.produit_arrivee == 16) {
+      this.produit_arrivee = 8
       document.getElementsByClassName('product-show-more')[0].innerHTML = '+'
     } 
     // Afficher plus de produits
     else {
-      this.produit_arrivee = 10;
+      this.produit_arrivee = 16;
       document.getElementsByClassName('product-show-more')[0].innerHTML = '-'
     }
   }

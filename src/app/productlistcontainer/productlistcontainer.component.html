@@ -1,10 +1,10 @@
 <h2 class="product-title">Liste des produits</h2>
 <div class="product-container">
     <div class="product-card" *ngFor="let product of products.slice(produit_depart, produit_arrivee)">
+        <div class="product-card-price">{{ product.price_sell }}€</div>
         <img [src]=product.image alt="" class="product-card-image">
     <h3 class="product-card-title">{{ product.name }}</h3>
     <div class="text-wrapper">
-        <p class="product-card-description">{{ product.price_sell }}</p>
         <a class="product-card-link" [title]="product.name + ' details'"
         [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute, product.id]">
             Louer
