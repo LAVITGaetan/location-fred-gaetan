@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './pages/homepage/homepage.component';
+import { HomepageComponent } from './layout/homepage/homepage.component';
 import { ProductlistcontainerComponent } from './productlistcontainer/productlistcontainer.component';
 import { ProductdetailComponent } from './productlistcontainer/productdetail/productdetail.component';
 import { ArticledetailComponent } from './articlelistcontainer/articledetail/articledetail.component';
@@ -9,10 +9,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
 import { CgvComponent } from './pages/cgv/cgv.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
-import { PanierComponent } from './panier/panier.component';
-import { GalerieimageComponent } from './galerieimage/galerieimage.component';
-import { GalerievideoComponent } from './galerievideo/galerievideo.component';
-import { AboutComponent } from './about/about.component';
+import { GalerieimageComponent } from './galeries/galerieimage/galerieimage.component';
+import { GalerievideoComponent } from './galeries/galerievideo/galerievideo.component';
+import { AboutComponent } from './pages/about/about.component';
+import { CartfullComponent } from './carts/cartfull/cartfull.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'cgv', component: CgvComponent },
   { path: 'mentions-legales', component: MentionsLegalesComponent },
-  { path: 'panier', component: PanierComponent },
+  { path: 'panier', component: CartfullComponent },
   { path: '**', component: NotfoundComponent }
 ];
 

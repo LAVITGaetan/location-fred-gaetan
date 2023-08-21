@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { SeoService } from '../shared/services/seo.service';
+import { SeoService } from '../../shared/services/seo.service';
 import { videos } from 'src/assets/files/galerie';
 
 @Component({

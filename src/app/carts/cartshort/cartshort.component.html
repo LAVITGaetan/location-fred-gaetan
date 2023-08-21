@@ -1,0 +1,18 @@
+<div class="cartshort-container">
+    <h3 class="cartshort-title">Mon panier</h3>
+    <div class="cartshort-content">
+        <span class="cartshort-subtitle">Mes produits</span>
+        <span class="cartshort-count">count produits</span>
+        <div *ngFor="let item of items let i=index" class="cartshort-row">
+            <div class="cartshort-row-image"></div>
+            <div class="cartshort-row-name"></div>
+            <div class="cartshort-row-price"></div>
+            <div class="cartshort-row-actions"><button aria-label="Remove" (click)="clearOrderElement(i)">
+                delete
+            </button>
+        </div>
+        </div>
+    </div>
+    <div class="cartshort-extra">Garantie et caution *</div>
+    <div class="cartshort-action">Valider mon panier</div>
+</div>

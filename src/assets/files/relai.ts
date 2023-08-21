@@ -1,23 +1,33 @@
 export interface relai {
     id: number,
     name: string,
+    data: [
+        
+    ]
 }
 
 export const relais: relai[] = [
     {
         id: 1,
-        name: "Cilaos"
+        name: "Cilaos",
+        data : []
     },
     {
         id: 2,
-        name: "Saint-Pierre"
+        name: "Saint-Pierre",
+        data : []
+
     },
     {
         id: 3,
-        name: "Saint-Denis"
+        name: "Saint-Denis",
+        data : []
+
     },
     {
         id: 4,
-        name: "Saint-Gilles"
+        name: "Saint-Gilles",
+        data : []
+
     }
 ]

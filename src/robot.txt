@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /shared/
+Disallow: /shipping/
+Disallow: /cart/
+Disallow: /newversion/
+Sitemap: https://dtentes.re/sitemap.xml

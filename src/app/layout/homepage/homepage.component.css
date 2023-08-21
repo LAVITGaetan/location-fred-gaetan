@@ -9,7 +9,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto) auto 50px;
     grid-column-gap: 0px;
-    margin-bottom: 40px;
     grid-row-gap: 32px;
 }
 
@@ -193,4 +192,14 @@
     .page-product-recherche-image {
         display: none;
     }
+}
+
+.homepage-flex-container {
+    display: flex;
+}
+
+.homepage-extrabar {
+    width: 100%;
+    background-color: #F1F5F9;
+    padding: 32px 10%;
 }

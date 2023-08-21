@@ -4,9 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './pages/header/header.component';
-import { HomepageComponent } from './pages/homepage/homepage.component';
-import { FooterComponent } from './pages/footer/footer.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { HomepageComponent } from './layout/homepage/homepage.component';
+import { FooterComponent } from './layout/footer/footer.component';
 import { ProductlistcontainerComponent } from './productlistcontainer/productlistcontainer.component';
 import { ProductdetailComponent } from './productlistcontainer/productdetail/productdetail.component';
 import { ArticlelistcontainerComponent } from './articlelistcontainer/articlelistcontainer.component';
@@ -15,11 +15,13 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
 import { CgvComponent } from './pages/cgv/cgv.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
-import { PanierComponent } from './panier/panier.component';
-import { GoogleMapsComponent } from './google-maps/google-maps.component';
-import { GalerieimageComponent } from './galerieimage/galerieimage.component';
-import { GalerievideoComponent } from './galerievideo/galerievideo.component';
-import { AboutComponent } from './about/about.component';
+import { GoogleMapsComponent } from './pages/google-maps/google-maps.component';
+import { GalerieimageComponent } from './galeries/galerieimage/galerieimage.component';
+import { GalerievideoComponent } from './galeries/galerievideo/galerievideo.component';
+import { AboutComponent } from './pages/about/about.component';
+import { CartfullComponent } from './carts/cartfull/cartfull.component';
+import { CartshortComponent } from './carts/cartshort/cartshort.component';
+import { NotificationbarComponent } from './layout/notificationbar/notificationbar.component';
 
 @NgModule({
   declarations: [
@@ -35,11 +37,13 @@ import { AboutComponent } from './about/about.component';
     MentionsLegalesComponent,
     CgvComponent,
     NotfoundComponent,
-    PanierComponent,
     GoogleMapsComponent,
     GalerieimageComponent,
     GalerievideoComponent,
-    AboutComponent
+    AboutComponent,
+    CartfullComponent,
+    CartshortComponent,
+    NotificationbarComponent
   ],
   imports: [
     BrowserModule,

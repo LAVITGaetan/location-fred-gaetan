@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { products } from "../../assets/files/product";
 import { SeoService } from '../shared/services/seo.service';
 
+
 @Component({
   selector: 'app-productlistcontainer',
   templateUrl: './productlistcontainer.component.html',
@@ -32,6 +33,10 @@ export class ProductlistcontainerComponent {
       this.produit_arrivee = 16;
       document.getElementsByClassName('product-show-more')[0].innerHTML = '-'
     }
+  }
+
+  ajouterItem(product: object) {
+    console.log(product);
   }
 
 }

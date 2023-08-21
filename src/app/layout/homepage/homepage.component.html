@@ -11,11 +11,11 @@
             <div class="page-product-recherche-bar-location">
                 <label class="bar-label">Lieu de prise en charge</label>
                 <select class="bar-input">
-                        <option value="Selectionner" aria-disabled>D'où partez vous ?</option>
-                        <option [value]="relais[0].id">{{ relais[0].name}}</option>
-                        <option [value]="relais[1].id">{{ relais[1].name}}</option>
-                        <option [value]="relais[2].id">{{ relais[2].name}}</option>
-                        <option [value]="relais[3].id">{{ relais[3].name}}</option>
+                    <option value="Selectionner" aria-disabled>D'où partez vous ?</option>
+                    <option [value]="relais[0].id">{{ relais[0].name}}</option>
+                    <option [value]="relais[1].id">{{ relais[1].name}}</option>
+                    <option [value]="relais[2].id">{{ relais[2].name}}</option>
+                    <option [value]="relais[3].id">{{ relais[3].name}}</option>
                 </select>
             </div>
 
@@ -36,5 +36,8 @@
 
 </div>
 
+<div class="homepage-extrabar">Informations de livraison</div>
+
 <app-productlistcontainer [produit_depart]="0" [produit_arrivee]="8"></app-productlistcontainer>
+    <app-cartshort></app-cartshort>
 <app-galerieimage></app-galerieimage>
