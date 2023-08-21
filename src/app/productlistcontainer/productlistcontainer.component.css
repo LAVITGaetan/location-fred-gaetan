@@ -1,15 +1,16 @@
-.product-title {
+.product-page-title {
     font-size: 28px;
-    color: #222;
+    color: #334155;
     font-weight: 700;
-    padding: 48px 10% 0 10%;
+    line-height: 150%;
+    margin: 20px 10% 8px 10%;
 }
 
 .product-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 32px 10%;
+    padding: 16px 10% 0 10%;
 }
 
 .product-card {
@@ -17,8 +18,10 @@
     max-width: 600px;
     margin-right: 32px;
     background-color: #fff;
+    border: 1px solid #F2F5F9;
+    box-shadow: 2px 2px 8px 2px #33415515;
+    border-top: 4px solid #4f45be;
     border-radius: 4px;
-    box-shadow: 2px 2px 4px 1px #00000015;
     margin-bottom: 32px;
     height: fit-content;
     position: relative;
@@ -36,46 +39,45 @@
 }
 
 .product-card-image {
-    width: fit-content;
-    max-height: 160px;
+    width: 250px;
+    height: 250px;
     object-fit: contain;
     object-position: left;
     margin: 20px 20px 8px 20px;
-    background-color: #F1F5F9;
 }
 
 .product-card-title {
     font-size: 18px;
-    padding: 8px 20px;
-    color: #334155;
+    padding: 10px 20px;
+    color: #222;
 }
 
 .product-card-description {
     font-size: 15px;
-    padding: 8px 20px;
-    margin-bottom: 8px;
+    padding: 0 20px;
+    margin-bottom: 10px;
     color: #333;
-
+    max-height: 60px;
+    overflow: auto;
+    scrollbar-color: #346abf white; /* ascensseur bleu sur fond blanc */
 }
 
 .product-card-link {
-    color: #FFF;
-    background-color: #d92465;height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0;
-    font-size: 16px;
+    background-color: #4f45be15;
+    color: #4f45be;
+    font-size: 15px;
+    padding: 12px 18px;
     border-radius: 4px;
-    font-weight: 600;
-    margin: 10px 20px 20px 20px;
+    font-weight: bold;
+    display: inline-block;
     text-decoration: none;
+    margin: 10px 20px 20px 20px;
 }
 
 .product-show-more {
     padding: 12px;
     margin: 0 10%;
-    background-color: #d92465;
+    background-color: #4f45be;
     outline: none;
     border: none;
     font-size: 24px;

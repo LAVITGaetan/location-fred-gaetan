@@ -19,6 +19,7 @@ import { PanierComponent } from './panier/panier.component';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { GalerieimageComponent } from './galerieimage/galerieimage.component';
 import { GalerievideoComponent } from './galerievideo/galerievideo.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { GalerievideoComponent } from './galerievideo/galerievideo.component';
     PanierComponent,
     GoogleMapsComponent,
     GalerieimageComponent,
-    GalerievideoComponent
+    GalerievideoComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

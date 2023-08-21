@@ -1,5 +1,28 @@
-<div [innerHTML]='videos[0].titre'></div>
-    <iframe width="280" height="156" [src]="getEmbedUrl(videos[0].src)" 
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen="">
-  </iframe>
+<h1 class="video-page-title">Nos vidéos et tutoriels pour vos équipements</h1>
+<h2 class="video-page-subtitle">Retrouvez l'ensemble de nos vidéos et tutoriels afin de faciliter le motnage de vos équipements de randonnées ou autres</h2>
+<div class="video-container">
+  <div class="video-card">
+    <div class="video-card-iframe">
+      <iframe [src]="getEmbedUrl(videos[0].src)" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+      </iframe>
+    </div>
+    <h3 class="video-card-title"> {{ videos[0].titre }}</h3>
+  </div>
+  <div class="video-card">
+    <div class="video-card-iframe">
+      <iframe [src]="getEmbedUrl(videos[0].src)" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+      </iframe>
+    </div>
+    <h3 class="video-card-title"> {{ videos[0].titre }}</h3>
+  </div>
+  <div class="video-card">
+    <div class="video-card-iframe">
+      <iframe [src]="getEmbedUrl(videos[0].src)" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+      </iframe>
+    </div>
+    <h3 class="video-card-title"> {{ videos[0].titre }}</h3>
+  </div>
+</div>

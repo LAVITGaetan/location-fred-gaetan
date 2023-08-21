@@ -12,6 +12,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { PanierComponent } from './panier/panier.component';
 import { GalerieimageComponent } from './galerieimage/galerieimage.component';
 import { GalerievideoComponent } from './galerievideo/galerievideo.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'article-bivouac-rando-ile-reunion/:articleNameRoute/:id', component: ArticledetailComponent },
   { path: 'galerie-bivouac-rando-ile-reunion', component: GalerieimageComponent },
   { path: 'video-bivouac-rando-ile-reunion', component: GalerievideoComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'cgv', component: CgvComponent },
   { path: 'mentions-legales', component: MentionsLegalesComponent },

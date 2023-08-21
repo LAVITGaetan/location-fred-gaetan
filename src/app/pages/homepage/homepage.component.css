@@ -1,5 +1,5 @@
 .page-product {
-    background: linear-gradient(to bottom right, #09203F, #537895 300%);
+    background: linear-gradient(to top left, #100e26, #537895 400%);
     padding: 0 10%;
 }
 
@@ -9,6 +9,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto) auto 50px;
     grid-column-gap: 0px;
+    margin-bottom: 40px;
     grid-row-gap: 32px;
 }
 
@@ -76,7 +77,7 @@
 .page-product-recherche-bar-bouton {
     padding: 12px;
     color: #fff;
-    background-color: #d92465;
+    background-color: #4f45be;
     font-size: 1.125rem;
     display: flex;
     align-items: center;

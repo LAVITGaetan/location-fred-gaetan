@@ -2,26 +2,29 @@
 <h2 class="contact-page-subtitle">Formulaire de contact</h2>
 
 <div class="contact-page-form-container">
-    <form class="contact-page-form">
+    <form (submit)="sendEmail($event)" class="contact-page-form">
 <div class="contact-page-form-group">
     <label for="" class="contact-page-form-label">Nom complet</label>
-    <input type="text" class="contact-page-form-input" placeholder="...">
+    <input type="text" class="contact-page-form-input" placeholder="..." name="user_name">
 </div>
 <div class="contact-page-form-group">
     <label for="" class="contact-page-form-label">Adresse e-mail</label>
-    <input type="text" class="contact-page-form-input" placeholder="...">
+    <input type="text" class="contact-page-form-input" placeholder="..." name="email">
 </div>
 <div class="contact-page-form-group">
     <label for="" class="contact-page-form-label">Numéro de téléphone</label>
-    <input type="text" class="contact-page-form-input" placeholder="...">
+    <input type="text" class="contact-page-form-input" placeholder="..." name="telephone">
 </div>
 <div class="contact-page-form-group">
     <label for="" class="contact-page-form-label">Objet</label>
-    <input type="text" class="contact-page-form-input" placeholder="...">
+    <input type="text" class="contact-page-form-input" placeholder="..." name="object">
 </div>
 <div class="contact-page-form-group-large">
     <label for="" class="contact-page-form-label">Message</label>
-    <input type="text" class="contact-page-form-input" placeholder="...">
+    <input type="text" class="contact-page-form-input" placeholder="..." name="message">
+</div>
+<div class="contact-page-form-group-large">
+    <input type="submit" class="contact-page-form-submit" placeholder="..." name="message" value="Envoyer">
 </div>
     </form>
 </div>

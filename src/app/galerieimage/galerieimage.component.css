@@ -8,10 +8,19 @@
 }
 
 .galerie-page-title {
-    font-size: 26px;
+    font-size: 28px;
     color: #334155;
     font-weight: 700;
-    margin: 20px 10%;
+    line-height: 150%;
+    margin: 20px 10% 0 10%;
+}
+
+.galerie-page-subtitle {
+    font-size: 20px;
+    color: #444;
+    font-weight: 500;
+    line-height: 160%;
+    padding: 12px 10%;
 }
 
 .galerie-card {

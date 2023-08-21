@@ -1,10 +1,17 @@
-.article-title {
+.article-page-title {
     font-size: 28px;
-    color: #222;
+    color: #334155;
     font-weight: 700;
-    margin: 20px 10%;
-    border-left: 4px solid #d92465;
-    padding-left: 4px;
+    line-height: 150%;
+    margin: 20px 10% 0 10%;
+}
+
+.article-page-subtitle {
+    font-size: 20px;
+    color: #444;
+    font-weight: 500;
+    padding: 12px 10%;
+    line-height: 150%;
 }
 
 .article-container {
@@ -97,8 +104,8 @@
 }
 
 .article-card-link {
-    background-color: #d9246515;
-    color: #d92465;
+    background-color: #4f45be15;
+    color: #4f45be;
     font-size: 15px;
     padding: 12px 18px;
     border-radius: 4px;
@@ -112,7 +119,7 @@
 .article-show-more {
     padding: 12px;
     margin: 0 10%;
-    background-color: #d92465;
+    background-color: #4f45be;
     outline: none;
     border: none;
     font-size: 24px;
