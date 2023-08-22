@@ -1,10 +1,10 @@
 footer {
-    background: #f1f5f9;
-    color: #64748b;
+    background: #191645;
+    color: #fff;
     position: relative;
     padding-top: 40px;
     margin-top: 50px;
-    }
+}
 
 
 .footer.index {
@@ -83,9 +83,9 @@ footer {
  }
 
   .footer-extra{
-    background-color: #100e26;
-    color: #fff; 
+    background-color: #fff;
     padding: 20px;
+    color: #191645;
  }
 
  .image_performance_google_web_speed{
@@ -101,7 +101,7 @@ footer {
 
  a {
     text-decoration: none;
-    color: #64748b;
+    color: #F1F5F9;
  }
 
  .footer-extra-text {
@@ -111,7 +111,11 @@ footer {
  }
 
  .footer-extra-link {
-    text-decoration: underline 2px solid #fff;
-    color: #fff;
-    padding-bottom: 4px;
+    text-decoration: underline 2px solid #191645;
+    color: #191645;
+ }
+
+ .flex-container {
+    display: flex;
+    flex-wrap: wrap;
  }

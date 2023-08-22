@@ -16,12 +16,13 @@
   .toolbar a {
     color: #64748b;
     text-decoration: none;
+    font-size: 17px;
   }
 
   .toolbar-annonce {
-    background-color: #4f45be15;
-    color: #4f45be;
-    font-size: 16px;
+    background-color: #43C6AC15;
+    color: #43C6AC;
+    font-size: 17px;
     padding: 16px 24px;
     border-radius: 4px;
     font-weight: bold;

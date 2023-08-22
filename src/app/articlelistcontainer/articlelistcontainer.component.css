@@ -6,12 +6,26 @@
     margin: 20px 10% 0 10%;
 }
 
-.article-page-subtitle {
+.article-page-tag-container {
     font-size: 20px;
     color: #444;
     font-weight: 500;
     padding: 12px 10%;
     line-height: 150%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article-page-tag-item {
+    padding: 6px 12px;
+    background-color: #F1F5F9;
+    border-radius: 4px;
+    color: #64748b;
+    font-size: 14px;
+    width: fit-content;
+    font-weight: 600;
+    margin-right: 12px;
+    cursor: pointer;
 }
 
 .article-container {
@@ -104,8 +118,8 @@
 }
 
 .article-card-link {
-    background-color: #4f45be15;
-    color: #4f45be;
+    background-color: #43C6AC15;
+    color: #43C6AC;
     font-size: 15px;
     padding: 12px 18px;
     border-radius: 4px;
@@ -119,7 +133,7 @@
 .article-show-more {
     padding: 12px;
     margin: 0 10%;
-    background-color: #4f45be;
+    background-color: #43C6AC;
     outline: none;
     border: none;
     font-size: 24px;

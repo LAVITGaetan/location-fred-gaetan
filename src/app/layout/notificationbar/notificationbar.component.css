@@ -1,0 +1,42 @@
+.notification-bar {
+    transition: 1s ease-in;
+    width: 100%;
+    display: flex;
+    padding: 0 10%;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background: linear-gradient(to top left, #191645, #537895 400%);
+}
+
+.notification-text {
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.notification-button {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 12px;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+cursor: pointer;
+background-color: #43C6AC;
+}
+
+.notification-close {
+justify-items: flex-end;
+font-size: 16px;
+color: #fff;
+font-weight: 800;
+position: absolute;
+right: 20px;
+cursor: pointer;
+}
+
+.notification-bar-displayed {
+    background-color: #43C6AC;
+}

@@ -1,1 +1,5 @@
-<p>notificationbar works!</p>
+<div *ngIf="composantVisible" class="notification-bar">
+    <div class="notification-text">Offre évasion à partir de 25€ par jour</div>
+    <div class="notification-button">Voir l'offre</div>
+    <div class="notification-close" (click)="hideComponent()" class="notification-close">X</div>
+</div>

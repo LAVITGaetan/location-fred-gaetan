@@ -14,15 +14,15 @@
 }
 
 .product-card {
-    width: calc(25% - 32px);
+    width: calc(25% - 20px);
     max-width: 600px;
-    margin-right: 32px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     background-color: #fff;
     border: 1px solid #F2F5F9;
     box-shadow: 2px 2px 8px 2px #33415515;
-    border-top: 4px solid #4f45be;
+    border-top: 5px solid #191645;
     border-radius: 4px;
-    margin-bottom: 32px;
     height: fit-content;
     position: relative;
 }
@@ -39,8 +39,8 @@
 } */
 
 .product-card-image {
-    width: 250px;
-    height: 250px;
+    width: 128px;
+    height: 128px;
     object-fit: contain;
     object-position: left;
     margin: 20px 20px 8px 20px;
@@ -52,24 +52,27 @@
     color: #222;
 }
 
-.product-card-description {
-    font-size: 15px;
-    padding: 0 20px;
-    margin-bottom: 10px;
-    color: #333;
-    max-height: 60px;
-    overflow: auto;
-    scrollbar-color: #346abf white; /* ascensseur bleu sur fond blanc */
-}
-
 .product-card-link {
-    background-color: #4f45be15;
-    color: #4f45be;
+    background-color: #43C6AC15;
+    color: #43C6AC;
     font-size: 15px;
     padding: 12px 18px;
     border-radius: 4px;
     font-weight: bold;
     display: inline-block;
+    text-decoration: none;
+    margin: 0 20px 0 0;
+}
+
+.product-card-louer {
+    background-color: #43C6AC;
+    color: #fff;
+    font-size: 15px;
+    padding: 12px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    outline: none;
+    border: none;
     text-decoration: none;
     margin: 10px 20px 20px 20px;
 }
@@ -77,7 +80,7 @@
 .product-show-more {
     padding: 12px;
     margin: 0 10%;
-    background-color: #4f45be;
+    background-color: #43C6AC;
     outline: none;
     border: none;
     font-size: 24px;

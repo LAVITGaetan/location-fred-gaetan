@@ -1,12 +1,12 @@
-export interface Galerie {
-    id: number,
-    titre: string,
-    src: string,
-    alt: string,
-    longitude: string,
-    latitude: string,
-    google_maps: string
-}
+    export interface Galerie {
+        id: number,
+        titre: string,
+        src: string,
+        alt: string,
+        longitude: string,
+        latitude: string,
+        google_maps: string,
+    }
 
 export const galeries: Galerie[] = [
     {
@@ -17,7 +17,8 @@ export const galeries: Galerie[] = [
         longitude: "",
         latitude: "",
         google_maps: "https://www.google.com/maps/place/L'Ermitage-Les-Bains,+La+R%C3%A9union/@-21.0749003,55.21939,16z/data=!4m10!1m2!2m1!1sgoogle+maps+hermitage!3m6!1s0x218291787b44382b:0x59e8bf13deb35752!8m2!3d-21.0749003!4d55.2245398!15sChVnb29nbGUgbWFwcyBoZXJtaXRhZ2UiA4gBAZIBDHN1YmxvY2FsaXR5MeABAA!16s%2Fg%2F1q5bkxvf7?entry=ttu"
-    }, {
+    }, 
+    {
         id: 2,
         titre: "Mare à poule d'eau",
         src: './assets/images/galerie/mare_poule.jpg',

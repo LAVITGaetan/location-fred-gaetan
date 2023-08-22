@@ -1,5 +1,5 @@
 .page-product {
-    background: linear-gradient(to top left, #100e26, #537895 400%);
+    background: linear-gradient(to top left, #191645, #537895 400%);
     padding: 0 10%;
 }
 
@@ -76,7 +76,7 @@
 .page-product-recherche-bar-bouton {
     padding: 12px;
     color: #fff;
-    background-color: #4f45be;
+    background-color: #43C6AC;
     font-size: 1.125rem;
     display: flex;
     align-items: center;

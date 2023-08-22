@@ -20,13 +20,13 @@ const ELEMENT_DATA: Orders[] = [
     price: 179, priceTotal: 179,
     promo: 179,
     quantity: 1,
-    thumbnail: '',
+    thumbnail: '../../assets/images/product/qaou/Qaou-Sleeping-pad2-300x300.webp',
     weight: 2.1,
     weightTotal: 2.1
   },
-  { name: 'Tente Qaou V5 pack 6en1', nameRoute: 'Tente-Qaou-V5-pack-6en1', price: 239, priceTotal: 239, promo: 239, quantity: 1, thumbnail: '', weight: 3.3, weightTotal: 3.3 },
-  { name: 'Hamac double toit', nameRoute: 'Qaou-Hamac-double-toi-vert', price: 29, priceTotal: 29, promo: 29, quantity: 1, thumbnail: '', weight: 0.6, weightTotal: 0.6 },
-  /* { name: 'Matelas trek gonflable', nameRoute: 'Qaou-Matelas-Randonnée',  price: 45, priceTotal: 45 , promo: 45, quantity: 1,   thumbnail: '../../assets/images/product/qaou/Qaou-Sleeping-pad2-300x300.webp' , weight: 0.65, weightTotal : 0.65},*/
+  { name: 'Tente Qaou V5 pack 6en1', nameRoute: 'Tente-Qaou-V5-pack-6en1', price: 239, priceTotal: 239, promo: 239, quantity: 1, thumbnail: '../../assets/images/product/qaou/Qaou-Sleeping-pad2-300x300.webp', weight: 3.3, weightTotal: 3.3 },
+  { name: 'Hamac double toit', nameRoute: 'Qaou-Hamac-double-toi-vert', price: 29, priceTotal: 29, promo: 29, quantity: 1, thumbnail: '../../assets/images/product/qaou/Qaou-Sleeping-pad2-300x300.webp', weight: 0.6, weightTotal: 0.6 },
+  { name: 'Matelas trek gonflable', nameRoute: 'Qaou-Matelas-Randonnée',  price: 45, priceTotal: 45 , promo: 45, quantity: 1,   thumbnail: '../../assets/images/product/qaou/Qaou-Sleeping-pad2-300x300.webp' , weight: 0.65, weightTotal : 0.65},
 ];
 
 @Component({
