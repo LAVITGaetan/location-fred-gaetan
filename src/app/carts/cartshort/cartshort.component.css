@@ -1,5 +1,5 @@
 .cartshort-container {
-    margin: 20px;
+    width: 100%;
 }
 
 .cartshort-title {
@@ -23,9 +23,10 @@ font-size: 18px;
 }
 
 .cartshort-count {
-    color: #346abf;
+    color: #43C6AC;
 font-weight: 700;
-font-size: 16px;
+font-size: 18px;
+text-align: right;
 }
 
 .cartshort-row {
@@ -73,5 +74,16 @@ font-size: 16px;
 }
 
 .cartshort-action {
-    /* Styles pour le bouton "Valider mon panier" */
+    padding: 8px 12px;
+    background-color: #43C6AC;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 4px;
+    width:fit-content;
+}
+
+.cartshort-span-container {
+    display: flex;
+    justify-content: space-between;
 }

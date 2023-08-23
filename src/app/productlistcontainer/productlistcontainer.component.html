@@ -1,17 +1,22 @@
 <h2 class="product-page-title">Catalogue de Produits</h2>
 <div class="product-container">
-    <div class="product-card" *ngFor="let product of products.slice(produit_depart, produit_arrivee)">
-        <img [src]=product.image alt="" class="product-card-image">
-    <h3 class="product-card-title">{{ product.name }}</h3>
-    <div class="text-wrapper">
-        <button class="product-card-louer" (click)="ajouterItem(product)">Louer</button>
-        <a class="product-card-link" [title]="product.name + ' details'"
-        [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute, product.id]">
-            Infos
-            <!-- faire une modale -->
-        </a>
-    </div>
 
+    <div class="product-container-left">
+        <div class="product-list">
+            <div class="product-card" *ngFor="let product of products.slice(produit_depart, produit_arrivee)">
+                <img [src]=product.image alt="" class="product-card-image">
+                <h3 class="product-card-title">{{ product.name }}</h3>
+                <div class="text-wrapper">
+                    <button class="product-card-louer" (click)="ajouterItem(product)">Louer</button>
+                    <a class="product-card-link" [title]="product.name + ' details'"
+                        [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute, product.id]">
+                        Infos
+                        <!-- faire une modale -->
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="product-show-more" (click)="changeParam()">+</button>
+    </div>
+    <div class="product-container-right"><app-cartshort></app-cartshort></div>
 </div>
-</div>
-<button class="product-show-more" (click)="changeParam()">+</button>
