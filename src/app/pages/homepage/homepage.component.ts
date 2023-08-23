@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { relais } from 'src/assets/files/relai';
+import { composants } from 'src/assets/files/composant';
 
 @Component({
   selector: 'app-homepage',
@@ -8,4 +9,5 @@ import { relais } from 'src/assets/files/relai';
 })
 export class HomepageComponent {
   relais = relais;
+  composants = composants;
 }
