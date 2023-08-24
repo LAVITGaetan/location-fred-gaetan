@@ -9,11 +9,11 @@ export const composants: Composant[] = [
     {
         id: 1,
         name: 'titre-principal',
-        text: 'Profitez du bivouac,',
+        text: 'Nouveau titre,',
     },
     {
         id: 2,
         name: 'titre-secondaire',
-        text: 'À vous le confort.',
+        text: 'À nous le confort.',
     },
 ] 
