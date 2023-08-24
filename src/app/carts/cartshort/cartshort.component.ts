@@ -28,16 +28,23 @@ const order: Orders[] = [
 
 export interface Panier {
   id: number,
+  id_user: number,
   date_start: string,
   date_end: string,
-  products: Orders[]
+  id_relai: number
+  products: Orders[],
+  code_promo: string
+
 }
 
 const panier:  Panier = {
   id: 1,
+  id_user: 1,
+  id_relai: 1,
   date_start: '1212',
   date_end: '1414',
-  products: order
+  products: order,  
+  code_promo: "AXTT"
 }
 
 @Component({
@@ -45,6 +52,7 @@ const panier:  Panier = {
   templateUrl: './cartshort.component.html',
   styleUrls: ['./cartshort.component.css']
 })
+
 export class CartshortComponent {
   longueur: number = 0;
   items = panier.products;

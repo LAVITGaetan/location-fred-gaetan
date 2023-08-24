@@ -1,11 +1,10 @@
 <div class="cartshort-container">
-    {{ panier.id }}
-    {{ panier.date_start }}
-    {{ panier.date_end }}
-
     <h3 class="cartshort-title">Mon panier</h3>
     <div class="cartshort-content" *ngIf="items.length > 0">
         <div class="cartshort-span-container">
+            <p>Mes dates    {{ panier.date_start }}
+                {{ panier.date_end }}</p>
+                <p>Lieu de livraison {{ panier.id_relai }}</p>
             <p class="cartshort-subtitle">Ma liste :</p>
             <p class="cartshort-count">count produits</p>
         </div>
