@@ -4,7 +4,7 @@
     <div class="product-container-left">
         <div class="product-list">
             <div class="product-card" *ngFor="let product of products.slice(produit_depart, produit_arrivee)">
-                <img [src]=product.image alt="" class="product-card-image">
+                <img [src]=product.thumbnail alt="" class="product-card-image">
                 <h3 class="product-card-title">{{ product.name }}</h3>
                 <div class="text-wrapper">
                     <button class="product-card-louer" (click)="ajouterItem(product)">Louer</button>
