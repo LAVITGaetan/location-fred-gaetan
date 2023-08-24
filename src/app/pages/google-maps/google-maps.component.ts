@@ -12,13 +12,15 @@ Leaflet.Icon.Default.imagePath = 'assets/';
 export class GoogleMapsComponent  {
   
   map!: Leaflet.Map;
-  markers: Leaflet.Marker[] = [];
+  markers: Leaflet.Marker[] = []; 
+  customIconUrl = '../assets/images/frontend/marker-icon.png';
   options = {
     layers: [
       Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       })
     ],
+    
     zoom: 10,
     center: { lat: -21.1151, lng: 55.5364 }  }
 

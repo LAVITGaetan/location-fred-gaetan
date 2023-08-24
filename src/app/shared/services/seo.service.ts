@@ -5,7 +5,7 @@ import { Title, Meta } from '@angular/platform-browser';
   providedIn: 'root',
 })
 export class SeoService {
-  private titleBase: string = `Dtentes.re - `;
+  private titleBase: string = `LocIci - `;
 
   constructor(private title: Title, private meta: Meta) {}
 
@@ -14,10 +14,7 @@ export class SeoService {
   }
 
   public setDescription(description: string): void {
-    this.meta.updateTag(
-      { name: 'description', content: description },
-      'name=description'
-    );
+    this.meta.updateTag({ name: 'description', content: description });
   }
 
   public setKeywords(keywords: string[]): void {

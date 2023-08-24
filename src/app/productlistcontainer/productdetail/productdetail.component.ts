@@ -27,7 +27,7 @@ export class ProductdetailComponent {
     this.product = products.find(product => product.nameRoute === productIdFromRoute) || undefined;
     this.seo.setTitle(`Location ile de la réunion `);
     this.seo.setDescription(
-      'île de la réunion, Location'
+      `test`
     );
     this.route.params.subscribe(params => {
       const id_product = params['id'];
