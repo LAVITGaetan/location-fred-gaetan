@@ -13,6 +13,7 @@ import { GalerieimageComponent } from './galeries/galerieimage/galerieimage.comp
 import { GalerievideoComponent } from './galeries/galerievideo/galerievideo.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CartfullComponent } from './carts/cartfull/cartfull.component';
+import { GoogleMapsComponent } from './pages/google-maps/google-maps.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'cgv', component: CgvComponent },
   { path: 'mentions-legales', component: MentionsLegalesComponent },
   { path: 'panier', component: CartfullComponent },
+  { path: 'map', component: GoogleMapsComponent },
   { path: '**', component: NotfoundComponent }
 ];
 
