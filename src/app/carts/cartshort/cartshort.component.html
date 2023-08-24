@@ -1,4 +1,8 @@
 <div class="cartshort-container">
+    {{ panier.id }}
+    {{ panier.date_start }}
+    {{ panier.date_end }}
+
     <h3 class="cartshort-title">Mon panier</h3>
     <div class="cartshort-content" *ngIf="items.length > 0">
         <div class="cartshort-span-container">
@@ -8,7 +12,7 @@
 
         <div *ngFor="let item of items let i=index" class="cartshort-row">
             <div class="cartshort-row-image">
-                <img src="{{item.thumbnail}}" width="128px" height="128px" alt="{{ item.name }}">
+                <img src="{{item.thumbnail}}" width="64px" height="64px" alt="{{ item.name }}">
             </div>
             <div class="cart-short-row-side">
                 <div class="cartshort-row-name">{{ item.name }}</div>
@@ -23,6 +27,7 @@
         </div>
         <div class="cartshort-extra">Garantie et caution *</div>
         <div class="cartshort-action">Valider mon panier</div>
+        {{ totalTtc }}
     </div>
 
 </div>
