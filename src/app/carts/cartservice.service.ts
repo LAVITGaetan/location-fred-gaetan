@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Orders } from 'src/assets/files/order';
 import { relais } from 'src/assets/files/relai';
+import { PanierService } from '../shared/services/panier.service';
 
 export const ordered_products: Orders[] = [
 
@@ -15,9 +16,10 @@ export interface Panier {
   products: Orders[],
   code_promo: string,
   quantity: number,
+  total: number
 }
 
-const panier: Panier = {
+export const panier: Panier = {
   id: 1,
   id_user: 1,
   id_relai: 1,
@@ -26,12 +28,13 @@ const panier: Panier = {
   products: ordered_products,
   code_promo: "AXTT",
   quantity: 0,
+  total: 0
 }
-
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class CartService {
   items = panier.products;
   totalTtc = 0;
@@ -40,40 +43,44 @@ export class CartService {
   relais = relais
   ngOnInit() {
     this.totalTtc = this.items.map(item => item.price[0]).reduce((prev, curr) => prev + curr, 0);
-
   }
+  constructor(private panierService: PanierService) { }
 
   decrease(index: number) {
     if (this.items[index].quantity > 0) {
       this.items[index].quantity = this.items[index].quantity - 1
       this.panier.quantity -= 1
       this.calcSum()
-    }
-    else {
-      this.items.splice(index, 1)
+      if (this.items[index].quantity == 0) {
+        this.items.splice(index, 1)
+      }
     }
   }
   increase(index: number) {
     this.items[index].quantity = this.items[index].quantity + 1
     this.panier.quantity += 1
     this.calcSum()
+    this.panierService.updatePanierLength(panier.quantity);
   }
 
   clearOrderElement(id: number, quantity: number) {
     this.panier.quantity -= quantity
     this.items.splice(id, 1)
     this.calcSum()
+    this.panierService.updatePanierLength(panier.quantity);
 
     /* return this.items; */
   }
   clearOrders(id: number) {
     this.panier.quantity = 0
     this.items = [];
+    this.panierService.updatePanierLength(panier.quantity);
     return this.items;
   }
 
   calcSum() {
-    this.totalTtc = this.items.map(item => item.price[0]).reduce((prev, curr) => prev + curr, 0);
+    this.totalTtc = this.items.map(item => item.price[0] * item.quantity).reduce((prev, curr) => prev + curr, 0);
+    panier.total = this.totalTtc
   }
 
   addProduct(product: any) {
@@ -82,6 +89,7 @@ export class CartService {
     if (productToModify) {
       productToModify.quantity += 1
       this.calcSum()
+      this.panierService.updatePanierLength(panier.quantity);
       return
     }
     ordered_products.push({
@@ -99,6 +107,7 @@ export class CartService {
       weight: product.weight,
     })
     this.calcSum()
+    this.panierService.updatePanierLength(panier.quantity);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { composants } from 'src/assets/files/composant';
 
 @Component({
   selector: 'app-notificationbar',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./notificationbar.component.css']
 })
 export class NotificationbarComponent {
+  composants = composants
   composantVisible = false;
   ngOnInit(): void {
     setTimeout(() => {

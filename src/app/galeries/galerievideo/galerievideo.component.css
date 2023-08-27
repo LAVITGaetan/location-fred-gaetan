@@ -3,15 +3,22 @@
     color: #334155;
     font-weight: 700;
     line-height: 150%;
-    margin: 20px 10% 0 10%;
+    margin: 20px 7% 0 7%;
 }
 
 .video-page-subtitle {
     font-size: 20px;
     color: #444;
     font-weight: 500;
-    padding: 12px 10%;
+    padding: 12px 7%;
     line-height: 150%;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px 7%;
 }
 
 .video-card {
@@ -26,11 +33,4 @@
     padding: 16px 20px;
     color: #222;
     border-bottom: 3px solid #29afe2;
-}
-
-.video-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 30px 10%;
-}
+}   

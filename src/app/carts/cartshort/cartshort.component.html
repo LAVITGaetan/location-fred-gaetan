@@ -2,22 +2,20 @@
     <h3 class="cartshort-title">Mon panier</h3>
 
     <div class="cartshort-content">
-        <p>Du {{ panier.date_start }} au 
+        <p class="cartshort-date">Du {{ panier.date_start }} au
             {{ panier.date_end }}</p>
 
-            <label class="cartshort-label">Relai</label>
-            <select class="cartshort-input">
-                <option value="Selectionner" aria-disabled>D'où partez vous ?</option>
-                <option [value]="relais[0].id">{{ relais[0].name}}</option>
-                <option [value]="relais[1].id">{{ relais[1].name}}</option>
-                <option [value]="relais[2].id">{{ relais[2].name}}</option>
-                <option [value]="relais[3].id">{{ relais[3].name}}</option>
-            </select>
+        <select class="cartshort-input">
+            <option value="Selectionner" aria-disabled>Point de relai</option>
+            <option [value]="relais[0].id">{{ relais[0].name}}</option>
+            <option [value]="relais[1].id">{{ relais[1].name}}</option>
+            <option [value]="relais[2].id">{{ relais[2].name}}</option>
+            <option [value]="relais[3].id">{{ relais[3].name}}</option>
+        </select>
 
-        <p class="cartshort-subtitle">Total d'articles : <span class="cartshort-count">{{ panier.quantity }}</span></p>
-            <div *ngFor="let item of items let i=index" class="cartshort-row">
-                <button class="cartshort-row-delete" aria-label="Remove"
-                (click)="clearOrderElement(i, item.quantity)">
+        <div class="cartshort-count">{{ panier.quantity }} article<span *ngIf="panier.quantity > 1">s</span></div>
+        <div *ngFor="let item of items let i=index" class="cartshort-row">
+            <button class="cartshort-row-delete" aria-label="Remove" (click)="clearOrderElement(i, item.quantity)">
                 x
             </button>
             <div class="cartshort-row-image">
@@ -37,8 +35,7 @@
             </div>
 
         </div>
-        <div class="cartshort-extra">Garantie et caution *</div>
-        <div class="cartshort-price">Total: {{ totalTtc }} €</div>
+        <div class="cartshort-price">Total: {{ panier.total }} €</div>
         <div class="cartshort-action">Valider mon panier</div>
     </div>
 

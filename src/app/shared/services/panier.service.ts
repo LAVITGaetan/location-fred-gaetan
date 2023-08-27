@@ -1,32 +1,23 @@
-import { HttpClient } from '@angular/common/http';
-import { Product } from '../../../assets/files/product';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { panier } from 'src/app/carts/cartservice.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PanierService {
-  items: Product[] = [];
+  private panier_length: BehaviorSubject<number> = new BehaviorSubject<number>(panier.quantity);
+  private panier_total: BehaviorSubject<number> = new BehaviorSubject<number>(panier.products.map(item => item.price[0] * item.quantity).reduce((prev, curr) => prev + curr, 0));
 
-  constructor(
-    private http: HttpClient
-  ) {}
-
-  // getShippingPrices() {
-  //   return this.http.get<{type: string, price: number}[]>('/assets/shipping.json');
-  // }
-
-  addToPanier(product: Product) {
-    this.items.push(product);
+  updatePanierLength(newValue: number) {
+    this.panier_length.next(newValue);
   }
 
-  getItems() {
-    return this.items;
+  getSharedVariable() {
+    return this.panier_length.asObservable();
   }
-
-  clearPanier() {
-    this.items = [];
-    return this.items;
+  
+  getPanierTotal() {
+    return this.panier_total.asObservable();
   }
-/* . . . */
 }

@@ -4,7 +4,7 @@
   }
 
   .page-header {
-    padding: 20px 10%;
+    padding: 20px 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,6 +26,23 @@
     padding: 16px 24px;
     border-radius: 4px;
     font-weight: bold;
+    position: relative;
+  }
+
+  .toolbar-panier-count {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #29afe2;
+    border-radius: 50px;
+    top: calc(50% - 12px);
+    right: -12px;
   }
 
   .svg-icon {

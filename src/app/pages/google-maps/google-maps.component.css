@@ -1,4 +1,18 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 40px 7%;
+}
+
 .map-container {
-  height: 80vh;
-  margin: 40px 10%;
+  width: 48%;
+  min-height: 50vh;
+}
+
+.image-container {
+  width: 48%;
+  min-height: 50vh;
 }

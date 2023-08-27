@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CartService } from '../cartservice.service';
 import { relais } from 'src/assets/files/relai';
+import { PanierService } from 'src/app/shared/services/panier.service';
 
 @Component({
   selector: 'app-cartshort',
@@ -13,10 +14,12 @@ export class CartshortComponent {
   relais = relais
   items = this.cartService.items
   totalTtc = this.cartService.totalTtc
-  constructor(private cartService: CartService) { }
-
-  ngOnChange(): void {
-  this.totalTtc = this.cartService.totalTtc
+  panier_total:number = 0
+  constructor(private cartService: CartService, private panierService: PanierService) { }
+  ngOnInit() {
+    this.panierService.getPanierTotal().subscribe(value => {
+      this.panier_total = value;
+    });
   }
 
   increase(index: number) {

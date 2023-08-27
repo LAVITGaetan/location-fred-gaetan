@@ -1,6 +1,8 @@
-<div class="map-container"
-  leaflet
-  [leafletOptions]="options"
-  (leafletMapReady)="onMapReady($event)"
-  (leafletClick)="mapClicked($event)">
+<div class="flex-container">
+  <div class="map-container" leaflet [leafletOptions]="options" (leafletMapReady)="onMapReady($event)"
+    (leafletClick)="mapClicked($event)">
+  </div>
+  <div class="image-container">
+    <img src="../assets/images/frontend/geo_carte-webp_850x520.webp" alt="map">
+  </div>
 </div>

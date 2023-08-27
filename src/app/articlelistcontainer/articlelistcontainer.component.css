@@ -3,14 +3,14 @@
     color: #334155;
     font-weight: 700;
     line-height: 150%;
-    margin: 20px 10% 0 10%;
+    margin: 20px 7% 0 7%;
 }
 
 .article-page-tag-container {
     font-size: 20px;
     color: #444;
     font-weight: 500;
-    padding: 12px 10%;
+    padding: 12px 7%;
     line-height: 150%;
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +32,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 10%;
+    padding: 20px 7%;
 
 }
 
@@ -131,7 +131,7 @@
 
 .article-show-more {
     padding: 12px;
-    margin: 0 10%;
+    margin: 0 7%;
     background-color: #29afe2;
     outline: none;
     border: none;

@@ -1,6 +1,6 @@
 .page-product {
     background: linear-gradient(to top left, #162445, #537895 400%);
-    padding: 0 10%;
+    padding: 0 7%;
 }
 
 /* Parent GRID */
@@ -40,7 +40,7 @@
     display: flex;
     z-index: 10;
     flex-wrap: wrap;
-    margin-right: 10%;
+    margin-right: 7%;
 }
 
 .page-product-recherche-bar-location {
@@ -201,5 +201,5 @@
 .homepage-extrabar {
     width: 100%;
     background-color: #F1F5F9;
-    padding: 32px 10%;
+    padding: 32px 7%;
 }

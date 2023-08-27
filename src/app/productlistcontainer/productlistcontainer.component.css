@@ -1,6 +1,6 @@
 .product-container {
     display: flex;
-    padding: 16px 10% 0 10%;
+    padding: 16px 7% 0 7%;
 }
 
 .product-container-left {
@@ -17,7 +17,7 @@
     color: #334155;
     font-weight: 700;
     line-height: 150%;
-    margin: 20px 10% 8px 10%;
+    margin: 20px 7% 8px 7%;
 }
 
 .product-list {
@@ -39,12 +39,12 @@
     border-radius: 4px;
     height: fit-content;
     position: relative;
-    padding: 12px;
+    padding: 24px;
 }
 
 .product-card-image {
-    width: 128px;
-    height: 128px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     object-position: left;
     margin-bottom: 12px;
