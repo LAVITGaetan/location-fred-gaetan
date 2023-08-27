@@ -37,18 +37,21 @@ export class CartService {
   totalTtc = 0;
   codePromo = 'Camping974'
   panier = panier
-relais = relais
+  relais = relais
   ngOnInit() {
     this.totalTtc = this.items.map(item => item.price[0]).reduce((prev, curr) => prev + curr, 0);
-    
+
   }
 
   decrease(index: number) {
     if (this.items[index].quantity > 0) {
       this.items[index].quantity = this.items[index].quantity - 1
       this.panier.quantity -= 1
-    this.calcSum()
-  }
+      this.calcSum()
+    }
+    else {
+      this.items.splice(index, 1)
+    }
   }
   increase(index: number) {
     this.items[index].quantity = this.items[index].quantity + 1
@@ -57,10 +60,10 @@ relais = relais
   }
 
   clearOrderElement(id: number, quantity: number) {
-    this.panier.quantity -=  quantity
+    this.panier.quantity -= quantity
     this.items.splice(id, 1)
     this.calcSum()
-    
+
     /* return this.items; */
   }
   clearOrders(id: number) {
@@ -78,8 +81,8 @@ relais = relais
     const productToModify = ordered_products.find(el => el.name === product.name)
     if (productToModify) {
       productToModify.quantity += 1
-    this.calcSum()
-    return
+      this.calcSum()
+      return
     }
     ordered_products.push({
       name: product.name,

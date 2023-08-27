@@ -16,23 +16,23 @@
 
         <p class="cartshort-subtitle">Total d'articles : <span class="cartshort-count">{{ panier.quantity }}</span></p>
             <div *ngFor="let item of items let i=index" class="cartshort-row">
+                <button class="cartshort-row-delete" aria-label="Remove"
+                (click)="clearOrderElement(i, item.quantity)">
+                x
+            </button>
             <div class="cartshort-row-image">
                 <img src="{{item.thumbnail}}" width="80px" height="80px" alt="{{ item.name }}">
             </div>
             <div class="cart-short-row-side">
                 <div class="cartshort-row-name">{{ item.name }}</div>
-                <div class="cartshort-row-price">Prix: {{ item.price[0] * item.quantity }}€ / jour</div>
-                <div class="cartshort-row-weight">Poids: {{ item.weight * item.quantity }}kg</div>
+                <div class="cartshort-row-price">Prix: {{ item.price[0] * item.quantity }}€</div>
                 <div class="cartshort-row-actions">
                     <div class="cartshort-row-quantity">
                         <button class="cartshort-row-decrease" (click)="decrease(i)">-</button>
                         <span class="cartshort-row-span">{{ item.quantity }}</span>
                         <button class="cartshort-row-increase" (click)="increase(i)">+</button>
                     </div>
-                    <button class="cartshort-row-delete" aria-label="Remove"
-                        (click)="clearOrderElement(i, item.quantity)">
-                        x
-                    </button>
+
                 </div>
             </div>
 

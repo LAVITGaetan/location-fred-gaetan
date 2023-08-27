@@ -14,12 +14,13 @@
 
 .cartshort-content {
     padding: 20px;
-    box-shadow: 0 5px 10px 2px #16244510;
+    background-color: #F1F5F9;
 }
 
 .cartshort-subtitle {
     color: #333;
     font-size: 18px;
+    margin-bottom: 12px;
 }
 
 .cartshort-count {
@@ -31,19 +32,30 @@
 
 .cartshort-row {
     background-color: #FFF;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     display: flex;
+    position: relative;
+    padding: 12px;
 }
 
 .cartshort-row-image {
     width: 80px;
     height: 80px;
+    margin-right: 12px;
+}
+
+.cartshort-row-name {
+    font-size: 16px;
+    color: #162445;
+    font-weight: 600;
+    margin-bottom: 6px;
 }
 
 .cartshort-row-price {
     font-size: 16px;
     color: #162445;
-    font-weight: 600;
+    margin-bottom: 6px;
+    font-weight: 500;
 }
 
 .cartshort-row-delete {
@@ -58,13 +70,18 @@
     font-size: 18px;
     font-weight: 500;
     color: #fff;
+    line-height: 0;
     cursor: pointer;
-    border-radius: 4px;
+    font-family: Lexend;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .cartshort-row-decrease, .cartshort-row-increase {
     background-color: #F1F5F9;
     height: 24px;
+    font-family: Lexend;
     width: 24px;
     outline: none;
     border: none;
@@ -86,4 +103,11 @@
     font-weight: 500;
     border-radius: 4px;
     width: fit-content;
+}
+
+.cartshort-row-quantity {
+    width: 80px;
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-between;
 }
