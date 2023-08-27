@@ -1,23 +1,36 @@
 <div class="cartshort-container">
     <h3 class="cartshort-title">Mon panier</h3>
-    <div class="cartshort-content" *ngIf="items.length > 0">
-        <div class="cartshort-span-container">
-            <p>Mes dates    {{ panier.date_start }}
-                {{ panier.date_end }}</p>
-                <p>Lieu de livraison {{ panier.id_relai }}</p>
-            <p class="cartshort-subtitle">Ma liste :</p>
-            <p class="cartshort-count">count produits</p>
-        </div>
 
-        <div *ngFor="let item of items let i=index" class="cartshort-row">
+    <div class="cartshort-content">
+        <p>Du {{ panier.date_start }} au 
+            {{ panier.date_end }}</p>
+
+            <label class="cartshort-label">Relai</label>
+            <select class="cartshort-input">
+                <option value="Selectionner" aria-disabled>D'où partez vous ?</option>
+                <option [value]="relais[0].id">{{ relais[0].name}}</option>
+                <option [value]="relais[1].id">{{ relais[1].name}}</option>
+                <option [value]="relais[2].id">{{ relais[2].name}}</option>
+                <option [value]="relais[3].id">{{ relais[3].name}}</option>
+            </select>
+
+        <p class="cartshort-subtitle">Total d'articles : <span class="cartshort-count">{{ panier.quantity }}</span></p>
+            <div *ngFor="let item of items let i=index" class="cartshort-row">
             <div class="cartshort-row-image">
-                <img src="{{item.thumbnail}}" width="64px" height="64px" alt="{{ item.name }}">
+                <img src="{{item.thumbnail}}" width="80px" height="80px" alt="{{ item.name }}">
             </div>
             <div class="cart-short-row-side">
                 <div class="cartshort-row-name">{{ item.name }}</div>
-                <div class="cartshort-row-price">{{ item.price }} €</div>
+                <div class="cartshort-row-price">Prix: {{ item.price[0] * item.quantity }}€ / jour</div>
+                <div class="cartshort-row-weight">Poids: {{ item.weight * item.quantity }}kg</div>
                 <div class="cartshort-row-actions">
-                    <button class="cartshort-row-delete" aria-label="Remove" (click)="clearOrderElement(i)">
+                    <div class="cartshort-row-quantity">
+                        <button class="cartshort-row-decrease" (click)="decrease(i)">-</button>
+                        <span class="cartshort-row-span">{{ item.quantity }}</span>
+                        <button class="cartshort-row-increase" (click)="increase(i)">+</button>
+                    </div>
+                    <button class="cartshort-row-delete" aria-label="Remove"
+                        (click)="clearOrderElement(i, item.quantity)">
                         x
                     </button>
                 </div>
@@ -25,8 +38,8 @@
 
         </div>
         <div class="cartshort-extra">Garantie et caution *</div>
+        <div class="cartshort-price">Total: {{ totalTtc }} €</div>
         <div class="cartshort-action">Valider mon panier</div>
-        {{ totalTtc }}
     </div>
 
 </div>

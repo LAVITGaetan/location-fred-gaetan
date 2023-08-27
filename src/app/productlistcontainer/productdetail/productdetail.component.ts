@@ -11,9 +11,6 @@ import { products, Product } from 'src/assets/files/product';
 })
 export class ProductdetailComponent {
 
-
-
-
   constructor(private route: ActivatedRoute, private seo: SeoService, private sanitizer: DomSanitizer) { }
   product: Product | undefined;
   products = products

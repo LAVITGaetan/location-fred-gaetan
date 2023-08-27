@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     height: 60px;
-    background: linear-gradient(to top left, #191645, #537895 400%);
+    background: linear-gradient(to top left, #162445, #537895 400%);
 }
 
 .notification-text {
@@ -24,7 +24,7 @@
     font-size: 14px;
     font-weight: 600;
 cursor: pointer;
-background-color: #43C6AC;
+background-color: #29afe2;
 }
 
 .notification-close {
@@ -38,5 +38,5 @@ cursor: pointer;
 }
 
 .notification-bar-displayed {
-    background-color: #43C6AC;
+    background-color: #29afe2;
 }

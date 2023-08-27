@@ -1,5 +1,5 @@
 footer {
-    background: #191645;
+    background: #162445;
     color: #fff;
     position: relative;
     padding-top: 40px;
@@ -87,7 +87,7 @@ footer {
   .footer-extra{
     background-color: #fff;
     padding: 20px;
-    color: #191645;
+    color: #162445;
  }
 
  .image_performance_google_web_speed{
@@ -113,8 +113,8 @@ footer {
  }
 
  .footer-extra-link {
-    text-decoration: underline 2px solid #191645;
-    color: #191645;
+    text-decoration: underline 2px solid #162445;
+    color: #162445;
  }
 
  .flex-container {

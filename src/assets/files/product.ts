@@ -117,10 +117,10 @@ export const products: Product[] = [
       '',
     ],
     price: [
-      50,
-      200,
-      500,
-      1000,
+      70,
+      140,
+      280,
+      300,
     ],
     weight: 50,
     avisweb: 'top',
@@ -146,7 +146,7 @@ export const products: Product[] = [
       '',
     ],
     price: [
-      50,
+      40,
       200,
       500,
       1000,
@@ -175,7 +175,7 @@ export const products: Product[] = [
       '../assets/images/product/tentedetoit/soft/tente-de-toit-soft-E.webp',
     ],
     price: [
-      50,
+      20,
       200,
       500,
       1000,
@@ -204,7 +204,7 @@ export const products: Product[] = [
       ''
     ],
     price: [
-      50,
+      90,
       200,
       500,
       1000,
@@ -219,7 +219,7 @@ export const products: Product[] = [
   },
 ];
 
-const stocks: Stock[] = [
+export const stocks: Stock[] = [
   {
     id: 1,
     id_product: 1,
