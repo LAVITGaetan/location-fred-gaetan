@@ -1,28 +1,12 @@
-<h1 class="video-page-title">Découvrez nos tutoriels dédiés à l'assemblage de vos équipements de randonnée</h1>
+<h1 class="video-page-title">Découvrez nos tutoriels dédiés à l'assemblage de vos équipements de randonnée et quelques moments partagés</h1>
 <h2 class="video-page-subtitle">Utilisez nos ressources pour simplifier le processus de montage de vos équipements, que ce soit pour la randonnée ou d'autres activités.</h2>
 <div class="video-container">
-  <div class="video-card">
-    <div class="video-card-iframe">
-      <iframe [src]="getEmbedUrl(videos[0].src)" frameborder="0"
+  <div class="video-card" *ngFor="let video of videos">
+   <!-- <div class="video-card-iframe"> -->
+      <iframe [src]="getEmbedUrl(video.src)" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
       </iframe>
-    </div>
-    <h3 class="video-card-title"> {{ videos[0].titre }}</h3>
-  </div>
-  <div class="video-card">
-    <div class="video-card-iframe">
-      <iframe [src]="getEmbedUrl(videos[0].src)" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-      </iframe>
-    </div>
-    <h3 class="video-card-title"> {{ videos[0].titre }}</h3>
-  </div>
-  <div class="video-card">
-    <div class="video-card-iframe">
-      <iframe [src]="getEmbedUrl(videos[0].src)" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-      </iframe>
-    </div>
-    <h3 class="video-card-title"> {{ videos[0].titre }}</h3>
+   <!-- </div> -->
+    <h3 class="video-card-title"> {{ video.titre }}</h3>
   </div>
 </div>

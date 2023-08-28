@@ -1,6 +1,19 @@
-<div class="product-detail-container" *ngIf="product">
-        <h1 class="product-detail-title">{{ product.name }}</h1>
-        <div class="product-detail-description" [innerHTML]="product.description_long"></div>
-        <div class="product-detail-weight">Poids: {{ product.weight }} kg</div>
-        <div class="product-detail-price">Caution: {{ product.caution }} €</div>
+<div class="product-container" *ngIf="product">
+        <div class="product-galerie-container">
+                <div class="galerie-image0"><img class="galerie-image" [src]="product.thumbnail" alt=""></div>
+                <div class="galerie-image1"></div>
+                <div class="galerie-image2"></div>
+                <div class="galerie-image3"></div>
+                <div class="galerie-image4"></div>
+                <div class="galerie-image5"></div>
+                <div class="galerie-left-action"></div>
+                <div class="galerie-right-action"></div>
+        </div>
+        <div class="product-detail-container">
+                <h1 class="product-detail-title">{{ product.name }}</h1>
+                <h2 class="product-detail-subtitle">Description</h2>
+                <div class="product-detail-description" [innerHTML]="product.description_long"></div>
+                <div class="product-detail-weight">Poids: {{ product.weight }} kg</div>
+                <div class="product-detail-price">Caution: {{ product.caution }} €</div>
+        </div>
 </div>

@@ -29,3 +29,21 @@ body {
     background: linear-gradient(to top right,#29afe2,#77cef0);
     border: 0px solid transparent;
 }
+
+/* style des descriptions de produits*/
+
+.product-detail-subtitle {
+    font-size: 22px;
+    color: #334155;
+    line-height: 150%;
+    border-left: 4px solid #29afe2;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    padding-left: 4px;
+}
+
+.product-detail-list {
+margin-left: 20px;
+list-style-type: circle;
+color: #222;
+}
