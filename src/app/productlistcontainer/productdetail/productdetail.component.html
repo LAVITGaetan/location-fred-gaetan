@@ -1,7 +1,6 @@
-<div class="product-detail-container" *ngFor="let product of products">
-    <div *ngIf="(product.id == id_product)">
+<div class="product-detail-container" *ngIf="product">
         <h1 class="product-detail-title">{{ product.name }}</h1>
-        <h2 class="product-detail-subtitle">{{ product.caution }}</h2>
-
-    </div>
+        <div class="product-detail-description" [innerHTML]="product.description_long"></div>
+        <div class="product-detail-weight">Poids: {{ product.weight }} kg</div>
+        <div class="product-detail-price">Caution: {{ product.caution }} €</div>
 </div>

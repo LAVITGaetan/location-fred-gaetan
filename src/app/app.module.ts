@@ -23,6 +23,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { CartfullComponent } from './carts/cartfull/cartfull.component';
 import { CartshortComponent } from './carts/cartshort/cartshort.component';
 import { NotificationbarComponent } from './layout/notificationbar/notificationbar.component';
+import { EnigmeComponent } from './layout/enigme/enigme.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { NotificationbarComponent } from './layout/notificationbar/notificationb
     AboutComponent,
     CartfullComponent,
     CartshortComponent,
-    NotificationbarComponent
+    NotificationbarComponent,
+    EnigmeComponent
   ],
   imports: [
     BrowserModule,

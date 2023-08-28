@@ -8,7 +8,7 @@
 <section class="article-container">
     <article class="article-card" *ngFor="let article of articles.slice(article_depart, article_arrivee)">
         <div class="article-card-header">
-            <img class="article-card-header-image" src="../assets/images/frontend/{{ article.image_large}}"
+            <img class="article-card-header-image" src="./assets/images/frontend/{{ article.image_large}}"
                 alt="hiking image">
             <div class="article-card-timer"> {{ article.temps_de_lecture }}</div>
             <div class="article-card-tags">
