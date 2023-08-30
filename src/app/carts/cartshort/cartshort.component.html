@@ -27,9 +27,9 @@
                 <div class="cartshort-row-price">Prix: {{ item.price[0] * item.quantity }}€</div>
                 <div class="cartshort-row-actions">
                     <div class="cartshort-row-quantity">
-                        <button class="cartshort-row-decrease" (click)="decrease(i)">-</button>
+                        <button class="cartshort-row-decrease" (click)="decreaseFromId(item.id)">-</button>
                         <span class="cartshort-row-span">{{ item.quantity }}</span>
-                        <button class="cartshort-row-increase" (click)="increase(i)">+</button>
+                        <button class="cartshort-row-increase" (click)="increaseFromId(item.id)">+</button>
                     </div>
 
                 </div>

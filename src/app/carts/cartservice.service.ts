@@ -41,23 +41,28 @@ export class CartService {
   codePromo = 'Camping974'
   panier = panier
   relais = relais
+  item_exist: any
   ngOnInit() {
     this.totalTtc = this.items.map(item => item.price[0]).reduce((prev, curr) => prev + curr, 0);
   }
   constructor(private panierService: PanierService) { }
 
-  decrease(index: number) {
-    if (this.items[index].quantity > 0) {
-      this.items[index].quantity = this.items[index].quantity - 1
+  // Increase and decrease with id
+  decreaseFromId(id: number) {
+    let item = this.items.find(el => el.id == id) || { quantity: 0 }
+    if (item.quantity > 0) {
+      item.quantity = item.quantity - 1
       this.panier.quantity -= 1
       this.calcSum()
-      if (this.items[index].quantity == 0) {
+      if (item.quantity == 0) {
+        const index = this.items.findIndex(item => item.id === id);
         this.items.splice(index, 1)
       }
     }
   }
-  increase(index: number) {
-    this.items[index].quantity = this.items[index].quantity + 1
+  increaseFromId(id: number) {
+    let item = this.items.find(el => el.id == id) || { quantity: 0 }
+    item.quantity = item.quantity + 1
     this.panier.quantity += 1
     this.calcSum()
     this.panierService.updatePanierLength(panier.quantity);
@@ -68,8 +73,6 @@ export class CartService {
     this.items.splice(id, 1)
     this.calcSum()
     this.panierService.updatePanierLength(panier.quantity);
-
-    /* return this.items; */
   }
   clearOrders(id: number) {
     this.panier.quantity = 0
@@ -83,16 +86,17 @@ export class CartService {
     panier.total = this.totalTtc
   }
 
-  addProduct(product: any) {
-    this.panier.quantity += 1
+  addProduct(product: any, quantity: number) {
+    this.panier.quantity += quantity
     const productToModify = ordered_products.find(el => el.name === product.name)
     if (productToModify) {
-      productToModify.quantity += 1
+      productToModify.quantity += quantity
       this.calcSum()
       this.panierService.updatePanierLength(panier.quantity);
       return
     }
     ordered_products.push({
+      id: ordered_products.length + 1,
       name: product.name,
       nameRoute: product.nameRoute,
       price: [
@@ -102,12 +106,22 @@ export class CartService {
         product.price[3],
       ],
       promo: product.promo,
-      quantity: 1,
+      quantity: quantity,
       thumbnail: product.thumbnail,
       weight: product.weight,
     })
     this.calcSum()
     this.panierService.updatePanierLength(panier.quantity);
+  }
+
+  addFromDetail(id: number, quantity: number, product: object) {
+    const item_exist = this.items.find(el => el.id == id) || undefined
+    if (item_exist != undefined) {
+      this.item_exist += quantity
+    } else {
+      this.addProduct(product, quantity)
+    }
+    this.calcSum()
   }
 
 }

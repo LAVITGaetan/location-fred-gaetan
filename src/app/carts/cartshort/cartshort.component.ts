@@ -22,12 +22,12 @@ export class CartshortComponent {
     });
   }
 
-  increase(index: number) {
-    this.cartService.increase(index);
+  increaseFromId(id: number) {
+    this.cartService.increaseFromId(id);
   }
 
-  decrease(index: number) {
-    this.cartService.decrease(index);
+  decreaseFromId(id: number) {
+    this.cartService.decreaseFromId(id);
   }
 
   clearOrderElement(id: number, quantity: number) {

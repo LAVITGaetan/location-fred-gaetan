@@ -46,7 +46,7 @@ import { EnigmeComponent } from './layout/enigme/enigme.component';
     CartfullComponent,
     CartshortComponent,
     NotificationbarComponent,
-    EnigmeComponent
+    EnigmeComponent,
   ],
   imports: [
     BrowserModule,

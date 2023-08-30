@@ -39,7 +39,7 @@ export class ProductlistcontainerComponent {
   }
 
   ajouterItem(product: any) {
-    this.cartService.addProduct(product)
+    this.cartService.addProduct(product, 1)
   }
 
 
