@@ -4,7 +4,7 @@
     grid-template-rows: repeat(3, 225px);
     grid-column-gap: 32px;
     grid-row-gap: 32px;
-    margin: 32px 7%;
+    margin: 32px 7.5%;
 }
 
 .galerie-page-title {
@@ -12,7 +12,7 @@
     color: #334155;
     font-weight: 700;
     line-height: 150%;
-    margin: 20px 7% 0 7%;
+    margin: 20px 7.5% 0 7.5%;
 }
 
 .galerie-page-subtitle {
@@ -20,7 +20,7 @@
     color: #444;
     font-weight: 500;
     line-height: 160%;
-    padding: 12px 7%;
+    padding: 12px 7.5%;
 }
 
 .galerie-card {

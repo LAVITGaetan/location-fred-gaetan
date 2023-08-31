@@ -2,13 +2,13 @@
     font-size: 28px;
     color: #222;
     font-weight: 700;
-    padding: 48px 7% 0 7%;
+    padding: 48px 7.5% 0 7.5%;
 }
 
 .about-profil-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px 7%;
+    padding: 30px 7.5%;
     justify-content: space-between;
 }
 

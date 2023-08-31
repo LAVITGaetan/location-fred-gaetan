@@ -42,5 +42,22 @@ export class ProductlistcontainerComponent {
     this.cartService.addProduct(product, 1)
   }
 
+  showProductModal(product: any) {
+    let modal_box = document.getElementById('product-modal')
+    let modal_title = document.getElementById('product-modal-title')
+    if(modal_box) {
+      modal_box.style.display = 'block'
+    }
+    if(modal_title) {
+      modal_title.innerHTML = product.name
+    }
+  }
+
+  closeProductModal() {
+    let modal_box = document.getElementById('product-modal')
+    if(modal_box) {
+      modal_box.style.display = 'none'
+    }
+  }
 
 }

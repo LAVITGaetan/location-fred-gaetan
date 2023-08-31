@@ -1,25 +1,36 @@
+<div id="youtube-modal">
+        <div id="youtube-modal-close" (click)="closeYoutubeModal()">X</div>
+        <!-- <h4 id="youtube-modal-title"></h4> -->
+        <iframe id="youtube-modal-iframe" frameborder="0"></iframe>
+</div>
+
+
 <div class="product-container" *ngIf="product">
         <div class="product-galerie-container">
-                <div class="galerie-image0"><img class="galerie-image" [src]="product.thumbnail" alt=""></div>
-                <div class="galerie-image1">
-                        <h2 *ngIf="product.video">{{product.video[0]}}</h2>
+                <div class="galerie-image-main"><img id="main-image" class="galerie-image" [src]="product.thumbnail" alt="">
                 </div>
-                <div class="galerie-image2"><img class="galerie-image" [src]="product.thumbnail" alt=""></div>
-                <div class="galerie-image3"><img class="galerie-image" [src]="product.thumbnail" alt=""></div>
-                <div class="galerie-image4"><img class="galerie-image" [src]="product.thumbnail" alt=""></div>
-                <div class="galerie-image5"><img class="galerie-image" [src]="product.thumbnail" alt=""></div>
+                <div class="galerie-image-row">
+                        <div class="galerie-video-item" *ngIf="product.video[0]" (click)="displayYoutubeModal(product.video[0], product.video[1])">
+                                <img src="./assets/images/frontend/icon-youtube.png" alt="youtube" width="90px" height="90px">
+                        </div>
+                        <div class="galerie-image-item" *ngFor="let image of product.images let i= index" (click)="selectImage(product.images[i])">
+                                <img width="100px" height="100px" class="galerie-image-pic" [src]="product.images[i]" alt="">
+                        </div>
+                </div>
+
         </div>
         <div class="product-detail-container">
                 <h1 class="product-detail-title">{{ product.name }}</h1>
                 <h2 class="product-detail-subtitle">Description</h2>
                 <div class="product-detail-description" [innerHTML]="product.description_long"></div>
-                <div class="product-detail-price">{{ product.weight }} kg</div>
-                <div class="product-detail-weight">{{ product.caution }} €</div>
+                <div class="product-detail-weight">{{ product.weight }} kg</div>
+                <div class="product-detail-price">{{ product.price.day }} €</div>
                 <div class="product-detail-quantity"><span>Quantité</span>
                         <button class="product-detail-quantity-action" (click)="modifyQuantity('decrease')">-</button>
                         <span class="product-detail-quantity-count">{{item_quantity}}</span>
                         <button class="product-detail-quantity-action" (click)="modifyQuantity('increase')">+</button>
                 </div>
-                <div class="product-detail-action" (click)="addToCart(product.id, item_quantity, product)">Ajouter au panier</div>
+                <div class="product-detail-action" (click)="addToCart(product.id, item_quantity, product)">Ajouter au
+                        panier</div>
         </div>
 </div>

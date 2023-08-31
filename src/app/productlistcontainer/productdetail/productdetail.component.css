@@ -1,18 +1,18 @@
 .product-container {
-    padding: 20px 7% 20px 7%;
+    padding: 20px 7.5% 20px 7.5%;
     display: flex;
     flex-wrap: wrap;
 }
 
 .product-galerie-container {
     width: 500px;
-    background-color: #F1F5F9;
-    display: grid;
-    grid-template-columns: repeat(5, 100px);
-    grid-template-rows: 500px 100px;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    height: 600px;
+    min-height: 600px;
+}
+
+.galerie-image-main {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 .galerie-image {
@@ -21,12 +21,27 @@
     object-fit: cover;
 }
 
-.galerie-image0 { grid-area: 1 / 1 / 2 / 6; }
-.galerie-image1 { grid-area: 2 / 1 / 3 / 2; }
-.galerie-image2 { grid-area: 2 / 2 / 3 / 3; }
-.galerie-image3 { grid-area: 2 / 3 / 3 / 4; }
-.galerie-image4 { grid-area: 2 / 4 / 3 / 5; }
-.galerie-image5 { grid-area: 2 / 5 / 3 / 6; }
+.galerie-image-row {
+    width: 100%;
+    min-height: 100px;
+    background-color: #F1F6F9;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.galerie-image-item {
+    width: 100px;
+    height: 100%;
+}
+
+.galerie-image-pic {
+    object-fit: cover;
+}
+
+.galerie-video-item {
+    width: 100px;
+    height: 100%;
+}
 
 .product-detail-container {
     width: calc(100% - 500px);
@@ -48,7 +63,7 @@
     margin-bottom: 20px;
 }
 
-.product-detail-price, .product-detail-weight{
+.product-detail-price, .product-detail-weight {
     font-size: 22px;
     color: #334155;
     line-height: 150%;
@@ -57,6 +72,7 @@
     border-left: 4px solid #29afe2;
     padding-left: 5px;
 }
+
 .product-detail-quantity {
     font-size: 18px;
     color: #222;
@@ -96,14 +112,56 @@
 
 
 @media screen and (max-width: 1300px) {
-    
-.product-galerie-container {
-order: 1;
-}
 
-.product-detail-container {
-    order: 0;
-    width: 100%;
+    .product-galerie-container {
+        order: 1;
     }
 
+    .product-detail-container {
+        order: 0;
+        width: 100%;
+    }
+
+}
+
+/*youtube modal*/
+
+#youtube-modal {
+    width: 500px;
+    display: none;
+    position: fixed;
+    height: 350px;
+    top: calc(50vh - 250px);
+    left: calc(50vw - 250px);
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0 0 0 10000px #16244590;
+}
+
+#youtube-modal-close {
+    width: 100%;
+    height: 50px;
+    background-color: #162445;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+#youtube-modal-title {
+    font-size: 20px;
+    color: #162445;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#youtube-modal-iframe {
+    width: 100%;
+    height: 300px;
 }

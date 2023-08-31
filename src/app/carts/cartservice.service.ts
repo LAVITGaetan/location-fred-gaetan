@@ -43,7 +43,7 @@ export class CartService {
   relais = relais
   item_exist: any
   ngOnInit() {
-    this.totalTtc = this.items.map(item => item.price[0]).reduce((prev, curr) => prev + curr, 0);
+    this.totalTtc = this.items.map(item => item.price.day).reduce((prev, curr) => prev + curr, 0);
   }
   constructor(private panierService: PanierService) { }
 
@@ -82,7 +82,7 @@ export class CartService {
   }
 
   calcSum() {
-    this.totalTtc = this.items.map(item => item.price[0] * item.quantity).reduce((prev, curr) => prev + curr, 0);
+    this.totalTtc = this.items.map(item => item.price.day * item.quantity).reduce((prev, curr) => prev + curr, 0);
     panier.total = this.totalTtc
   }
 
@@ -99,12 +99,12 @@ export class CartService {
       id: ordered_products.length + 1,
       name: product.name,
       nameRoute: product.nameRoute,
-      price: [
-        product.price[0],
-        product.price[1],
-        product.price[2],
-        product.price[3],
-      ],
+      price: {
+        day: product.price.day,
+        week_end: product.price.week_end,
+        week: product.price.week,
+        month: product.price.month,
+      },
       promo: product.promo,
       quantity: quantity,
       thumbnail: product.thumbnail,

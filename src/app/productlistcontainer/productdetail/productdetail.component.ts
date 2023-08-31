@@ -51,6 +51,35 @@ export class ProductdetailComponent {
     this.cartService.addFromDetail(id, quantity, product)
   }
 
+  displayYoutubeModal(title: string, src: string) {
+    let modal_box = document.getElementById('youtube-modal')
+    let modal_title = document.getElementById('youtube-modal-title')
+    let modal_iframe = document.getElementById('youtube-modal-iframe')
+    if(modal_box) {
+      modal_box.style.display = 'block'
+    }
+    if(modal_title) {
+      modal_title.innerHTML = title
+    }
+    if(modal_iframe) {
+      modal_iframe.setAttribute("src", `https://www.youtube.com/embed/${src}`)
+    }
+  }
+
+  closeYoutubeModal() {
+    let modal_box = document.getElementById('youtube-modal')
+    if(modal_box) {
+      modal_box.style.display = 'none'
+    }
+  }
+
+  selectImage(src: string) {
+    let main_image = document.getElementById('main-image')
+    if(main_image) {
+      main_image.setAttribute('src', src)
+    }
+  }
+
   product: Product | undefined;
   id_product = 0;
 }

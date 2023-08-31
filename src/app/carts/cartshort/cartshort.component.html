@@ -24,7 +24,7 @@
             </div>
             <div class="cart-short-row-side">
                 <div class="cartshort-row-name">{{ item.name }}</div>
-                <div class="cartshort-row-price">Prix: {{ item.price[0] * item.quantity }}€</div>
+                <div class="cartshort-row-price">Prix: {{ item.price.day * item.quantity }}€</div>
                 <div class="cartshort-row-actions">
                     <div class="cartshort-row-quantity">
                         <button class="cartshort-row-decrease" (click)="decreaseFromId(item.id)">-</button>

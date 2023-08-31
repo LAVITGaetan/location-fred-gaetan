@@ -6,23 +6,17 @@ export interface Product {
   description_short: string,
   description_long: string,
   thumbnail: string,
-  images: [
-    src1: string,
-    src2: string,
-    src3: string,
-    src4: string,
-    src5: string
-  ],
-  price: [
+  images: string[],
+  price: {
     day: number,
     week_end: number,
     week: number,
     month: number,
-    complement: [
+    complement: {
       titre: string,
       montant: number
-    ]
-  ]
+    }
+  }
   weight: number,
   avisweb: string,
   caution: number,
@@ -114,23 +108,21 @@ export const products: Product[] = [
     description_long: '<p>La tente de toit à coque dure offre une nouvelle façon de voir le camping et les vacances d\'aventure en 4xAvec un espace intérieur plus grand, elle offre un espace de couchage pour deux adultes et un enfant. La tente à toit rigide PLAYDO a deux portes et deux fenêtres, ce qui crée une excellente ventilation transversale permettant à l\'air de circuler librement dans toute la tente. Ouvrez et fermez en quelques secondes avec le système de support hydraulique unique. Toutes les tentes de toit s\'adaptent au toit de la plupart des véhicules et peuvent être retirées et stockées lorsqu\'elles ne sont pas nécessaires et sont couvertes par une garantie de 1 an sur le tissu, la coque et le mécanisme.</p><h3 class="product-detail-subtitle">Caractéristiques</h3><ul class="product-detail-list"><li>Élastiques pour le pliage interne du tissu</li><li>Structure stable, imperméable et coupe-vent</li><li>Échelle en alliage réglable et sac porte-échelle</li><li>Recommandé pour 2 adultes</li></ul>',
     thumbnail: './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-01.webp',
     images: [
-      './assets/images/product/tente-de-toit-fibre-de-verre-hermitage-29-06-2023.webp',
-      './assets/images/product/tente-de-toit-fibre-de-verre-01-webp.webp',
-      './assets/images/product/tente-de-toit-fibre-de-verre-02-webp.webp',
-      './assets/images/product/tente-de-toit-fibre-de-verre-03-webp.webp',
-      '',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-hermitage-29-06-2023.webp',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-01.webp',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-02.webp',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-03.webp',
     ],
-    price: [
-      70,
-      140,
-      280,
-      300, 
-      [
-        'prise en charge',
-        0,
-      ]
-
-    ],
+    price: {
+      day: 10,
+      week_end: 30,
+      week: 50,
+      month: 100,
+      complement: {
+        titre: "Prise en charge",
+        montant: 10
+      }
+    },
     weight: 50,
     avisweb: 'top',
     caution: 2200,
@@ -148,22 +140,21 @@ export const products: Product[] = [
     description_long: '<p>La tente de toit à coque dure offre une nouvelle façon de voir le camping et les vacances d\'aventure en 4xAvec un espace intérieur plus grand, elle offre un espace de couchage pour deux adultes et un enfant. La tente à toit rigide PLAYDO a deux portes et deux fenêtres, ce qui crée une excellente ventilation transversale permettant à l\'air de circuler librement dans toute la tente. Ouvrez et fermez en quelques secondes avec le système de support hydraulique unique. Toutes les tentes de toit s\'adaptent au toit de la plupart des véhicules et peuvent être retirées et stockées lorsqu\'elles ne sont pas nécessaires et sont couvertes par une garantie de 1 an sur le tissu, la coque et le mécanisme.</p><h3 class="product-detail-subtitle">Caractéristiques</h3><ul class="product-detail-list"><li>Élastiques pour le pliage interne du tissu</li><li>Structure stable, imperméable et coupe-vent</li><li>Échelle en alliage réglable et sac porte-échelle</li><li>Recommandé pour 2 adultes</li></ul>',
     thumbnail: './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-01.webp',
     images: [
-      './assets/images/product/tente-de-toit-fibre-de-verre-hermitage-29-06-2023.webp',
-      './assets/images/product/tente-de-toit-fibre-de-verre-01-webp.webp',
-      './assets/images/product/tente-de-toit-fibre-de-verre-02-webp.webp',
-      './assets/images/product/tente-de-toit-fibre-de-verre-03-webp.webp',
-      '',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-01.webp',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-02.webp',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-03.webp',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-04.webp',
     ],
-    price: [
-      40,
-      200,
-      500,
-      1000,
-      [
-        'prise en charge',
-        0,
-      ]
-    ],
+    price: {
+      day: 10,
+      week_end: 30,
+      week: 50,
+      month: 100,
+      complement: {
+        titre: "Prise en charge",
+        montant: 10
+      }
+    },
     weight: 30,
     avisweb: 'bof',
     caution: 2450,
@@ -181,22 +172,21 @@ export const products: Product[] = [
     description_long: '<p>La tente de toit à coque dure offre une nouvelle façon de voir le camping et les vacances d\'aventure en 4xAvec un espace intérieur plus grand, elle offre un espace de couchage pour deux adultes et un enfant. La tente à toit rigide PLAYDO a deux portes et deux fenêtres, ce qui crée une excellente ventilation transversale permettant à l\'air de circuler librement dans toute la tente. Ouvrez et fermez en quelques secondes avec le système de support hydraulique unique. Toutes les tentes de toit s\'adaptent au toit de la plupart des véhicules et peuvent être retirées et stockées lorsqu\'elles ne sont pas nécessaires et sont couvertes par une garantie de 1 an sur le tissu, la coque et le mécanisme.</p><h3 class="product-detail-subtitle">Caractéristiques</h3><ul class="product-detail-list"><li>Élastiques pour le pliage interne du tissu</li><li>Structure stable, imperméable et coupe-vent</li><li>Échelle en alliage réglable et sac porte-échelle</li><li>Recommandé pour 2 adultes</li></ul>',
     thumbnail: './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-01.webp',
     images: [
-      './assets/images/product/-toit-soft-A.webp',
-      './assets/images/product/-toit-soft-B.webp',
-      './assets/images/product/-toit-soft-C.webp',
-      './assets/images/product/-toit-soft-D.webp',
-      './assets/images/product/-toit-soft-E.webp',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-01.webp',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-02.webp',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-03.webp',
+      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-04.webp',
     ],
-    price: [
-      20,
-      200,
-      500,
-      1000,
-      [
-        'prise en charge',
-        0,
-      ]
-    ],
+    price: {
+      day: 10,
+      week_end: 30,
+      week: 50,
+      month: 100,
+      complement: {
+        titre: "Prise en charge",
+        montant: 10
+      }
+    },
     weight: 10,
     avisweb: 'super',
     caution: 1800,
@@ -215,21 +205,17 @@ export const products: Product[] = [
     thumbnail: './assets/images/product/decatlon/dentes.paddle.webp',
     images: [
       './assets/images/product/decatlon/dentes.paddle.webp',
-      '',
-      '',
-      '',
-      ''
     ],
-    price: [
-      90,
-      200,
-      500,
-      1000,
-      [
-        'prise en charge',
-        0,
-      ]
-    ],
+    price: {
+      day: 10,
+      week_end: 30,
+      week: 50,
+      month: 100,
+      complement: {
+        titre: "Prise en charge",
+        montant: 10
+      }
+    },
     weight: 15,
     avisweb: 'un paddle',
     caution: 1800,
