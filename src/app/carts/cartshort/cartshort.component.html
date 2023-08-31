@@ -15,26 +15,28 @@
 
         <div *ngIf="panier.quantity > 0" class="cartshort-count">{{ panier.quantity }} article<span
                 *ngIf="panier.quantity > 1">s</span></div>
-        <div *ngFor="let item of items let i=index" class="cartshort-row">
-            <button class="cartshort-row-delete" aria-label="Remove" (click)="clearOrderElement(i, item.quantity)">
-                x
-            </button>
-            <div class="cartshort-row-image">
-                <img src="{{item.thumbnail}}" width="80px" height="80px" alt="{{ item.name }}">
-            </div>
-            <div class="cart-short-row-side">
-                <div class="cartshort-row-name">{{ item.name }}</div>
-                <div class="cartshort-row-price">Prix: {{ item.price.day * item.quantity }}€</div>
-                <div class="cartshort-row-actions">
-                    <div class="cartshort-row-quantity">
-                        <button class="cartshort-row-decrease" (click)="decreaseFromId(item.id)">-</button>
-                        <span class="cartshort-row-span">{{ item.quantity }}</span>
-                        <button class="cartshort-row-increase" (click)="increaseFromId(item.id)">+</button>
-                    </div>
-
+        <div class="cartshort-scroll">
+            <div *ngFor="let item of items let i=index" class="cartshort-row">
+                <button class="cartshort-row-delete" aria-label="Remove" (click)="clearOrderElement(i, item.quantity)">
+                    x
+                </button>
+                <div class="cartshort-row-image">
+                    <img src="{{item.thumbnail}}" width="80px" height="80px" alt="{{ item.name }}">
                 </div>
-            </div>
+                <div class="cart-short-row-side">
+                    <div class="cartshort-row-name">{{ item.name }}</div>
+                    <div class="cartshort-row-price">Prix: {{ item.price.day * item.quantity }}€</div>
+                    <div class="cartshort-row-actions">
+                        <div class="cartshort-row-quantity">
+                            <button class="cartshort-row-decrease" (click)="decreaseFromId(item.id)">-</button>
+                            <span class="cartshort-row-span">{{ item.quantity }}</span>
+                            <button class="cartshort-row-increase" (click)="increaseFromId(item.id)">+</button>
+                        </div>
 
+                    </div>
+                </div>
+
+            </div>
         </div>
         <div *ngIf="panier.total > 0" class="cartshort-price">Total: {{ panier.total }} €</div>
         <div class="cartshort-action">Valider mon panier</div>

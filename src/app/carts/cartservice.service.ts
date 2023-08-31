@@ -59,6 +59,7 @@ export class CartService {
         this.items.splice(index, 1)
       }
     }
+    this.panierService.updatePanierLength(panier.quantity);
   }
   increaseFromId(id: number) {
     let item = this.items.find(el => el.id == id) || { quantity: 0 }
