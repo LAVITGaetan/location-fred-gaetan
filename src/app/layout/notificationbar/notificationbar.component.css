@@ -23,18 +23,18 @@
     border-radius: 50px;
     font-size: 14px;
     font-weight: 600;
-cursor: pointer;
-background-color: #29afe2;
+    cursor: pointer;
+    background-color: #29afe2;
 }
 
 .notification-close {
-justify-items: flex-end;
-font-size: 16px;
-color: #fff;
-font-weight: 800;
-position: absolute;
-right: 20px;
-cursor: pointer;
+    justify-items: flex-end;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 800;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
 }
 
 .notification-bar-displayed {

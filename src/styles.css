@@ -9,7 +9,7 @@
 body {
     font-family: Lexend;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 12px;
     height: 11px;
     background: #F1F5F9;
@@ -28,7 +28,7 @@ body {
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(to top right,#29afe2,#77cef0);
     border: 0px solid transparent;
-}
+} */
 
 /* style des descriptions de produits*/
 
