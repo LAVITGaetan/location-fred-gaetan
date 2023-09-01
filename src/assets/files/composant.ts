@@ -19,12 +19,12 @@ export const composants: Composant[] = [
     {
         id: 3,
         name: 'top-title',
-        text: 'Offre évasion à partir de 25€ par jour',
+        text: 'Gagnez de l\'argent en partageant vos biens',
     },
     {
         id: 4,
         name: 'top-action',
-        text: 'Voir l\'offre',
+        text: 'En savoir plus',
     },
     {
         id: 5,

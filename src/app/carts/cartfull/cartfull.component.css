@@ -2,11 +2,42 @@
   width: 100%;
   padding: 40px 7.5%;
 }
-.carfull-table {
+
+.cartfull-table {
   width: 100%;
+  box-shadow: 0 4px 10px 2px #00000010;
 }
 
 .cartfull-table-head {
   padding: 12px;
-  background-color: #000;
+  background-color: #F1F6F9;
+}
+
+.cartfull-table-head th {
+  text-align: left;
+  padding: 12px ;
+  background-color: #162445;
+  color: #fff;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.cartfull-table-delete {
+  padding: 10px 12px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #29afe2;
+}
+
+.cartfull-table-cell {
+  padding: 12px ;
+  border: 0;
+}
+
+.cartfull-table-row:nth-child(2n) {
+  background-color: #F1F6F9; /* Exemple : couleur de fond grise pour les éléments pairs */
 }

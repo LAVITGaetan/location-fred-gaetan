@@ -1,21 +1,19 @@
 <div class="cartfull-container">
     <table class="cartfull-table">
-        <thead>
-            <tr>
-                <th class="cartfull-table-head"></th>
-                <th class="cartfull-table-head">Produit</th>
-                <th class="cartfull-table-head">Prix/j</th>
-                <th class="cartfull-table-head">Quantité</th>
-                <th class="cartfull-table-head">Actions</th>
+            <tr class="cartfull-table-head">
+                <th>Aperçu</th>
+                <th>Produit</th>
+                <th>Prix/j</th>
+                <th>Quantité</th>
+                <th>Actions</th>
             </tr>
-        </thead>
         <tbody>
-            <tr *ngFor="let item of items let i=index" class="cartshort-row">
-                <td><img src="{{item.thumbnail}}" width="80px" height="80px" alt="{{ item.name }}"></td>
-                <td>{{ item.name }}</td>
-                <td>{{ item.price.day }}</td>
-                <td>{{ item.quantity }}</td>
-                <td><button>Delete</button></td>
+            <tr *ngFor="let item of items let i=index" class="cartfull-table-row">
+                <td class="cartfull-table-cell"><img src="{{item.thumbnail}}" width="80px" height="80px" alt="{{ item.name }}"></td>
+                <td class="cartfull-table-cell">{{ item.name }}</td>
+                <td class="cartfull-table-cell">{{ item.price.day }}</td>
+                <td class="cartfull-table-cell">{{ item.quantity }}</td>
+                <td class="cartfull-table-cell"><button class="cartfull-table-delete">Delete</button></td>
             </tr>
         </tbody>
     </table>

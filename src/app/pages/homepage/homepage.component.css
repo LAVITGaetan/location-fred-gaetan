@@ -100,7 +100,7 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    color: #334155;
+    color: #040B35;
     font-weight: 500;
     font-size: 16px;
     font-family: Lexend;
@@ -116,7 +116,7 @@
 }
 
 ::placeholder {
-    color: #334155;
+    color: #040B35;
     font-weight: 500;
     font-size: 16px;
     font-family: Lexend;

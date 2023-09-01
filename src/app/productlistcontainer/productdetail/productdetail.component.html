@@ -10,7 +10,7 @@
                 <div class="galerie-image-main"><img id="main-image" class="galerie-image" [src]="product.thumbnail" alt="">
                 </div>
                 <div class="galerie-image-row">
-                        <div class="galerie-video-item" *ngIf="product.video[0]" (click)="displayYoutubeModal(product.video[0], product.video[1])">
+                        <div class="galerie-video-item" *ngIf="product.video.title" (click)="displayYoutubeModal(product.video.title, product.video.src)">
                                 <img src="./assets/images/frontend/icon-youtube.png" alt="youtube" width="90px" height="90px">
                         </div>
                         <div class="galerie-image-item" *ngFor="let image of product.images let i= index" (click)="selectImage(product.images[i])">

@@ -9,7 +9,7 @@
 
 .galerie-page-title {
     font-size: 28px;
-    color: #334155;
+    color: #040B35;
     font-weight: 700;
     line-height: 150%;
     margin: 20px 7.5% 0 7.5%;
@@ -17,7 +17,7 @@
 
 .galerie-page-subtitle {
     font-size: 20px;
-    color: #444;
+    color: #535a69;
     font-weight: 500;
     line-height: 160%;
     padding: 12px 7.5%;
@@ -25,12 +25,12 @@
 
 .galerie-card {
     transition: .3s ease;
-    box-shadow: 2px 2px 16px 4px #33415515;
+    box-shadow: 2px 2px 16px 4px #040B3515;
     border-radius: 4px;
 }
 
 .galerie-card:hover {
-    box-shadow: 2px 2px 16px 4px #33415530;
+    box-shadow: 2px 2px 16px 4px #040B3530;
 }
 
 .galerie-card1 {
@@ -82,7 +82,7 @@
 }
 
 .galerie-row-title {
-    color: #334155;
+    color: #040B35;
     font-size: 16px;
     padding-left: 6px;
     padding-right: 12px;

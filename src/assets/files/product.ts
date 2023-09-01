@@ -20,11 +20,10 @@ export interface Product {
   weight: number,
   avisweb: string,
   caution: number,
-  video: [
+  video: {
     title: string,
     src: string
-  ],
-
+  },
 }
 
 export interface Stock {
@@ -126,10 +125,10 @@ export const products: Product[] = [
     weight: 50,
     avisweb: 'top',
     caution: 2200,
-    video: [
-      'video_test',
-      'ZFj4WUZiBBc'
-    ],
+    video: {
+      title: 'video_test',
+      src: 'ZFj4WUZiBBc'
+  },
   },
   {
     id: 2,
@@ -158,10 +157,10 @@ export const products: Product[] = [
     weight: 30,
     avisweb: 'bof',
     caution: 2450,
-    video: [
-      'video_test',
-      'ZFj4WUZiBBc'
-    ],
+    video: {
+      title: 'video_test',
+      src :'ZFj4WUZiBBc'
+    },
   },
   {
     id: 3,
@@ -190,10 +189,10 @@ export const products: Product[] = [
     weight: 10,
     avisweb: 'super',
     caution: 1800,
-    video: [
-      'video_test',
-      'ZFj4WUZiBBc'
-    ],
+    video: {
+      title:'video_test',
+      src: 'ZFj4WUZiBBc'
+    },
   },
   {
     id: 4,
@@ -219,10 +218,10 @@ export const products: Product[] = [
     weight: 15,
     avisweb: 'un paddle',
     caution: 1800,
-    video: [
-      'Vous fournissons un gonfleur électrique !',
-      'OMx3W-0-5dM'
-    ],
+    video: {
+      title: 'Vous fournissons un gonfleur électrique !',
+      src: 'OMx3W-0-5dM'
+    },
   },
   {
     id: 5,
@@ -252,10 +251,10 @@ export const products: Product[] = [
     weight: 2.4,
     avisweb: 'tente quaou de qualité',
     caution: 179,
-    video: [
-      'Adventure V5 - 3 en 1',
-      'MaX89pkMqm0'
-    ],
+    video: {
+      title: 'Adventure V5 - 3 en 1',
+      src: 'MaX89pkMqm0'
+    },
   },
   {
     id: 6,
@@ -285,10 +284,10 @@ export const products: Product[] = [
     weight: 3.3,
     avisweb: 'tente quaou de qualité',
     caution: 239,
-    video: [
-      'Adventure V5 - 6 en 1',
-      'MaX89pkMqm0'
-    ],
+    video: {
+      title: 'Adventure V5 - 6 en 1',
+      src :'MaX89pkMqm0'
+    },
   },
   {
     id: 7,
@@ -316,10 +315,10 @@ export const products: Product[] = [
     weight: 0.3,
     avisweb: 'tente quaou de qualité',
     caution: 59,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
   {
     id: 8,
@@ -345,10 +344,10 @@ export const products: Product[] = [
     weight: 0.6,
     avisweb: '',
     caution: 49,
-    video: [
-      'Hamac Qaou Double toit',
-      'sIVkaVMPMKk'
-    ],
+    video: {
+      title: 'Hamac Qaou Double toit',
+      src: 'sIVkaVMPMKk'
+    },
   },
   {
     id: 9,
@@ -374,10 +373,10 @@ export const products: Product[] = [
     weight: 0.42,
     avisweb: '',
     caution: 22,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
   {
     id: 10,
@@ -403,10 +402,10 @@ export const products: Product[] = [
     weight: 0.65,
     avisweb: '',
     caution: 61,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
   {
     id: 11,
@@ -432,10 +431,10 @@ export const products: Product[] = [
     weight: 0.5,
     avisweb: '',
     caution: 50,
-    video: [
-      'Multples utilisations du Huntsman wood',
-      'EmY9WEl4DDw'
-    ],
+    video: {
+      title: 'Multples utilisations du Huntsman wood',
+      src:'EmY9WEl4DDw'
+    },
   },
   {
     id: 12,
@@ -461,10 +460,10 @@ export const products: Product[] = [
     weight: 0.5,
     avisweb: '',
     caution: 13.96,
-    video: [
-      'Aiguiseur multifonctions',
-      '5YMamVDTOUs'
-    ],
+    video: {
+      title:'Aiguiseur multifonctions',
+      src:'5YMamVDTOUs'
+    },
   },
   {
     id: 13,
@@ -489,10 +488,10 @@ export const products: Product[] = [
     weight: 0.5,
     avisweb: '',
     caution: 16.96,
-    video: [
-      'Tour de cou multifonctions',
-      '3hKn6_adBMw'
-    ],
+    video: {
+      title: 'Tour de cou multifonctions',
+      src: '3hKn6_adBMw'
+    },
   },
   {
     id: 14,
@@ -518,10 +517,10 @@ export const products: Product[] = [
     weight: 0.2,
     avisweb: '',
     caution: 35,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
   {
     id: 15,
@@ -547,10 +546,10 @@ export const products: Product[] = [
     weight: 0,
     avisweb: '',
     caution: 100,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
   {
     id: 16,
@@ -576,10 +575,10 @@ export const products: Product[] = [
     weight: 0,
     avisweb: '',
     caution: 100,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
   {
     id: 17,
@@ -605,10 +604,10 @@ export const products: Product[] = [
     weight: 0,
     avisweb: '',
     caution: 100,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
   {
     id: 19,
@@ -634,10 +633,10 @@ export const products: Product[] = [
     weight: 8,
     avisweb: '',
     caution: 175,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
   {
     id: 20,
@@ -663,10 +662,10 @@ export const products: Product[] = [
     weight: 55,
     avisweb: '',
     caution: 800,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
   {
     id: 21,
@@ -692,10 +691,10 @@ export const products: Product[] = [
     weight: 15,
     avisweb: '',
     caution: 60,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
   {
     id: 22,
@@ -721,10 +720,10 @@ export const products: Product[] = [
     weight: 3.3,
     avisweb: '',
     caution: 90,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
   {
     id: 23,
@@ -750,10 +749,10 @@ export const products: Product[] = [
     weight: 3.3,
     avisweb: '',
     caution: 90,
-    video: [
-      '',
-      ''
-    ],
+    video: {
+      title: '',
+      src: ''
+    },
   },
 ];
 
