@@ -1,4 +1,4 @@
-<h1 class="article-page-title">Liste des articles</h1>
+<h1 class="article-page-title">Nos articles sur la Réunion</h1>
 <div class="article-page-tag-container">
     <div class="article-page-tag-item">Tous</div>
     <div class="article-page-tag-item">Bivouac</div>
@@ -6,7 +6,7 @@
     <div class="article-page-tag-item">Paddle</div>
 </div>
 <section class="article-container">
-    <article class="article-card" *ngFor="let article of articles.slice(article_depart, article_arrivee)">
+    <article class="article-card" *ngFor="let article of articles">
         <div class="article-card-header">
             <img class="article-card-header-image" src="./assets/images/frontend/{{ article.image_large}}"
                 alt="hiking image">
@@ -28,4 +28,3 @@
 
     </article>
 </section>
-<button class="article-show-more" (click)="changeArticleParam()">+</button>

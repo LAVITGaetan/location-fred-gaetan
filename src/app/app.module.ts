@@ -24,6 +24,7 @@ import { AboutComponent } from './views/pages/about/about.component';
 import { CartfullComponent } from './views/components/cartfull/cartfull.component';
 import { CartshortComponent } from './views/components/cartshort/cartshort.component';
 import { NotificationbarComponent } from './views/layout/notificationbar/notificationbar.component';
+import { BlogComponent } from './views/components/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { NotificationbarComponent } from './views/layout/notificationbar/notific
     CartfullComponent,
     CartshortComponent,
     NotificationbarComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

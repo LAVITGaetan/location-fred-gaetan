@@ -4,8 +4,8 @@
 }
 
 .cartfull-table {
-  width: 100%;
   box-shadow: 0 4px 10px 2px #00000010;
+  border-spacing: 0;
 }
 
 .cartfull-table-head {

@@ -31,13 +31,12 @@
 .article-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding: 20px 7.5%;
 
 }
 
 .article-card {
-    width: calc(33% - 20px);
+    width: calc(20% - 20px);
     max-width: 600px;
     margin-right: 20px;
     background-color: #fff;
@@ -143,6 +142,19 @@
     border-radius: 4px;
     cursor: pointer;
     font-weight: 700;
+}
+
+@media screen and (max-width:2000px) {
+
+    .article-card {
+        width: calc(25% - 20px);
+    }
+}
+@media screen and (max-width:1600px) {
+
+    .article-card {
+        width: calc(33% - 20px);
+    }
 }
 
 @media screen and (max-width:1300px) {

@@ -9,7 +9,7 @@ export const articles: Article[] = [
         publier_a_la_une: false,
         publier: true,
         image_200x200: "string",
-        image_large: "hiking-image-800-533.jpg",
+        image_large: "midjourney-hiking.png",
         temps_de_lecture: "5 min",
         hashtags: ["bivouac", "nature", "camping"]
     },
@@ -21,7 +21,7 @@ export const articles: Article[] = [
         publier_a_la_une: false,
         publier: true,
         image_200x200: "string",
-        image_large: "surf-thumbnail-800-423.jpg",
+        image_large: "midjourney-surf.png",
         temps_de_lecture: "6 min",
         hashtags: ["surf", "plages", "océan"]
     },
@@ -33,7 +33,7 @@ export const articles: Article[] = [
         publier_a_la_une: true,
         publier: true,
         image_200x200: "lien_image_article_3.jpg",
-        image_large: "reunion-mountains-volcano-640-480.jpg",
+        image_large: "midjourney-hiking-couple.png",
         temps_de_lecture: "7 min",
         hashtags: ["randonnée", "sentiers", "paysages"]
     },
@@ -45,7 +45,7 @@ export const articles: Article[] = [
         publier_a_la_une: true,
         publier: true,
         image_200x200: "lien_image_article_4.jpg",
-        image_large: "hiking-image-800-533.jpg",
+        image_large: "midjourney-deep-sea.png",
         temps_de_lecture: "6 min",
         hashtags: ["plongée", "fonds_marins", "biodiversité"]
     },
@@ -57,7 +57,7 @@ export const articles: Article[] = [
         publier_a_la_une: false,
         publier: true,
         image_200x200: "lien_image_article_5.jpg",
-        image_large: "hiking-image-800-533.jpg",
+        image_large: "midjourney-hiking.png",
         temps_de_lecture: "7 min",
         hashtags: ["gastronomie", "cuisine", ""]
     },
@@ -69,9 +69,20 @@ export const articles: Article[] = [
         publier_a_la_une: false,
         publier: true,
         image_200x200: "lien_image_article_6.jpg",
-        image_large: "hiking-image-800-533.jpg",
+        image_large: "midjourney-hiking.png",
         temps_de_lecture: "8 min",
         hashtags: ["escalade", "alpinisme", "volcans"]
     },
-
+    {
+        id: 7,
+        titre: "Plages Envoûtantes à La Réunion : Découvrez le Paradis des Baigneurs",
+        nameRoute: 'Article-plages-baigneurs-reunion',
+        description: "L' île de La Réunion' regorge de plages magnifiques qui attirent les amateurs de soleil, de sable et de mer.",
+        publier_a_la_une: false,
+        publier: true,
+        image_200x200: "lien_image_article_6.jpg",
+        image_large: "midjourney-beach-palms.png",
+        temps_de_lecture: "8 min",
+        hashtags: ["plages", "baignade", "bronzage"]
+    },
 ]
