@@ -1,16 +1,19 @@
 <h1 class="product-page-title">Catalogue de Produits</h1>
 <div class="product-container">
     <div class="product-card-grid" *ngFor="let product of products">
-        <div class="product-grid1">
+        <div  [title]="product.name + ' details'"
+        [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute, product.id]" class="product-grid1">
             <img class="product-card-image" [src]=product.thumbnail>
 
         </div>
         <div class="product-grid2">
-            <h3 class="product-card-title">{{ product.name }}</h3>
+            <a class="product-card-title" [title]="product.name + ' details'"
+            [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute, product.id]">{{ product.name }}</a>
 
         </div>
         <div class="product-grid3">
-            <p class="product-card-description">{{ product.description_short }}</p>
+            <a [title]="product.name + ' details'"
+            [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute, product.id]" class="product-card-description">{{ product.description_short }}</a>
 
         </div>
         <div class="product-grid4">
