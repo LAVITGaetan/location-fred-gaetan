@@ -9,7 +9,7 @@ export const articles: Article[] = [
         publier_a_la_une: false,
         publier: true,
         image_200x200: "string",
-        image_large: "midjourney-hiking.png",
+        image_large: "midjourney-hiking.webp",
         temps_de_lecture: "5 min",
         hashtags: ["bivouac", "nature", "camping"]
     },
@@ -21,7 +21,7 @@ export const articles: Article[] = [
         publier_a_la_une: false,
         publier: true,
         image_200x200: "string",
-        image_large: "midjourney-surf.png",
+        image_large: "midjourney-surf.webp",
         temps_de_lecture: "6 min",
         hashtags: ["surf", "plages", "océan"]
     },
@@ -32,8 +32,8 @@ export const articles: Article[] = [
         description: "Explorez les sentiers de randonnée les plus magnifiques de La Réunion et profitez de vues panoramiques exceptionnelles.",
         publier_a_la_une: true,
         publier: true,
-        image_200x200: "lien_image_article_3.jpg",
-        image_large: "midjourney-hiking-couple.png",
+        image_200x200: "lien_image_article_3.webp",
+        image_large: "midjourney-hiking-couple.webp",
         temps_de_lecture: "7 min",
         hashtags: ["randonnée", "sentiers", "paysages"]
     },
@@ -44,8 +44,8 @@ export const articles: Article[] = [
         description: "Découvrez les sites de plongée les plus impressionnants de La Réunion et rencontrez une biodiversité marine incroyable.",
         publier_a_la_une: true,
         publier: true,
-        image_200x200: "lien_image_article_4.jpg",
-        image_large: "midjourney-deep-sea.png",
+        image_200x200: "lien_image_article_4.webp",
+        image_large: "midjourney-deep-sea.webp",
         temps_de_lecture: "6 min",
         hashtags: ["plongée", "fonds_marins", "biodiversité"]
     },
@@ -56,8 +56,8 @@ export const articles: Article[] = [
         description: "Explorez les délices culinaires de La Réunion, des plats épicés aux desserts exotiques, pour une expérience gustative unique.",
         publier_a_la_une: false,
         publier: true,
-        image_200x200: "lien_image_article_5.jpg",
-        image_large: "midjourney-hiking.png",
+        image_200x200: "lien_image_article_5.webp",
+        image_large: "midjourney-hiking.webp",
         temps_de_lecture: "7 min",
         hashtags: ["gastronomie", "cuisine", ""]
     },
@@ -68,8 +68,8 @@ export const articles: Article[] = [
         description: "Découvrez les sites d'escalade uniques de l'île, des parois rocheuses aux volcans éteints, pour les amateurs de sensations fortes.",
         publier_a_la_une: false,
         publier: true,
-        image_200x200: "lien_image_article_6.jpg",
-        image_large: "midjourney-hiking.png",
+        image_200x200: "lien_image_article_6.webp",
+        image_large: "midjourney-hiking.webp",
         temps_de_lecture: "8 min",
         hashtags: ["escalade", "alpinisme", "volcans"]
     },
@@ -80,8 +80,8 @@ export const articles: Article[] = [
         description: "L' île de La Réunion' regorge de plages magnifiques qui attirent les amateurs de soleil, de sable et de mer.",
         publier_a_la_une: false,
         publier: true,
-        image_200x200: "lien_image_article_6.jpg",
-        image_large: "midjourney-beach-palms.png",
+        image_200x200: "lien_image_article_6.webp",
+        image_large: "midjourney-beach-palms.webp",
         temps_de_lecture: "8 min",
         hashtags: ["plages", "baignade", "bronzage"]
     },

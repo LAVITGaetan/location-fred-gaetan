@@ -30,7 +30,7 @@
     border-radius: 180px;
     background-color: #fff;
     margin-bottom: 12px;
-    background-image: url(../../../assets/images/frontend/fred-photo.jpg);
+    background-image: url(../../../../assets/images/frontend/fred-photo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -43,7 +43,7 @@
     border-radius: 180px;
     background-color: #fff;
     margin-bottom: 12px;
-    background-image: url(../../../assets/images/frontend/gaetan-photo.jpg);
+    background-image: url(../../../../assets/images/frontend/gaetan-photo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
