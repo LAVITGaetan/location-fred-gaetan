@@ -1,0 +1,39 @@
+<div class="page-product">
+    <div class="page-product-element-recherche">
+        <h1 class="page-product-recherche-title"><span>{{ configurations[0].text}}</span><br>
+            <span>{{ configurations[1].text}}</span>
+        </h1>
+        <h2 class="page-product-recherche-subtitle">{{ configurations[5].text}}</h2>
+        <div class="page-product-recherche-bar">
+
+            <div class="page-product-recherche-bar-location">
+                <label class="bar-label">Lieu de prise en charge</label>
+                <select class="bar-input">
+                    <option value="Selectionner" aria-disabled>D'où partez vous ?</option>
+                    <option [value]="relais[0].id">{{ relais[0].name}}</option>
+                    <option [value]="relais[1].id">{{ relais[1].name}}</option>
+                    <option [value]="relais[2].id">{{ relais[2].name}}</option>
+                    <option [value]="relais[3].id">{{ relais[3].name}}</option>
+                </select>
+            </div>
+
+            <div class="page-product-recherche-bar-date">
+                <label class="bar-label">Départ</label>
+                <input type="date" placeholder="Départ" class="bar-input">
+            </div>
+            <div class="page-product-recherche-bar-date">
+                <label class="bar-label">Retour</label>
+                <input type="date" placeholder="Retour" class="bar-input">
+            </div>
+
+            <div class="page-product-recherche-bar-bouton">Rechercher</div>
+        </div>
+        <div class="page-product-recherche-image"></div>
+    </div>
+
+
+</div>
+
+<div class="homepage-extrabar">Informations de livraison</div>
+
+<app-galerieimage></app-galerieimage>

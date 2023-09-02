@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { panier } from 'src/app/carts/cartservice.service';
+import { panier } from 'src/app/shared/services/cartservice.service';
 
 @Injectable({
   providedIn: 'root'

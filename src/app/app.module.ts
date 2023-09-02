@@ -6,25 +6,24 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { HomepageComponent } from './pages/homepage/homepage.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { ProductlistcontainerComponent } from './productlistcontainer/productlistcontainer.component';
-import { ProductdetailComponent } from './productlistcontainer/productdetail/productdetail.component';
-import { ArticlelistcontainerComponent } from './articlelistcontainer/articlelistcontainer.component';
-import { ArticledetailComponent } from './articlelistcontainer/articledetail/articledetail.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
-import { CgvComponent } from './pages/cgv/cgv.component';
-import { NotfoundComponent } from './pages/notfound/notfound.component';
-import { GoogleMapsComponent } from './pages/google-maps/google-maps.component';
-import { GalerieimageComponent } from './galeries/galerieimage/galerieimage.component';
-import { GalerievideoComponent } from './galeries/galerievideo/galerievideo.component';
-import { AboutComponent } from './pages/about/about.component';
-import { CartfullComponent } from './carts/cartfull/cartfull.component';
-import { CartshortComponent } from './carts/cartshort/cartshort.component';
-import { NotificationbarComponent } from './layout/notificationbar/notificationbar.component';
-import { EnigmeComponent } from './layout/enigme/enigme.component';
+import { HeaderComponent } from './views/layout/header/header.component';
+import { HomepageComponent } from './views/pages/homepage/homepage.component';
+import { FooterComponent } from './views/layout/footer/footer.component';
+import { ProductlistcontainerComponent } from './views/components/productlistcontainer/productlistcontainer.component';
+import { ProductdetailComponent } from './views/components/productdetail/productdetail.component';
+import { ArticlelistcontainerComponent } from './views/components/articlelistcontainer/articlelistcontainer.component';
+import { ArticledetailComponent } from './views/components/articledetail/articledetail.component';
+import { ContactComponent } from './views/pages/contact/contact.component';
+import { MentionsLegalesComponent } from './views/pages/mentions-legales/mentions-legales.component';
+import { CgvComponent } from './views/pages/cgv/cgv.component';
+import { NotfoundComponent } from './views/pages/notfound/notfound.component';
+import { GoogleMapsComponent } from './views/pages/google-maps/google-maps.component';
+import { GalerieimageComponent } from './views/components/galerieimage/galerieimage.component';
+import { GalerievideoComponent } from './views/components/galerievideo/galerievideo.component';
+import { AboutComponent } from './views/pages/about/about.component';
+import { CartfullComponent } from './views/components/cartfull/cartfull.component';
+import { CartshortComponent } from './views/components/cartshort/cartshort.component';
+import { NotificationbarComponent } from './views/layout/notificationbar/notificationbar.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +46,6 @@ import { EnigmeComponent } from './layout/enigme/enigme.component';
     CartfullComponent,
     CartshortComponent,
     NotificationbarComponent,
-    EnigmeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,6 @@
-export interface Composant {
-    id: number,
-    name: string
-    text: string,
+import { Configuration } from "src/app/models/configuration"
 
-}
-
-export const composants: Composant[] = [
+export const configurations: Configuration[] = [
     {
         id: 1,
         name: 'titre-principal',

@@ -1,10 +1,4 @@
-export interface relai {
-    id: number,
-    name: string,
-    latitude: number,
-    longitude: number,
-    photos: [],
-}
+import { relai } from "src/app/models/relai"
 
 export const relais: relai[] = [
     {

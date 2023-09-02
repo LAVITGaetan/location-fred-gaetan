@@ -1,0 +1,124 @@
+footer {
+    background: #162445;
+    color: #fff;
+    position: relative;
+    padding-top: 40px;
+    margin-top: 50px;
+}
+
+
+.footer.index {
+    padding-top : 2px;  
+    background-image: url(../../../../assets/images/frontend/footer.svg);
+    background-position: top;
+    background-size: cover;
+    z-index: 5;
+}
+
+.footer-title {
+    padding-left: 10px;
+}
+
+@media screen and (min-width: 40em){
+.wrapper{
+    text-align: left;
+    grid-template-columns: 1fr 22% 22%;
+    grid-column-gap: 4%;
+    grid-template-areas: "brand nav-1 nav-2";
+    padding-left: 20px;
+}
+}
+.wrapper {
+    display: grid;
+    padding: 0 7.5%;
+    padding-bottom: 40px;
+
+}
+
+.wrapper p {
+    padding-left: 10px;
+}
+
+
+@media screen and (min-width: 78em){
+.wrapper {
+    margin: 0 auto;
+}
+}
+.wrapper {
+    width: 100%;
+
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    font-size: 1,2em;
+}
+
+.fontawesomeicon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+ }
+
+ .nav1-element{
+    padding: 5px 20px 5px 0px;
+ }
+ .nav2 h1 {
+    padding-left:10px;
+ }
+ .nav2 div {
+    padding-left:10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+ }
+ .icon{
+  display : inline-block;
+  fill: currentColor;
+  vertical-align: middle;
+  background: none;
+  overflow: visible;
+  width: 28px;
+  height:28px;
+  opacity: .4;
+ }
+
+  .footer-extra{
+    background-color: #fff;
+    padding: 20px;
+    color: #162445;
+ }
+
+ .image_performance_google_web_speed{
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: baseline;
+        align-content: flex-start;
+    
+ }
+
+ a {
+    text-decoration: none;
+    color: #F1F5F9;
+ }
+
+ .footer-extra-text {
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+ }
+
+ .footer-extra-link {
+    text-decoration: underline 2px solid #162445;
+    color: #162445;
+ }
+
+ .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 20px 5px 10px;
+ }

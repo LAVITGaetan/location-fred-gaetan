@@ -1,0 +1,5 @@
+<div *ngIf="composantVisible" class="notification-bar">
+    <div class="notification-text">{{configurations[2].text}}</div>
+    <div class="notification-button">{{configurations[3].text}}</div>
+    <div class="notification-close" (click)="hideComponent()" class="notification-close">X</div>
+</div>
