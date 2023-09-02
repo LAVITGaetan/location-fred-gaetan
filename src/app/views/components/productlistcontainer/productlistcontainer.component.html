@@ -1,27 +1,30 @@
-<h2 class="product-page-title">Catalogue de Produits</h2>
+<h1 class="product-page-title">Catalogue de Produits</h1>
 <div class="product-container">
+    <div class="product-card-grid" *ngFor="let product of products">
+        <div class="product-grid1">
+            <img class="product-card-image" [src]=product.thumbnail>
 
-    <div class="product-container-left">
-        <div class="product-list">
-            <div class="product-card" *ngFor="let product of products.slice(produit_depart, produit_arrivee)">
-                <a class="product-card-container" [title]="product.name + ' details'"
-                    [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute, product.id]">
-                    <img [src]=product.thumbnail alt="" class="product-card-image" width="150px" height="150px">
-                    <h3 class="product-card-title">{{ product.name }}</h3>
-                    <span class="product-card-price">{{ product.price.day }}€ / j</span>
-                    <p class="product-card-description">{{ product.description_short }}</p>
-                </a>
-                <div class="text-wrapper">
-                    <button class="product-card-louer" (click)="ajouterItem(product)">Louer</button>
-                    <a class="product-card-link" [title]="product.name + ' details'"
-                        [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute, product.id]">
-                        Infos
-                        <!-- faire une modale -->
-                    </a>
-                </div>
-            </div>
         </div>
-        <button class="product-show-more" (click)="changeParam()">+</button>
+        <div class="product-grid2">
+            <h3 class="product-card-title">{{ product.name }}</h3>
+
+        </div>
+        <div class="product-grid3">
+            <p class="product-card-description">{{ product.description_short }}</p>
+
+        </div>
+        <div class="product-grid4">
+            <button class="product-card-louer" (click)="ajouterItem(product)">Louer</button>
+
+        </div>
+        <div class="product-grid5">
+            <a class="product-card-info" [title]="product.name + ' details'"
+                [routerLink]="['/location-bivouac-rando-ile-reunion', product.nameRoute, product.id]">
+                Infos
+            </a>
+        </div>
+        <span class="product-card-price">{{ product.price.day }}€ / j</span>
+
     </div>
-    <div class="product-container-right"><app-cartshort></app-cartshort></div>
 </div>
+<app-cartshort></app-cartshort>
