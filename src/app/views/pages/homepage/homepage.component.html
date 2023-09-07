@@ -21,7 +21,7 @@
             <div class="page-product-recherche-bar-date">
                 <label class="bar-label">Départ</label>
                 <input type="date" placeholder="Départ" class="bar-input" formControlName="debut"
-                    [min]="defaultStartDate" [(ngModel)]="defaultStartDate">
+                    [min]="defaultStartDate" [(ngModel)]="defaultStartDate" (ngModelChange)="updateEndDate($event)">
             </div>
             <div class="page-product-recherche-bar-date">
                 <label class="bar-label">Retour</label>

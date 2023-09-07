@@ -37,13 +37,20 @@ export class HomepageComponent {
     console.log(this.searchForm.value, this.searchForm.valid);
   }
 
+  updateEndDate(newStartDate: string) {
+    if (newStartDate > this.defaultEndDate) {
+      this.defaultEndDate = newStartDate;
+      this.searchForm.get('fin')?.setValue(newStartDate);
+    }
+  }
+
   isAfterStart(control: AbstractControl): ValidationErrors | null {
 
     // recuperation des valeurs associèes
     const debut = control.parent?.get('debut')?.value;
     const fin = control.value;
 
-    // regle de validation
+    // regles de validation
     if (debut && fin) {
       if (fin < debut) {
         return { isAfterStart: true };
