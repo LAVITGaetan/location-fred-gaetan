@@ -145,13 +145,15 @@ a {
 
 
 @media screen and (max-width: 800px) {
-.galerie-page-title {
-    font-size: 22px;
-}
-.galerie-page-subtitle {
-    font-size: 16px;
-    line-height: 150%;
-}
+    .galerie-page-title {
+        font-size: 22px;
+    }
+
+    .galerie-page-subtitle {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
     .galerie-container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 225px);

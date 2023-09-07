@@ -6,14 +6,14 @@ export const relais: relai[] = [
         name: "Cilaos",
         latitude: -21.115228337279778,
         longitude: 55.42361373419449,
-        photos:[]
+        photos: []
     },
     {
         id: 2,
         name: "Saint-Pierre",
         latitude: -21.335715644287873,
         longitude: 55.50056479974344,
-        photos:[]
+        photos: []
 
     },
     {
@@ -21,7 +21,7 @@ export const relais: relai[] = [
         name: "Saint-Denis",
         latitude: -20.885539319828236,
         longitude: 55.44822590025657,
-        photos:[]
+        photos: []
 
     },
     {
@@ -29,7 +29,7 @@ export const relais: relai[] = [
         name: "Saint-Gilles",
         latitude: -21.081580946593007,
         longitude: 55.24547599348848,
-        photos:[]
+        photos: []
 
     }
 ]

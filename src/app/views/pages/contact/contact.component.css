@@ -106,21 +106,21 @@
 }
 
 @media screen and (max-width:1250px) {
-    
-.contact-data {
-    width: 100%;
-}
 
-.contact-page-form {
-    width: 100%;
-}
+    .contact-data {
+        width: 100%;
+    }
+
+    .contact-page-form {
+        width: 100%;
+    }
 }
 
 
 @media screen and (max-width:750px) {
-    
+
     .contact-page-form-group {
-        width:100%;
+        width: 100%;
         margin-bottom: 20px;
     }
-    }
+}

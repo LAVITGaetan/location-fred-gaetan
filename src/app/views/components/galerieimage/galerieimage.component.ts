@@ -8,5 +8,5 @@ import { galeries } from 'src/assets/files/galerie';
 })
 export class GalerieimageComponent {
   galeries = galeries;
-  
+
 }

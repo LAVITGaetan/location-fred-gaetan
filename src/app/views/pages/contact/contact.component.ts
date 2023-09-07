@@ -23,9 +23,9 @@ export class ContactComponent {
   onSubmit() {
     console.log(this.contactForm.value, this.contactForm.invalid);
     this.isSubmited = true
-    if(this.contactForm.valid) {
+    if (this.contactForm.valid) {
       const form = document.getElementById('contact-form') as HTMLFormElement;
-      
+
       emailjs.sendForm('service_bmhgihw', 'template_joy5ipj', form, 'tI_GYCmxxx1ocbTk6')
         .then((result: EmailJSResponseStatus) => {
           console.log(result.text);
@@ -34,6 +34,6 @@ export class ContactComponent {
         });
     }
   }
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) { }
 
 }

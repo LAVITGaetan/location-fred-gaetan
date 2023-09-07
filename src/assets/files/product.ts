@@ -102,7 +102,7 @@ export const products: Product[] = [
     video: {
       title: 'video_test',
       src: 'ZFj4WUZiBBc'
-  },
+    },
   },
   {
     id: 2,
@@ -133,7 +133,7 @@ export const products: Product[] = [
     caution: 2450,
     video: {
       title: 'video_test',
-      src :'ZFj4WUZiBBc'
+      src: 'ZFj4WUZiBBc'
     },
   },
   {
@@ -164,7 +164,7 @@ export const products: Product[] = [
     avisweb: 'super',
     caution: 1800,
     video: {
-      title:'video_test',
+      title: 'video_test',
       src: 'ZFj4WUZiBBc'
     },
   },
@@ -260,7 +260,7 @@ export const products: Product[] = [
     caution: 239,
     video: {
       title: 'Adventure V5 - 6 en 1',
-      src :'MaX89pkMqm0'
+      src: 'MaX89pkMqm0'
     },
   },
   {
@@ -407,7 +407,7 @@ export const products: Product[] = [
     caution: 50,
     video: {
       title: 'Multples utilisations du Huntsman wood',
-      src:'EmY9WEl4DDw'
+      src: 'EmY9WEl4DDw'
     },
   },
   {
@@ -435,8 +435,8 @@ export const products: Product[] = [
     avisweb: '',
     caution: 13.96,
     video: {
-      title:'Aiguiseur multifonctions',
-      src:'5YMamVDTOUs'
+      title: 'Aiguiseur multifonctions',
+      src: '5YMamVDTOUs'
     },
   },
   {
@@ -448,7 +448,7 @@ export const products: Product[] = [
     description_long: '<p>Tour de cou multifonction Original Buff X Qaou conçu à partir de bouteilles plastiques recyclées.</p><p>Le nouveau multifonctionnel classique: Plus flexible, fibre recyclée, protection solaire et sans coutures.</p><p>Technologie Ultrastretch : Ajustement dans 4 directions pour une meilleure tenue et un confort optimal.</p><p>Profitez de la multifonctionnalité : choisissez comment le porter !</p> <p>Confortable, extensible et doté d’une protection solaire, avec notre tour de cou vous aurez une grande modularité d’utilisation: du pratique et de l’esthétique!  Ce produit multifonction est conçu pour une utilisation en toute saison et au cours de toutes vos aventures: trek, randonnée, cyclisme, moto…</p><p>Taille unique. Conçu pour adultes.</p><p>95% polyestère recyclé, 5% élasthanne</p>',
     thumbnail: './assets/images/product/dtentes-ile-de-la-reunion-buffxqaou2-300x300.webp',
     images: [
-      './assets/images/product/dtentes-ile-de-la-reunion-Buffxqaou2-2400x2400.webp',    ],
+      './assets/images/product/dtentes-ile-de-la-reunion-Buffxqaou2-2400x2400.webp',],
     price: {
       day: 2,
       week_end: 4,

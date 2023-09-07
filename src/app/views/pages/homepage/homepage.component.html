@@ -4,11 +4,12 @@
             <span>{{ configurations[1].text}}</span>
         </h1>
         <h2 class="page-product-recherche-subtitle">{{ configurations[5].text}}</h2>
-        <div class="page-product-recherche-bar">
+        <form class="page-product-recherche-bar" (ngSubmit)="onSubmit()" [formGroup]="searchForm">
 
             <div class="page-product-recherche-bar-location">
-                <label class="bar-label">Lieu de prise en charge</label>
-                <select class="bar-input">
+
+                <label for="relai" class="bar-label">Lieu de prise en charge</label>
+                <select id="relai" class="bar-input" formControlName="relai">
                     <option value="Selectionner" aria-disabled>D'où partez vous ?</option>
                     <option [value]="relais[0].id">{{ relais[0].name}}</option>
                     <option [value]="relais[1].id">{{ relais[1].name}}</option>
@@ -19,15 +20,17 @@
 
             <div class="page-product-recherche-bar-date">
                 <label class="bar-label">Départ</label>
-                <input type="date" placeholder="Départ" class="bar-input">
+                <input type="date" placeholder="Départ" class="bar-input" formControlName="debut"
+                    [min]="defaultStartDate" [(ngModel)]="defaultStartDate">
             </div>
             <div class="page-product-recherche-bar-date">
                 <label class="bar-label">Retour</label>
-                <input type="date" placeholder="Retour" class="bar-input">
+                <input type="date" placeholder="Retour" class="bar-input" formControlName="fin" [min]="defaultEndDate"
+                    [(ngModel)]="defaultEndDate">
             </div>
 
-            <div class="page-product-recherche-bar-bouton">Rechercher</div>
-        </div>
+            <input type="submit" class="page-product-recherche-bar-bouton" value="Rechercher">
+        </form>
         <div class="page-product-recherche-image"></div>
     </div>
 
