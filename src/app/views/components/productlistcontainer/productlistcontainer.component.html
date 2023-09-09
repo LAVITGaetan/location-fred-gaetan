@@ -1,4 +1,19 @@
 <h1 class="product-page-title">Catalogue de Produits</h1>
+
+
+<form  [formGroup]="searchFormComplete">
+<label>Départ</label>
+<input class="date-input" type="date" [min]="defaultDate" formControlName="debut" [value]="defaultStartDate" (ngModelChange)="updateEndDate($event)">
+<label>Arrivée</label>
+<input class="date-input" type="date" [min]="defaultStartDate" formControlName="fin" [value]="defaultEndDate" (ngModelChange)="updateStartDate($event)">
+
+<label>Quel article recherchez-vous ?</label>
+<input type="text">
+
+<label>Dans quelle ville ?</label>
+<input type="text">
+<input type="submit" value="Chercher">
+</form>
 <div class="product-container">
     <div class="product-card-grid" *ngFor="let product of products">
         <div [title]="product.name + ' details'"

@@ -14,9 +14,11 @@ import { GalerievideoComponent } from './views/components/galerievideo/galerievi
 import { AboutComponent } from './views/pages/about/about.component';
 import { CartfullComponent } from './views/components/cartfull/cartfull.component';
 import { GoogleMapsComponent } from './views/pages/google-maps/google-maps.component';
+import { AnnonceComponent } from './views/pages/annonce/annonce.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
+  { path: 'deposer-une-annonce', component: AnnonceComponent },
   { path: 'location-bivouac-rando-ile-reunion', component: ProductlistcontainerComponent },
   { path: 'location-bivouac-rando-ile-reunion/:productNameRoute/:id', component: ProductdetailComponent },
   { path: 'article-bivouac-rando-ile-reunion', component: ArticlelistcontainerComponent },

@@ -19,7 +19,7 @@ export const configurations: Configuration[] = [
     {
         id: 4,
         name: 'top-action',
-        text: 'En savoir plus',
+        text: 'Déposer une annonce',
     },
     {
         id: 5,

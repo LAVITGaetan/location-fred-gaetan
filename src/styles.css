@@ -48,3 +48,14 @@ margin-left: 20px;
 list-style-type: circle;
 color: #222;
 }
+
+.date-input {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #040B35;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: Lexend;
+    padding: 6px;
+}

@@ -3,6 +3,9 @@ import { products } from "../../../../assets/files/product";
 import { stocks } from '../../../../assets/files/product';
 import { CartService } from '../../../shared/services/cartservice.service';
 import { SeoService } from '../../../shared/services/seo.service';
+import { ActivatedRoute } from '@angular/router';
+import { AbstractControl, FormBuilder, ValidationErrors, Validators } from '@angular/forms';
+import { relais } from 'src/assets/files/relai';
 
 
 @Component({
@@ -14,33 +17,73 @@ export class ProductlistcontainerComponent {
   @Input() produit_depart: number = 0; // nombre de départ
   @Input() produit_arrivee: number = 8; // nombre d'arrivé
 
-  constructor(private seo: SeoService, private cartService: CartService) { }
+  relais = relais;
+  defaultDate = new Date().toISOString().split('T')[0];
+  defaultStartDate: string = this.defaultDate;
+  defaultEndDate: string = this.defaultDate;
+
+  constructor(private seo: SeoService,
+    private cartService: CartService,
+    private route: ActivatedRoute,
+    private fb: FormBuilder,
+  ) { }
+
+  // Structure du formulaire de recherche
+  searchFormComplete = this.fb.group({
+    relai: ['', Validators.required],
+    debut: [this.defaultStartDate, [Validators.required]],
+    fin: [this.defaultEndDate, [Validators.required]],
+  })
+
   products = products
   stocks = stocks
   ngOnInit(): void {
-    console.log(this.produit_depart);
     this.seo.setTitle('location-materiel-bivouac-ile-de-la-reunion-974');
     this.seo.setDescription(
       'Tentes Qaou , hamac, matelas gonflables, couteau, siflet, tour de cou'
     );
-  }
+    this.route.queryParams.subscribe((queryParams) => {
+      const debut = queryParams['debut'];
+      const fin = queryParams['fin'];
+      const relai = queryParams['relai'];
+      if (debut) {
+        this.defaultStartDate = debut;
+        this.searchFormComplete.patchValue({
+          debut: debut
+        })
+      }
+      if (fin) {
+        this.defaultEndDate = fin;
+        this.searchFormComplete.patchValue({
+          fin: fin
+        })
+      }
+      // Vous pouvez utiliser ces valeurs comme bon vous semble
+      console.log('debut:', debut, this.defaultStartDate);
+      console.log('fin:', fin, this.defaultEndDate);
+      console.log('relai:', relai);
+    });
 
-  changeParam() {
-    // Afficher moins de produits
-    if (this.produit_arrivee == 16) {
-      this.produit_arrivee = 8
-      document.getElementsByClassName('product-show-more')[0].innerHTML = '+'
-    }
-    // Afficher plus de produits
-    else {
-      this.produit_arrivee = 16;
-      document.getElementsByClassName('product-show-more')[0].innerHTML = '-'
-    }
   }
 
   ajouterItem(product: any) {
     this.cartService.addProduct(product, 1)
   }
 
+  updateEndDate(newStartDate: string) {
+    this.defaultStartDate = newStartDate
+    if (newStartDate > this.defaultEndDate) {
+      this.defaultEndDate = newStartDate;
+      this.searchFormComplete.get('fin')?.setValue(newStartDate);
+    }
+  }
+
+  updateStartDate(newEndDate: string) {
+    this.defaultEndDate = newEndDate
+    if (newEndDate < this.defaultStartDate) {
+      this.defaultStartDate = newEndDate;
+      this.searchFormComplete.get('debut')?.setValue(newEndDate);
+    }
+  }
 
 }
