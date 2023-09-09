@@ -72,7 +72,7 @@
     width: fit-content;
     padding: 12px;
     color: var(--clr-main-dark);
-    background: var(--clr-cta)1c;
+    background: #2974b81c;
     border-radius: 4px;
     font-weight: 700;
 }

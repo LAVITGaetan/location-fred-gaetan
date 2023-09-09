@@ -52,7 +52,7 @@
 .article-box {
     padding: 20px;
     margin: 30px 7.5%;
-    var(--clr-main-dark-lighter)dow: 0 0 1000px 10px #00000010;
+    box-shadow: 0 0 1000px 10px #00000010;
     border-radius: 4px;
 }
 

@@ -72,7 +72,7 @@
     text-shadow: 1px 1px 5px #222;
     padding: 6px;
     border-radius: 100px;
-    background-color: var(--clr-main-dark)02;
+    background-color: #040B3502;
 }
 
 .article-card-title {
@@ -126,7 +126,7 @@
 }
 
 .article-card-link {
-    background-color: var(--clr-cta)00;
+    background-color: #2974b800;
     color: var(--clr-cta);
     font-size: 15px;
     padding: 12px 18px;
