@@ -1,13 +1,18 @@
 <div class="page-header">
     <div class="toolbar"><a [routerLink]="['/']"><span>Accueil</span></a></div>
-    <div class="toolbar"><a [routerLink]="['/article-bivouac-rando-ile-reunion']"><span>Blog</span></a></div>
-    <div class="toolbar"><a [routerLink]="['/location-bivouac-rando-ile-reunion']"><span>Produits</span></a></div>
-    <div class="toolbar"><a [routerLink]="['/galerie-bivouac-rando-ile-reunion']"><span>Galerie</span></a></div>
-    <!-- <div class="toolbar"><a [routerLink]="['/video-bivouac-rando-ile-reunion']"><span>Videos</span></a></div> -->
-    <div class="toolbar"><a [routerLink]="['/map']"><span>Map</span></a></div>
-    <div class="toolbar"><a [routerLink]="['/connexion']" class="toolbar-login" >
-        <img width="24px" height="24px" src="./assets/images/frontend/icon-user.svg" alt="login icon">
-        <span class="toolbar-login-text">Connexion</span>
-    </a></div>
-        <a [routerLink]="['/panier']" class="new-header-cart"><img width="24px" height="24px" src="./assets/images/frontend/icon-cart.svg" alt="cart icon"><span class="toolbar-panier-count" *ngIf="panier_length > 0">{{panier_length}}</span></a>
+    <div class="toolbar-group">
+        <div class="toolbar"><a [routerLink]="['/article-bivouac-rando-ile-reunion']"><span>Blog</span></a></div>
+        <div class="toolbar"><a [routerLink]="['/location-bivouac-rando-ile-reunion']"><span>Produits</span></a></div>
+        <div class="toolbar"><a [routerLink]="['/galerie-bivouac-rando-ile-reunion']"><span>Galerie</span></a></div>
+        <!-- <div class="toolbar"><a [routerLink]="['/video-bivouac-rando-ile-reunion']"><span>Videos</span></a></div> -->
+        <div class="toolbar"><a [routerLink]="['/map']"><span>Map</span></a></div>
+    </div>
+
+    <div class="toolbar"><a [routerLink]="['/connexion']" class="toolbar-login">
+            <img width="24px" height="24px" src="./assets/images/frontend/icon-user.svg" alt="login icon">
+            <span class="toolbar-login-text">Connexion</span>
+        </a></div>
+    <a [routerLink]="['/panier']" class="new-header-cart"><img width="24px" height="24px"
+            src="./assets/images/frontend/icon-cart.svg" alt="cart icon"><span class="toolbar-panier-count"
+            *ngIf="panier_length > 0">{{panier_length}}</span></a>
 </div>

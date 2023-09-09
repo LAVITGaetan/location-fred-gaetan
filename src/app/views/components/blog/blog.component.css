@@ -1,13 +1,13 @@
 .blog-title {
     font-size: 28px;
-    color: #040B35;
+    color: var(--clr-main-dark);
     font-weight: 700;
     line-height: 150%;
     margin: 20px 7.5% 0 7.5%;
 }
 .article-page-title {
     font-size: 28px;
-    color: #040B35;
+    color: var(--clr-main-dark);
     font-weight: 700;
     line-height: 150%;
     margin: 20px 7.5% 0 7.5%;
@@ -72,7 +72,7 @@
     text-shadow: 1px 1px 5px #222;
     padding: 6px;
     border-radius: 100px;
-    background-color: #040B3502;
+    background-color: var(--clr-main-dark)02;
 }
 
 .article-card-title {
@@ -126,21 +126,22 @@
 }
 
 .article-card-link {
-    background-color: #29afe215;
-    color: #29afe2;
+    background-color: var(--clr-cta)00;
+    color: var(--clr-cta);
     font-size: 15px;
     padding: 12px 18px;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: 700;
     display: inline-block;
     text-decoration: none;
-    margin: 0 20px 20px 20px;
+    border: 2px solid var(--clr-cta);
+    margin: 0 20px 20px;
 }
 
 .article-show-more {
     padding: 12px;
     margin: 0 7.5%;
-    background-color: #29afe2;
+    background-color: var(--clr-cta);
     outline: none;
     border: none;
     font-size: 24px;

@@ -7,6 +7,17 @@
     font-family: Lexend;
 }
 
+:root {
+    --clr-main-dark: #040B35;
+    --clr-main-dark-lighter: #162445;
+    --clr-background: #ffffff;
+    --clr-cta: #2974b8;
+    --clr-grey-dark: #64748B;
+    --clr-grey-light: #F1F6F9;
+    --clr-error: #DE3A3A;
+}
+
+
 /* ::-webkit-scrollbar {
     width: 12px;
     height: 11px;
@@ -24,7 +35,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top right,#29afe2,#77cef0);
+    background: linear-gradient(to top right,var(--clr-cta),#77cef0);
     border: 0px solid transparent;
 } */
 
@@ -32,9 +43,9 @@
 
 .product-detail-subtitle {
     font-size: 22px;
-    color: #040B35;
+    color: var(--clr-main-dark);
     line-height: 150%;
-    border-left: 4px solid #29afe2;
+    border-left: 4px solid var(--clr-cta);
     margin-bottom: 8px;
     margin-top: 16px;
     padding-left: 5px;
@@ -50,7 +61,7 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    color: #040B35;
+    color: var(--clr-main-dark);
     font-weight: 500;
     font-size: 16px;
     font-family: Lexend;
@@ -64,9 +75,9 @@
     outline: 0;
     border-radius: 4px;
     color: white;
-    background-color: #29afe2;
+    background-color: var(--clr-cta);
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     text-decoration: none;
-  }
+}

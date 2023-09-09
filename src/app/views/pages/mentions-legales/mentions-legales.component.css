@@ -11,7 +11,7 @@
     color: #222;
     font-weight: 700;
     margin: 20px 7.5%;
-    border-left: 4px solid #29afe2;
+    border-left: 4px solid var(--clr-cta);
     padding-left: 4px;
 }
 

@@ -11,13 +11,13 @@
 
 .cartfull-table-head {
   padding: 12px;
-  background-color: #F1F6F9;
+  background-color: var(--clr-grey-light);
 }
 
 .cartfull-table-head th {
   text-align: left;
   padding: 12px;
-  background-color: #162445;
+  background-color: var(--clr-main-dark-lighter);
   color: #fff;
   font-weight: 600;
   font-size: 17px;
@@ -31,7 +31,7 @@
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  background-color: #29afe2;
+  background-color: var(--clr-cta);
 }
 
 .cartfull-table-cell {
@@ -40,6 +40,6 @@
 }
 
 .cartfull-table-row:nth-child(2n) {
-  background-color: #F1F6F9;
+  background-color: var(--clr-grey-light);
   /* Exemple : couleur de fond grise pour les éléments pairs */
 }

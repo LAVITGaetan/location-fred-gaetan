@@ -1,6 +1,6 @@
 .product-page-title {
     font-size: 28px;
-    color: #040B35;
+    color: var(--clr-main-dark);
     font-weight: 700;
     line-height: 150%;
     margin: 20px 7.5% 40px 7.5%;
@@ -24,7 +24,7 @@
     font-family: Lexend;
     font-size: 18px;
     font-weight: 600;
-    color: #040B35;
+    color: var(--clr-main-dark);
     text-decoration: none;
 }
 
@@ -40,7 +40,7 @@
 .product-card-louer {
     width: 100%;
     height: 100%;
-    background-color: #29afe2;
+    background-color: var(--clr-cta);
     color: #fff;
     border: none;
     font-size: 16px;
@@ -58,10 +58,10 @@
     font-size: 16px;
     align-items: center;
     text-decoration: none;
-    background-color: #F1F6F9;
+    background-color: var(--clr-grey-light);
     font-weight: 600;
     border-radius: 4px;
-    color: #040B35;
+    color: var(--clr-main-dark);
     border: none;
 }
 
@@ -69,11 +69,10 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    width: -moz-fit-content;
     width: fit-content;
     padding: 12px;
-    color: #040B35;
-    background: #29afe21c;
+    color: var(--clr-main-dark);
+    background: var(--clr-cta)1c;
     border-radius: 4px;
     font-weight: 700;
 }
@@ -113,7 +112,7 @@
 
 .search-form {
     width: 100%;
-    background-color: #F1F6F9;
+    background-color: var(--clr-grey-light);
     padding: 20px 7.5%;
     display: flex;
     justify-content: space-between;
@@ -143,13 +142,14 @@
     font-size: 15px;
     outline: none;
     border: none;
-    border-bottom: 2px solid #29afe2;
+    border-bottom: 2px solid var(--clr-cta);
 }
 
 @media screen and (max-width:1250px) {
     .form-group {
         width: calc(50% - 20px);
     }
+
     .product-card-grid {
         min-width: calc(50% - 20px);
     }
@@ -174,4 +174,3 @@
         width: calc(100% - 20px);
     }
 }
-

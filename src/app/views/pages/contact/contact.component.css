@@ -63,7 +63,7 @@
     color: #222;
     font-weight: 700;
     margin: 20px 7.5%;
-    border-left: 4px solid #29afe2;
+    border-left: 4px solid var(--clr-cta);
     padding-left: 4px;
 }
 
@@ -88,7 +88,7 @@
 .contact-page-form-submit {
     padding: 12px;
     border: none;
-    background: #29afe2;
+    background: var(--clr-cta);
     color: #FFF;
     font-size: 18px;
     font-weight: 600;

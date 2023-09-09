@@ -1,8 +1,8 @@
-
 @keyframes slideInFromTop {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     height: 60px;
-    background: linear-gradient(to top left, #162445, #537895 400%);
+    background: linear-gradient(to top left, var(--clr-main-dark-lighter), #537895 400%);
     overflow: hidden;
     animation: slideInFromTop .3s ease-in;
 }
@@ -36,7 +36,7 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    background-color: #29afe2;
+    background-color: var(--clr-cta);
 }
 
 .notification-close {
@@ -50,5 +50,5 @@
 }
 
 .notification-bar-displayed {
-    background-color: #29afe2;
+    background-color: var(--clr-cta);
 }

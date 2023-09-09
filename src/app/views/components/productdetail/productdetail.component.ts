@@ -37,10 +37,10 @@ export class ProductdetailComponent {
   }
 
   modifyQuantity(arg: string) {
-    if(arg === 'increase') {
+    if (arg === 'increase') {
       this.item_quantity += 1;
     }
-    else if(arg === 'decrease' && this.item_quantity > 1) {
+    else if (arg === 'decrease' && this.item_quantity > 1) {
       this.item_quantity -= 1;
     }
     else {
@@ -48,7 +48,7 @@ export class ProductdetailComponent {
     }
   }
 
-  addToCart(id: number, quantity: number, product:object) {
+  addToCart(id: number, quantity: number, product: object) {
     this.cartService.addFromDetail(id, quantity, product)
   }
 
@@ -56,27 +56,27 @@ export class ProductdetailComponent {
     let modal_box = document.getElementById('youtube-modal')
     let modal_title = document.getElementById('youtube-modal-title')
     let modal_iframe = document.getElementById('youtube-modal-iframe')
-    if(modal_box) {
+    if (modal_box) {
       modal_box.style.display = 'block'
     }
-    if(modal_title) {
+    if (modal_title) {
       modal_title.innerHTML = title
     }
-    if(modal_iframe) {
+    if (modal_iframe) {
       modal_iframe.setAttribute("src", `https://www.youtube.com/embed/${src}`)
     }
   }
 
   closeYoutubeModal() {
     let modal_box = document.getElementById('youtube-modal')
-    if(modal_box) {
+    if (modal_box) {
       modal_box.style.display = 'none'
     }
   }
 
   selectImage(src: string) {
     let main_image = document.getElementById('main-image')
-    if(main_image) {
+    if (main_image) {
       main_image.setAttribute('src', src)
     }
   }

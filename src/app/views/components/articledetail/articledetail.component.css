@@ -1,6 +1,6 @@
 .article-detail-title {
     font-size: 28px;
-    color: #040B35;
+    color: var(--clr-main-dark);
     font-weight: 700;
     padding: 10px;
 }
@@ -14,9 +14,9 @@
 
 .article-detail-subtitle {
     font-size: 22px;
-    color: #040B35;
+    color: var(--clr-main-dark);
     font-weight: 700;
-    border-left: 4px solid #29afe2;
+    border-left: 4px solid var(--clr-cta);
     padding-left: 12px;
 }
 

@@ -1,9 +1,8 @@
 footer {
-    background: #162445;
+    background: var(--clr-main-dark-lighter);
     color: #fff;
     position: relative;
     padding-top: 40px;
-    margin-top: 50px;
 }
 
 
@@ -87,7 +86,7 @@ footer {
   .footer-extra{
     background-color: #fff;
     padding: 20px;
-    color: #162445;
+    color: var(--clr-main-dark-lighter);
  }
 
  .image_performance_google_web_speed{
@@ -113,8 +112,8 @@ footer {
  }
 
  .footer-extra-link {
-    text-decoration: underline 2px solid #162445;
-    color: #162445;
+    text-decoration: underline 2px solid var(--clr-main-dark-lighter);
+    color: var(--clr-main-dark-lighter);
  }
 
  .flex-container {

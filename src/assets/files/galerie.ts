@@ -59,7 +59,7 @@ export const galeries: Galerie[] = [
         id: 7,
         titre: "Col des Boeufs",
         src: './assets/images/galerie/locpei-974-ile-de-la-reunion-col_des_boeufs.webp',
-        alt: "col des boeufs",
+        alt: "col reunion",
         longitude: "",
         latitude: "",
         google_maps: "https://www.google.com/maps?q=col+des+boeufs&source=lmns&entry=mc&bih=1001&biw=1920&hl=fr&sa=X&ved=2ahUKEwiui5mloOmAAxUGsCcCHbK3A-kQ0pQJKAF6BAgBEAQ"
