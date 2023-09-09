@@ -19,14 +19,21 @@
     font-size: 17px;
   }
 
-  .toolbar-annonce {
-    background-color: #29afe215;
-    color: #29afe2;
-    font-size: 17px;
-    padding: 16px 24px;
+  .toolbar-login {
+    padding: 16px;
     border-radius: 4px;
-    font-weight: bold;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+
+  .toolbar-login-text {
+    font-weight: bold;
+    color: #040B35;
+    margin-left: 6px;
+    font-size: 17px;
   }
 
   .toolbar-panier-count {
@@ -51,3 +58,15 @@
     margin-right: 5px; 
     vertical-align: middle;
   }
+
+  .new-header-cart {
+    width: 50px;
+    height: 50px;
+    background-color: #040B35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+position: relative;
+}

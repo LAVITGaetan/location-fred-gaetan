@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Orders } from 'src/app/models/order';
+import { Order } from 'src/app/models/order';
 import { relais } from 'src/assets/files/relai';
 import { PanierService } from './panier.service';
 
-export const ordered_products: Orders[] = [
+export const ordered_products: Order[] = [
 
 ];
 
@@ -13,7 +13,7 @@ export interface Panier {
   date_start: string,
   date_end: string,
   id_relai: number,
-  products: Orders[],
+  products: Order[],
   code_promo: string,
   quantity: number,
   total: number

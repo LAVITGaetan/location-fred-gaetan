@@ -1,19 +1,31 @@
-<h1 class="product-page-title">Catalogue de Produits</h1>
+<form class="search-form" [formGroup]="searchFormComplete">
+<div class="form-group">
+        <label class="form-label">Départ</label>
+        <input class="form-input" type="date" [min]="defaultDate" formControlName="debut" [value]="defaultStartDate"
+            (ngModelChange)="updateEndDate($event)">
+    </div>
+    <div class="form-group">
+        <label class="form-label">Arrivée</label>
+        <input class="form-input" type="date" [min]="defaultStartDate" formControlName="fin" [value]="defaultEndDate"
+            (ngModelChange)="updateStartDate($event)">
+    </div>
 
+    <div class="form-group">
+        <label for="relai" class="bar-label" class="form-label">Lieu de prise en charge</label>
+        <select id="relai" class="form-input" class="form-input" formControlName="relai">
+            <option value="all">Tous</option>
+            <option [value]="relais[0].id">{{ relais[0].name}}</option>
+            <option [value]="relais[1].id">{{ relais[1].name}}</option>
+            <option [value]="relais[2].id">{{ relais[2].name}}</option>
+            <option [value]="relais[3].id">{{ relais[3].name}}</option>
+        </select>
+    </div>
 
-<form  [formGroup]="searchFormComplete">
-<label>Départ</label>
-<input class="date-input" type="date" [min]="defaultDate" formControlName="debut" [value]="defaultStartDate" (ngModelChange)="updateEndDate($event)">
-<label>Arrivée</label>
-<input class="date-input" type="date" [min]="defaultStartDate" formControlName="fin" [value]="defaultEndDate" (ngModelChange)="updateStartDate($event)">
-
-<label>Quel article recherchez-vous ?</label>
-<input type="text">
-
-<label>Dans quelle ville ?</label>
-<input type="text">
-<input type="submit" value="Chercher">
+    <div class="form-group">
+        <input type="submit" value="Chercher" class="cta">
+    </div>
 </form>
+<h1 class="product-page-title">Catalogue de Produits</h1>
 <div class="product-container">
     <div class="product-card-grid" *ngFor="let product of products">
         <div [title]="product.name + ' details'"

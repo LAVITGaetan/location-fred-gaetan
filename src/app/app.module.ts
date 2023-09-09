@@ -26,6 +26,7 @@ import { CartshortComponent } from './views/components/cartshort/cartshort.compo
 import { NotificationbarComponent } from './views/layout/notificationbar/notificationbar.component';
 import { BlogComponent } from './views/components/blog/blog.component';
 import { AnnonceComponent } from './views/pages/annonce/annonce.component';
+import { LoginComponent } from './views/pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { AnnonceComponent } from './views/pages/annonce/annonce.component';
     NotificationbarComponent,
     BlogComponent,
     AnnonceComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

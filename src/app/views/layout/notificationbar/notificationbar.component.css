@@ -1,5 +1,14 @@
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .notification-bar {
-    transition: 1s ease-in;
     width: 100%;
     display: flex;
     padding: 0 7.5%;
@@ -7,12 +16,15 @@
     justify-content: center;
     height: 60px;
     background: linear-gradient(to top left, #162445, #537895 400%);
+    overflow: hidden;
+    animation: slideInFromTop .3s ease-in;
 }
 
 .notification-text {
     color: #fff;
     font-weight: 600;
     font-size: 16px;
+    margin-right: 12px;
 }
 
 .notification-button {
@@ -23,18 +35,18 @@
     border-radius: 50px;
     font-size: 14px;
     font-weight: 600;
-cursor: pointer;
-background-color: #29afe2;
+    cursor: pointer;
+    background-color: #29afe2;
 }
 
 .notification-close {
-justify-items: flex-end;
-font-size: 16px;
-color: #fff;
-font-weight: 800;
-position: absolute;
-right: 20px;
-cursor: pointer;
+    justify-items: flex-end;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 800;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
 }
 
 .notification-bar-displayed {

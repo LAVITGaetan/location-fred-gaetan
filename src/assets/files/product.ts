@@ -136,38 +136,38 @@ export const products: Product[] = [
       src: 'ZFj4WUZiBBc'
     },
   },
-  {
-    id: 3,
-    id_category: 1,
-    name: 'Tente de toit: L=310 l=140 H=110',
-    nameRoute: 'Tente-de-toit-de-bateau-140',
-    description_short: 'Paddle Itiwit avec gonfleur électrique.Très stable et facile, pour des gabarits supérieurs à 80 kg. Idéal pour l Hermitage ou Etang Salé',
-    description_long: 'Paddle Itiwit avec gonfleur électrique.Très stable et facile, pour des gabarits supérieurs à 80 kg. Idéal pour l Hermitage ou Etang Salé',
-    thumbnail: './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-01.webp',
-    images: [
-      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-01.webp',
-      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-02.webp',
-      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-03.webp',
-      './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-04.webp',
-    ],
-    price: {
-      day: 10,
-      week_end: 30,
-      week: 50,
-      month: 100,
-      complement: {
-        titre: "Prise en charge",
-        montant: 10
-      }
-    },
-    weight: 10,
-    avisweb: 'super',
-    caution: 1800,
-    video: {
-      title: 'video_test',
-      src: 'ZFj4WUZiBBc'
-    },
-  },
+  // {
+  //   id: 3,
+  //   id_category: 1,
+  //   name: 'Tente de toit: L=310 l=140 H=110',
+  //   nameRoute: 'Tente-de-toit-de-bateau-140',
+  //   description_short: 'Paddle Itiwit avec gonfleur électrique.Très stable et facile, pour des gabarits supérieurs à 80 kg. Idéal pour l Hermitage ou Etang Salé',
+  //   description_long: 'Paddle Itiwit avec gonfleur électrique.Très stable et facile, pour des gabarits supérieurs à 80 kg. Idéal pour l Hermitage ou Etang Salé',
+  //   thumbnail: './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-01.webp',
+  //   images: [
+  //     './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-01.webp',
+  //     './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-02.webp',
+  //     './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-03.webp',
+  //     './assets/images/product/dtentes-ile-de-la-reunion-tente-de-toit-fibre-de-verre-04.webp',
+  //   ],
+  //   price: {
+  //     day: 10,
+  //     week_end: 30,
+  //     week: 50,
+  //     month: 100,
+  //     complement: {
+  //       titre: "Prise en charge",
+  //       montant: 10
+  //     }
+  //   },
+  //   weight: 10,
+  //   avisweb: 'super',
+  //   caution: 1800,
+  //   video: {
+  //     title: 'video_test',
+  //     src: 'ZFj4WUZiBBc'
+  //   },
+  // },
   {
     id: 4,
     id_category: 2,

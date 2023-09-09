@@ -1,17 +1,33 @@
 <div class="article-detail-container" *ngFor="let article of articles">
     <div *ngIf="(article.id == id_article)">
+
+        <div class="article-box">
         <h1 class="article-detail-title">{{ article.titre }}</h1>
-        <h2 class="article-detail-subtitle">{{ article.description }}</h2>
-        <div class="article-detail-infobar">
-            <div class="article-detail-infobar-item">
-            <span>{{ article.temps_de_lecture }}</span></div>
-            <div class="article-detail-infobar-item">
-                <span>{{ article.hashtags[0] }}</span></div>
-            <div class="article-detail-infobar-item">
-                <span>{{ article.hashtags[1] }}</span></div>
-            <div class="article-detail-infobar-item">
-                <span>{{ article.hashtags[2] }}</span></div>
+        <div class="article-detail-header">
+            <img src="./assets/images/frontend/{{article.image_large}}"
+                    width="200px" height="200px" alt="article cover">
+                    <div class="article-detail-infobar">
+                        <div class="article-detail-infobar-row">
+                            <span>Temps de lecture : {{ article.temps_de_lecture }}</span>
+                        </div>
+                        <div class="article-detail-infobar-item">
+                            <span>{{ article.hashtags[0] }}</span>
+                        </div>
+                        <div class="article-detail-infobar-item">
+                            <span>{{ article.hashtags[1] }}</span>
+                        </div>
+                        <div class="article-detail-infobar-item">
+                            <span>{{ article.hashtags[2] }}</span>
+                        </div>
+                    </div>
+                </div>
+
+            <h2 class="article-detail-subtitle">{{ article.description }}</h2>
+            <div class="article-text">
+                {{article.contenu}}
+
+            </div>
         </div>
-        {{article.contenu}}
+
     </div>
-</div>  
+</div>

@@ -6,6 +6,7 @@
 .cartfull-table {
   box-shadow: 0 4px 10px 2px #00000010;
   border-spacing: 0;
+  width: 100%;
 }
 
 .cartfull-table-head {
@@ -15,7 +16,7 @@
 
 .cartfull-table-head th {
   text-align: left;
-  padding: 12px ;
+  padding: 12px;
   background-color: #162445;
   color: #fff;
   font-weight: 600;
@@ -34,10 +35,11 @@
 }
 
 .cartfull-table-cell {
-  padding: 12px ;
+  padding: 12px;
   border: 0;
 }
 
 .cartfull-table-row:nth-child(2n) {
-  background-color: #F1F6F9; /* Exemple : couleur de fond grise pour les éléments pairs */
+  background-color: #F1F6F9;
+  /* Exemple : couleur de fond grise pour les éléments pairs */
 }

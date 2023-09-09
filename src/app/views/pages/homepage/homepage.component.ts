@@ -17,7 +17,7 @@ export class HomepageComponent {
 
   // Structure du formulaire de recherche
   searchForm = this.fb.group({
-    relai: ['', Validators.required],
+    relai: ['all', Validators.required],
     debut: [this.defaultStartDate, Validators.required],
     fin: [this.defaultEndDate, [Validators.required, this.isAfterStart.bind(this)]],
   })

@@ -30,7 +30,7 @@ export class ProductlistcontainerComponent {
 
   // Structure du formulaire de recherche
   searchFormComplete = this.fb.group({
-    relai: ['', Validators.required],
+    relai: ['all', Validators.required],
     debut: [this.defaultStartDate, [Validators.required]],
     fin: [this.defaultEndDate, [Validators.required]],
   })
@@ -58,10 +58,11 @@ export class ProductlistcontainerComponent {
           fin: fin
         })
       }
-      // Vous pouvez utiliser ces valeurs comme bon vous semble
-      console.log('debut:', debut, this.defaultStartDate);
-      console.log('fin:', fin, this.defaultEndDate);
-      console.log('relai:', relai);
+      if (relai) {
+        this.searchFormComplete.patchValue({
+          relai: relai
+        })
+      }
     });
 
   }
