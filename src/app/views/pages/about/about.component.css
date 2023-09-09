@@ -20,7 +20,7 @@
     align-items: center;
     background-color: #fff;
     padding: 32px;
-    box-shadow: 0px 2px 50px 2px var(--clr-main-dark)10;
+    box-shadow: 0px 2px 50px 2px #00000010;
     border-radius: 4px;
 }
 

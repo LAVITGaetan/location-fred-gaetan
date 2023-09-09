@@ -25,12 +25,12 @@
 
 .galerie-card {
     transition: .3s ease;
-    box-shadow: 2px 2px 16px 4px var(--clr-main-dark)15;
+    box-shadow: 2px 2px 16px 4px #00000015;
     border-radius: 4px;
 }
 
 .galerie-card:hover {
-    box-shadow: 2px 2px 16px 4px var(--clr-main-dark)30;
+    box-shadow: 2px 2px 16px 4px #00000030;
 }
 
 .galerie-card1 {
