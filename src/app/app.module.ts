@@ -27,6 +27,7 @@ import { NotificationbarComponent } from './views/layout/notificationbar/notific
 import { BlogComponent } from './views/components/blog/blog.component';
 import { AnnonceComponent } from './views/pages/annonce/annonce.component';
 import { LoginComponent } from './views/pages/login/login.component';
+import { ProducthomeComponent } from './views/components/producthome/producthome.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { LoginComponent } from './views/pages/login/login.component';
     BlogComponent,
     AnnonceComponent,
     LoginComponent,
+    ProducthomeComponent,
   ],
   imports: [
     BrowserModule,

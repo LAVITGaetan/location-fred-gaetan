@@ -3,8 +3,8 @@
 <div class="contact-page-container">
     <form id="contact-form" (ngSubmit)="onSubmit()" class="contact-page-form" [formGroup]="contactForm">
         <div class="contact-page-form-group">
-            <label for="" class="contact-page-form-label">Nom complet</label>
-            <input type="text" class="contact-page-form-input" placeholder="..." name="user_name"
+            <label for="" class="form-label">Nom complet</label>
+            <input type="text" class="form-input" placeholder="..." name="user_name"
                 formControlName="user_name"
                 [class.invalid]="contactForm.get('user_name')?.invalid && (contactForm.get('user_name')?.touched || contactForm.get('user_name')?.dirty || isSubmited)">
             <span
@@ -12,8 +12,8 @@
                 class="required-span">Ce champ est requis</span>
         </div>
         <div class="contact-page-form-group">
-            <label for="" class="contact-page-form-label">Adresse e-mail</label>
-            <input type="text" class="contact-page-form-input" placeholder="..." name="email" formControlName="email"
+            <label for="" class="form-label">Adresse e-mail</label>
+            <input type="text" class="form-input" placeholder="..." name="email" formControlName="email"
                 [class.invalid]="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty || isSubmited)">
             <span
                 *ngIf="contactForm.get('email')?.hasError('required') && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty || isSubmited)"
@@ -23,8 +23,8 @@
                 class="required-span">Format d'email non valide</span>
         </div>
         <div class="contact-page-form-group">
-            <label for="" class="contact-page-form-label">Numéro de téléphone</label>
-            <input type="text" class="contact-page-form-input" placeholder="..." name="telephone"
+            <label for="" class="form-label">Numéro de téléphone</label>
+            <input type="text" class="form-input" placeholder="..." name="telephone"
                 formControlName="telephone"
                 [class.invalid]="contactForm.get('telephone')?.invalid && (contactForm.get('telephone')?.touched || contactForm.get('telephone')?.dirty || isSubmited)">
             <span
@@ -32,26 +32,25 @@
                 class="required-span">Ce champ est requis</span>
         </div>
         <div class="contact-page-form-group">
-            <label for="" class="contact-page-form-label">Objet</label>
-            <input type="text" class="contact-page-form-input" placeholder="..." name="object" formControlName="object"
+            <label for="" class="form-label">Objet</label>
+            <input type="text" class="form-input" placeholder="..." name="object" formControlName="object"
                 [class.invalid]="contactForm.get('object')?.invalid && (contactForm.get('object')?.touched || contactForm.get('object')?.dirty || isSubmited)">
             <span
                 *ngIf="contactForm.get('object')?.invalid && (contactForm.get('object')?.touched || contactForm.get('object')?.dirty || isSubmited)"
                 class="required-span">Ce champ est requis</span>
-
         </div>
+
         <div class="contact-page-form-group-large">
-            <label for="" class="contact-page-form-label">Message</label>
-            <input type="text" class="contact-page-form-input" placeholder="..." name="message"
+            <label for="" class="orm-label">Message</label>
+            <input type="text" class="form-input" placeholder="..." name="message"
                 formControlName="message"
                 [class.invalid]="contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty || isSubmited)">
             <span
                 *ngIf="contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty || isSubmited)"
                 class="required-span">Ce champ est requis</span>
         </div>
-        <div class="contact-page-form-group-large">
-            <input type="submit" class="contact-page-form-submit" placeholder="..." value="Envoyer">
-        </div>
+            <input type="submit" class="form-submit" placeholder="..." value="Envoyer">
+
     </form>
     <div class="contact-data">
         <div class="contact-page-coordonnee-group">
