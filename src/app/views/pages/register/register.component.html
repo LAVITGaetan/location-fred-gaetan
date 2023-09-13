@@ -1,0 +1,59 @@
+<!-- Se connecter -->
+<div class="login-form">
+    <h1 class="login-title">Inscription</h1>
+    <h2 class="login-subtitle">Remplissez le formulaire pour vous inscrire</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="image" class="form-label">Photo de profil</label>
+            <div class="image-figure">
+                <img src="./assets/images/frontend/default_avatar.png" alt="image preview" id="image-preview"
+                    width="128px" height="128px">
+            </div>
+            <input class="file-input" type="file" id="image" accept=".png" (change)="onFileChange($event)">
+        </div>
+        <div class="form-group">
+            <label for="email" class="form-label">Adresse e-mail</label>
+            <input type="email" id="email" name="email" class="form-input" formControlName="email"
+                placeholder="example@service.com"
+                [class.invalid]="registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || isSubmitted)">
+            <div *ngIf="registerForm.get('email')?.hasError('required') && (registerForm.get('email')?.touched || isSubmitted)"
+                class="error-message">
+                Ce champ est requis
+            </div>
+            <div *ngIf="registerForm.get('email')?.hasError('email') && (registerForm.get('email')?.touched || isSubmitted)"
+                class="error-message">
+                Format d'e-mail non valide
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input type="password" id="password" name="password" class="form-input" formControlName="password"
+                [class.invalid]="registerForm.get('password')?.invalid && (registerForm.get('password')?.touched || isSubmitted)"
+                autocomplete="on">
+            <div *ngIf="registerForm.get('password')?.hasError('required') && (registerForm.get('password')?.touched || isSubmitted)"
+                class="error-message">
+                Ce champ est requis
+            </div>
+            <div *ngIf="registerForm.get('password')?.hasError('minlength') && (registerForm.get('password')?.touched || isSubmitted)"
+                class="error-message">
+                Le mot de passe doit contenir au moins 8 caractères
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirmed_password" class="form-label">Confirmation du Mot de passe</label>
+            <input type="password" id="confirmed_password" name="confirmed_password" class="form-input"
+                formControlName="confirmed_password"
+                [class.invalid]="registerForm.get('confirmed_password')?.invalid && (registerForm.get('confirmed_password')?.touched || isSubmitted)"
+                autocomplete="on">
+            <div *ngIf="registerForm.get('confirmed_password')?.hasError('required') && (registerForm.get('confirmed_password')?.touched || isSubmitted)"
+                class="error-message">
+                Ce champ est requis
+            </div>
+            <div *ngIf="registerForm.errors?.['isNotEqualToPassword'] && registerForm.get('password')?.valid && (registerForm.get('confirmed_password')?.touched || isSubmitted)"
+                class="error-message">
+                Le mot de passe doit être identique
+            </div>
+        </div>
+        <input type="submit" value="S'inscrire" class="form-submit">
+    </form>
+</div>

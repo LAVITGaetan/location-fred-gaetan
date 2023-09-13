@@ -15,7 +15,7 @@ import { AboutComponent } from './views/pages/about/about.component';
 import { CartfullComponent } from './views/components/cartfull/cartfull.component';
 import { GoogleMapsComponent } from './views/pages/google-maps/google-maps.component';
 import { AnnonceComponent } from './views/pages/annonce/annonce.component';
-import { LoginComponent } from './views/pages/login/login.component';
+import { AuthentificationComponent } from './views/pages/authentification/authentification.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'mentions-legales', component: MentionsLegalesComponent },
   { path: 'panier', component: CartfullComponent },
   { path: 'map', component: GoogleMapsComponent },
-  { path: 'connexion', component: LoginComponent },
+  { path: 'authentification', component: AuthentificationComponent },
   { path: '**', component: NotfoundComponent }
 ];
 

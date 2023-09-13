@@ -1,43 +1,33 @@
-<div class="login-container">
-
-  <div class="login-left">
-
-    <!-- Partie 1 : Se connecter -->
-    <div class="login-form">
-      <h1 class="login-title">Connexion</h1>
-      <h1 class="login-subtitle">Identifiez-vous pour accèder à votre tableau de bord</h1>
-      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <label for="email" class="form-label">Adresse e-mail</label>
-          <input placeholder="john.doe@gmail.com" type="email" id="email" name="email" class="form-input"
-            formControlName="email"
-            [class.invalid]="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || isSubmitted)">
-          <div
-            *ngIf="contactForm.get('email')?.hasError('required') && (contactForm.get('email')?.touched || isSubmitted)"
-            class="error-message">
-            Ce champ est requis
-          </div>
-          <div *ngIf="contactForm.get('email')?.hasError('email') && (contactForm.get('email')?.touched || isSubmitted)"
-            class="error-message">
-            Format d'e-mail non valide
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="password" class="form-label">Mot de passe</label>
-          <input placeholder="********" type="password" id="password" name="password" class="form-input"
-            formControlName="password"
-            [class.invalid]="contactForm.get('password')?.invalid && (contactForm.get('password')?.touched || isSubmitted)">
-          <div
-            *ngIf="contactForm.get('password')?.hasError('required') && (contactForm.get('password')?.touched || isSubmitted)"
-            class="error-message">
-            Ce champ est requis
-          </div>
-        </div>
-        <input type="submit" value="Me connecter" class="form-submit">
-      </form>
+<!-- Se connecter -->
+<div class="login-form">
+  <h1 class="login-title">Connexion</h1>
+  <h2 class="login-subtitle">Identifiez-vous pour accèder à votre tableau de bord</h2>
+  <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email" class="form-label">Adresse e-mail</label>
+      <input placeholder="john.doe@gmail.com" type="email" id="email" name="email" class="form-input"
+        formControlName="email"
+        [class.invalid]="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || isSubmitted)">
+      <div *ngIf="contactForm.get('email')?.hasError('required') && (contactForm.get('email')?.touched || isSubmitted)"
+        class="error-message">
+        Ce champ est requis
+      </div>
+      <div *ngIf="contactForm.get('email')?.hasError('email') && (contactForm.get('email')?.touched || isSubmitted)"
+        class="error-message">
+        Format d'e-mail non valide
+      </div>
     </div>
-  </div>
-
-  <div class="login-right">
-  </div>
+    <div class="form-group">
+      <label for="password" class="form-label">Mot de passe</label>
+      <input placeholder="********" type="password" id="password" name="password" class="form-input"
+        formControlName="password"
+        [class.invalid]="contactForm.get('password')?.invalid && (contactForm.get('password')?.touched || isSubmitted)">
+      <div
+        *ngIf="contactForm.get('password')?.hasError('required') && (contactForm.get('password')?.touched || isSubmitted)"
+        class="error-message">
+        Ce champ est requis
+      </div>
+    </div>
+    <input type="submit" value="Me connecter" class="form-submit">
+  </form>
 </div>

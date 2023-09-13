@@ -82,6 +82,18 @@
     text-decoration: none;
 }
 
+.underline-cta {
+    padding: 12px 16px;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    color: var(--clr-main-dark);
+    background-color: var(--clr-grey-light);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 .form-input {
     width: 100%;

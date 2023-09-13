@@ -27,5 +27,9 @@ export class AuthService {
     return this.afAuth.authState !== null;
   }
 
+  getAuthState() {
+    return this.afAuth.authState.pipe()
+  }
+
   // Ajoutez d'autres méthodes selon vos besoins
 }

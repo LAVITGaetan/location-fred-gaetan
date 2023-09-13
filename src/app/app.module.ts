@@ -36,6 +36,8 @@ import { BlogComponent } from './views/components/blog/blog.component';
 import { AnnonceComponent } from './views/pages/annonce/annonce.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { ProducthomeComponent } from './views/components/producthome/producthome.component';
+import { RegisterComponent } from './views/pages/register/register.component';
+import { AuthentificationComponent } from './views/pages/authentification/authentification.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +64,8 @@ import { ProducthomeComponent } from './views/components/producthome/producthome
     AnnonceComponent,
     LoginComponent,
     ProducthomeComponent,
+    RegisterComponent,
+    AuthentificationComponent,
   ],
   imports: [
     BrowserModule,

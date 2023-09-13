@@ -1,0 +1,22 @@
+<div class="login-container">
+
+    <div class="login-left">
+        <!-- S'inscrire -->
+        <div class="form-container" *ngIf="registerIsVisible">
+            <span class="toggle-text">Vous ête déjà inscrit ?<button class="underline-cta"
+                    (click)="showRegisterForm()">Connectez-vous</button></span>
+            <app-register class="form"></app-register>
+        </div>
+
+        <!-- Se connecter -->
+        <div class="form-container" *ngIf="loginIsVisible">
+            <span class="toggle-text">Vous ête déjà inscrit ?<button class="underline-cta"
+                    (click)="showRegisterForm()">Inscrivez-vous</button></span>
+            <app-login class="form"></app-login>
+        </div>
+    </div>
+
+    <!-- S'inscrire  -->
+    <div class="login-right">
+    </div>
+</div>
