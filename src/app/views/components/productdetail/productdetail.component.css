@@ -58,7 +58,7 @@
 
 .product-detail-description {
     font-size: 16px;
-    color: #222;
+    color: var(--clr-main-dark);
     line-height: 150%;
     margin-bottom: 20px;
 }
@@ -75,7 +75,7 @@
 
 .product-detail-quantity {
     font-size: 18px;
-    color: #222;
+    color: var(--clr-main-dark);
     font-weight: 600;
     display: flex;
     flex-wrap: wrap;

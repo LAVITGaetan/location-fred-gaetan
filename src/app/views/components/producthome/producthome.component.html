@@ -1,3 +1,6 @@
 <div class="product-container">
-    Liste produts
+    <div class="product-card" *ngFor="let product of products">
+        <p class="product-card-title">{{product.name}}</p>
+        <a class="product-card-link">Louer</a>
+    </div>
 </div>

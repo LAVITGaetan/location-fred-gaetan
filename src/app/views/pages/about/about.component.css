@@ -1,6 +1,6 @@
 .about-page-title {
     font-size: 28px;
-    color: #222;
+    color: var(--clr-main-dark);
     font-weight: 700;
     padding: 48px 7.5% 0 7.5%;
 }
@@ -53,7 +53,7 @@
 .about-profil-card-name {
     font-size: 22px;
     padding: 8px 20px;
-    color: #222;
+    color: var(--clr-main-dark);
     margin-bottom: 8px;
 }
 

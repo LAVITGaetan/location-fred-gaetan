@@ -35,7 +35,7 @@
 
 .cartshort-count {
     background-color: #FFF;
-    color: #222;
+    color: var(--clr-main-dark);
     padding: 6px 12px;
     font-size: 16px;
     text-align: right;
@@ -134,7 +134,7 @@
 
 .cartshort-price {
     background-color: #FFF;
-    color: #222;
+    color: var(--clr-main-dark);
     padding: 6px 12px;
     font-size: 16px;
     text-align: right;

@@ -1,5 +1,7 @@
 <div class="page-header">
-    <div class="toolbar"><a [routerLink]="['/']"><span>Accueil</span></a></div>
+    <div class="toolbar"><img src="./assets/images/frontend/camping_logo.png" width="48px" height="48px" alt="logo"><a
+            [routerLink]="['/']">
+            <span>Accueil</span></a></div>
     <div class="toolbar-group">
         <div class="toolbar"><a [routerLink]="['/article-bivouac-rando-ile-reunion']"><span>Blog</span></a></div>
         <div class="toolbar"><a [routerLink]="['/location-bivouac-rando-ile-reunion']"><span>Produits</span></a></div>
@@ -8,13 +10,16 @@
         <!-- <div class="toolbar"><a [routerLink]="['/map']"><span>Map</span></a></div> -->
         <div class="toolbar"><a [routerLink]="['/contact']"><span>Nous contacter</span></a></div>
     </div>
-    <div class="toolbar-group">    <div class="toolbar"><a [routerLink]="['/connexion']" class="toolbar-login">
+    <button (click)="Logout()">Logout</button>
+    <div class="toolbar-group">
+        <div class="toolbar"><a [routerLink]="['/connexion']" class="toolbar-login">
                 <img width="24px" height="24px" src="./assets/images/frontend/icon-user.svg" alt="login icon">
                 <span class="toolbar-login-text">Connexion</span>
             </a>
         </div>
+        <span  *ngIf="isAuth">Vous etes connecté</span>
         <a [routerLink]="['/panier']" class="new-header-cart"><img width="24px" height="24px"
                 src="./assets/images/frontend/icon-cart.svg" alt="cart icon"><span class="toolbar-panier-count"
-                *ngIf="panier_length > 0">{{panier_length}}</span></a></div>
-
+                *ngIf="panier_length > 0">{{panier_length}}</span></a>
+    </div>
 </div>

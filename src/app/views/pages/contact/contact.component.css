@@ -1,6 +1,6 @@
 .contact-page-title {
     font-size: 28px;
-    color: #222;
+    color: var(--clr-main-dark);
     font-weight: 700;
     margin: 20px 7.5% 40px 7.5%;
 }
@@ -33,7 +33,7 @@
 
 .contact-page-form-label {
     font-size: 18px;
-    color: #222;
+    color: var(--clr-main-dark);
     font-weight: 600;
     margin-bottom: 12px;
 }
@@ -53,11 +53,22 @@
 
 .contact-page-subtitle {
     font-size: 22px;
-    color: #222;
+    color: var(--clr-main-dark);
     font-weight: 700;
     margin: 20px 7.5%;
     border-left: 4px solid var(--clr-cta);
     padding-left: 4px;
+}
+
+.icon-container {
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    background-color: var(--clr-grey-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
 }
 
 .contact-page-coordonnee-text {
@@ -68,10 +79,6 @@
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-}
-
-.coordonnee-icon {
-    margin-right: 12px;
 }
 
 .invalid {

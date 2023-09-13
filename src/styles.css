@@ -54,7 +54,7 @@
 .product-detail-list {
     margin-left: 20px;
     list-style-type: circle;
-    color: #222;
+    color: var(--clr-main-dark);
 }
 
 .date-input {

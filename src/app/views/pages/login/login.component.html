@@ -9,7 +9,7 @@
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="email" class="form-label">Adresse e-mail</label>
-          <input placeholder="john.doe@gmail.com" type="email" id="email" name="password" class="form-input"
+          <input placeholder="john.doe@gmail.com" type="email" id="email" name="email" class="form-input"
             formControlName="email"
             [class.invalid]="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || isSubmitted)">
           <div

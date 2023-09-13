@@ -4,8 +4,7 @@
     <form id="contact-form" (ngSubmit)="onSubmit()" class="contact-page-form" [formGroup]="contactForm">
         <div class="contact-page-form-group">
             <label for="" class="form-label">Nom complet</label>
-            <input type="text" class="form-input" placeholder="..." name="user_name"
-                formControlName="user_name"
+            <input type="text" class="form-input" placeholder="..." name="user_name" formControlName="user_name"
                 [class.invalid]="contactForm.get('user_name')?.invalid && (contactForm.get('user_name')?.touched || contactForm.get('user_name')?.dirty || isSubmited)">
             <span
                 *ngIf="contactForm.get('user_name')?.invalid && (contactForm.get('user_name')?.touched || contactForm.get('user_name')?.dirty || isSubmited)"
@@ -24,8 +23,7 @@
         </div>
         <div class="contact-page-form-group">
             <label for="" class="form-label">Numéro de téléphone</label>
-            <input type="text" class="form-input" placeholder="..." name="telephone"
-                formControlName="telephone"
+            <input type="text" class="form-input" placeholder="..." name="telephone" formControlName="telephone"
                 [class.invalid]="contactForm.get('telephone')?.invalid && (contactForm.get('telephone')?.touched || contactForm.get('telephone')?.dirty || isSubmited)">
             <span
                 *ngIf="contactForm.get('telephone')?.invalid && (contactForm.get('telephone')?.touched || contactForm.get('telephone')?.dirty || isSubmited)"
@@ -42,32 +40,44 @@
 
         <div class="contact-page-form-group-large">
             <label for="" class="orm-label">Message</label>
-            <input type="text" class="form-input" placeholder="..." name="message"
-                formControlName="message"
+            <input type="text" class="form-input" placeholder="..." name="message" formControlName="message"
                 [class.invalid]="contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty || isSubmited)">
             <span
                 *ngIf="contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty || isSubmited)"
                 class="required-span">Ce champ est requis</span>
         </div>
-            <input type="submit" class="form-submit" placeholder="..." value="Envoyer">
+        <input type="submit" class="form-submit" placeholder="..." value="Envoyer">
 
     </form>
     <div class="contact-data">
         <div class="contact-page-coordonnee-group">
-            <a href="tel:0692742958" class="contact-page-coordonnee-text"><img class="coordonnee-icon"
-                    src="./assets/images/frontend/icon-telephone.png" width="48px" height="48px" alt="telephone">06 92
-                74 29 58</a>
+            <a href="tel:0692742958" class="contact-page-coordonnee-text">
+                <div class="icon-container">
+                    <img class="coordonnee-icon" src="./assets/images/frontend/icon-phone.svg" width="24px"
+                        height="24px" alt="telephone">
+                </div>
+                <span>06 92 74 29 58</span>
+            </a>
         </div>
         <div class="contact-page-coordonnee-group">
-            <a href="mailto:location.tente.reunion@gmail.com" class="contact-page-coordonnee-text"><img
-                    class="coordonnee-icon" src="./assets/images/frontend/icon-email.png" width="48px" height="48px"
-                    alt="telephone">location.tente.reunion@gmail.com</a>
+            <a href="mailto:location.tente.reunion@gmail.com" class="contact-page-coordonnee-text">
+                <div class="icon-container">
+                    <img class="coordonnee-icon" src="./assets/images/frontend/icon-email.svg" width="20px"
+                        height="20px" alt="email">
+                </div>
+                <span>location.tente.reunion@gmail.com</span>
+            </a>
         </div>
         <div class="contact-page-coordonnee-group">
             <a target="_blank" href="https://www.google.com/maps/@-21.3602509,55.523351,17z?entry=ttu"
-                class="contact-page-coordonnee-text"><img class="coordonnee-icon"
-                    src="./assets/images/frontend/icon-adresse.png" width="48px" height="48px" alt="telephone">Lizine
-                Usine 97410 Grand Bois - Saint Pierre Ile de la Réunion</a>
+                class="contact-page-coordonnee-text">
+                <div class="icon-container">
+                    <img class="coordonnee-icon" src="./assets/images/frontend/icon-location.svg" width="24px"
+                        height="24px" alt="adresse">
+                </div>
+                Lizine
+                <span>Usine 97410 Grand Bois - Saint Pierre Ile de la Réunion</span>
+            </a>
         </div>
     </div>
 </div>
