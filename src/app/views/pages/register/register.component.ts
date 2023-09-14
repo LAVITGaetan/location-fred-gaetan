@@ -3,6 +3,7 @@ import { FormBuilder, Validators, AbstractControl, ValidationErrors, ValidatorFn
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -15,7 +16,7 @@ export class RegisterComponent {
   registerForm: FormGroup;
   errorMessage = '';
 
-  constructor(private authService: AuthService, private fb: FormBuilder, private router: Router, private fireStorage: AngularFireStorage) {
+  constructor(private authService: AuthService, private fb: FormBuilder, private router: Router, private fireStorage: AngularFireStorage, private toastrService: ToastrService) {
 
     // Regle de validation customisé
     const isEqualToPassword: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
@@ -63,13 +64,15 @@ export class RegisterComponent {
           .then(() => {
             // Redirection vers la page de connexion après une inscription réussie
             this.router.navigate(['']);
-            console.log('Inscription réussie');
+            this.toastrService.success(`Inscription réussi`)
           })
           .catch((error) => {
             console.error('Erreur d\'inscription :', error);
             // Vérifiez si l'erreur est due à une adresse e-mail déjà utilisée
             if (error.code === 'auth/email-already-in-use') {
-              this.errorMessage = 'Cette adresse e-mail est déjà utilisée par un autre compte.';
+            this.toastrService.error(`Cette adresse e-mail est déjà utilisée par un autre compte`)
+
+              this.errorMessage = '';
             } else {
               this.errorMessage = 'Une erreur s\'est produite lors de l\'inscription. Veuillez réessayer plus tard.';
             }

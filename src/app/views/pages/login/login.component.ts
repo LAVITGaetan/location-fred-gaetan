@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class LoginComponent {
 
   isSubmitted = false;
 
-  constructor(private authService: AuthService, private fb: FormBuilder, private router: Router) {}
+  constructor(private authService: AuthService, private fb: FormBuilder, private router: Router, private toastrService: ToastrService) {}
 
   onSubmit() {
     this.isSubmitted = true;
@@ -31,11 +32,11 @@ export class LoginComponent {
           this.authService.login(email, password)
             .then(() => {
               // Redirection vers la page du tableau de bord après une connexion réussie
-              // Redirection vers la page du tableau de bord après une connexion réussie
               this.router.navigate(['']);
-              console.log('connexion reussit')
+              this.toastrService.success(`Connexion réussi`)
             })
             .catch((error) => {
+              this.toastrService.error(`Connexion impossible`)
               console.error('Erreur de connexion :', error);
               // Gérer les erreurs d'authentification ici, par exemple, afficher un message d'erreur.
             });

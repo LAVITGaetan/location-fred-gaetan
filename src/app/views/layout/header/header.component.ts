@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PanierService } from 'src/app/shared/services/panier.service';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 export class HeaderComponent {
   panier_length: number = 0;
   isAuth: any;
-  constructor(private panierService: PanierService, private afAuth: AuthService) { }
+  constructor(private panierService: PanierService, private afAuth: AuthService, private toastrService : ToastrService) { }
   ngOnInit() {
     this.panierService.getSharedVariable().subscribe(value => {
       this.panier_length = value;
@@ -21,6 +22,7 @@ export class HeaderComponent {
   }
 
   Logout() {
+    this.toastrService.success(`Déconnecté`)
     return this.afAuth.logout()
   }
 

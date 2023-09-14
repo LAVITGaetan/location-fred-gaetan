@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -38,6 +39,7 @@ import { LoginComponent } from './views/pages/login/login.component';
 import { ProducthomeComponent } from './views/components/producthome/producthome.component';
 import { RegisterComponent } from './views/pages/register/register.component';
 import { AuthentificationComponent } from './views/pages/authentification/authentification.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import { AuthentificationComponent } from './views/pages/authentification/authen
   ],
   imports: [
     BrowserModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
