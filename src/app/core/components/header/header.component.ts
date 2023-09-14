@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PanierService } from 'src/app/shared/services/panier.service';
-import { AuthService } from 'src/app/shared/services/auth.service';
+import { AuthService } from 'src/app/account/services/auth.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({

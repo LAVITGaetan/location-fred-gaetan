@@ -1,5 +1,6 @@
 @import "~leaflet/dist/leaflet.css";
 @import '~ngx-toastr/toastr';
+
 * {
     margin: 0;
     padding: 0;
@@ -18,9 +19,9 @@
 }
 
 
-/* ::-webkit-scrollbar {
-    width: 12px;
-    height: 11px;
+ /* ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
     background: #F1F5F9;
 
 }
@@ -35,9 +36,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top right,var(--clr-cta),#77cef0);
+    background: linear-gradient(to top right,var(--clr-grey-dark), var(--clr-grey-light));
     border: 0px solid transparent;
-} */
+}  */
 
 /* style des descriptions de produits*/
 
@@ -123,4 +124,17 @@
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-  }
+}
+
+.toast-success {
+    background-color: var(--clr-cta);
+}
+
+.toast-error {
+    background-color: var(--clr-error);
+}
+
+.toast-top-right {
+    top: 32px;
+    right: 7.5%;
+}

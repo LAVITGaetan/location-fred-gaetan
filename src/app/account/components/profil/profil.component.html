@@ -1,0 +1,5 @@
+<h1>login</h1>
+<div *ngIf="user$ | async as user">
+    <p>ID d'utilisateur : {{ user.user_id }}</p>
+    <p>Image url : {{ user.image_url }}</p>
+</div>

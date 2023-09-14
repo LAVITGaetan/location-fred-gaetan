@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+// import des composants
 import { HomepageComponent } from './views/pages/homepage/homepage.component';
-import { ProductlistcontainerComponent } from './views/components/productlistcontainer/productlistcontainer.component';
 import { ProductdetailComponent } from './views/components/productdetail/productdetail.component';
 import { ArticledetailComponent } from './views/components/articledetail/articledetail.component';
-import { ArticlelistcontainerComponent } from './views/components/articlelistcontainer/articlelistcontainer.component';
 import { ContactComponent } from './views/pages/contact/contact.component';
 import { MentionsLegalesComponent } from './views/pages/mentions-legales/mentions-legales.component';
 import { CgvComponent } from './views/pages/cgv/cgv.component';
@@ -12,10 +12,13 @@ import { NotfoundComponent } from './views/pages/notfound/notfound.component';
 import { GalerieimageComponent } from './views/components/galerieimage/galerieimage.component';
 import { GalerievideoComponent } from './views/components/galerievideo/galerievideo.component';
 import { AboutComponent } from './views/pages/about/about.component';
-import { CartfullComponent } from './views/components/cartfull/cartfull.component';
 import { GoogleMapsComponent } from './views/pages/google-maps/google-maps.component';
 import { AnnonceComponent } from './views/pages/annonce/annonce.component';
-import { AuthentificationComponent } from './views/pages/authentification/authentification.component';
+import { AuthentificationComponent } from './account/components/authentification/authentification.component';
+import { ArticlelistcontainerComponent } from './views/pages/articlelistcontainer/articlelistcontainer.component';
+import { CartfullComponent } from './views/pages/cartfull/cartfull.component';
+import { ProductlistcontainerComponent } from './views/pages/productlistcontainer/productlistcontainer.component';
+import { ProfilComponent } from './account/components/profil/profil.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -33,6 +36,7 @@ const routes: Routes = [
   { path: 'panier', component: CartfullComponent },
   { path: 'map', component: GoogleMapsComponent },
   { path: 'authentification', component: AuthentificationComponent },
+  {path: 'profil', component: ProfilComponent},
   { path: '**', component: NotfoundComponent }
 ];
 

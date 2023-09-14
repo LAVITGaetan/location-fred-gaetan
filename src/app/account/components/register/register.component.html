@@ -8,6 +8,9 @@
             <div class="image-figure">
                 <img src="./assets/images/frontend/default_avatar.png" alt="image preview" id="image-preview"
                     width="128px" height="128px">
+                <div class="loading" *ngIf="imageIsLoading">
+                    <div class="loading-spinner"></div><span class="loading-text">Image en cours de traitement</span>
+                </div>
             </div>
             <input class="file-input" type="file" id="image" accept=".png" (change)="onFileChange($event)">
         </div>
@@ -54,6 +57,7 @@
                 Le mot de passe doit être identique
             </div>
         </div>
-        <input type="submit" value="S'inscrire" class="form-submit">
+        <button type="submit" class="form-submit" [disabled]="isRegistering"><span
+                *ngIf="!isRegistering">S'inscrire</span><span *ngIf="isRegistering">...</span></button>
     </form>
 </div>
