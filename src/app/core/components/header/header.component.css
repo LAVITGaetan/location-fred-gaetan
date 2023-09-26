@@ -36,6 +36,63 @@
   font-size: 17px;
 }
 
+.toolbar-profil-container {
+  border-radius: 4px;
+  display: inline-block;
+  background-color: white;
+  border: 2px solid var(--clr-grey-light);
+  position: relative;
+  margin-right: 20px;
+}
+
+.toolbar-profil-figure {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar-profil-container:hover .toolbar-profil-submenu{
+  display: block;
+}
+
+.toolbar-profil-submenu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 10px 10px 1px #00000020;
+  border-radius: 4px;
+  z-index: 100;
+  border: 2px solid var(--clr-grey-light);
+  padding: 8px 0;
+}
+
+
+.toolbar-profil-submenu:hover {
+display: block;
+}
+
+.toolbar-profil-subtext {
+  display: inline-block;
+  border-radius: 4px;
+  transition: .3s;
+  color: var(--clr-main-dark);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  width: 100%;
+  letter-spacing: 0.03em;
+  text-decoration: 2px solid transparent;
+}
+
+.toolbar-profil-subtext:hover {
+  text-decoration: underline solid var(--clr-cta) 2px; 
+}
+
+
 .toolbar-panier-count {
   position: absolute;
   width: 24px;

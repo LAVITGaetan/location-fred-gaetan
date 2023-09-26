@@ -6,9 +6,9 @@ async function copyFilesToFTP(sourceDir, targetDir) {
 
   try {
     await client.access({
-      host: "ftp.cluster031.hosting.ovh.net",
-      user: "dtenteq",
-      password: "Saphir974Saphir974",
+      host: "",
+      user: "",
+      password: "",
       secure: false
     });
 

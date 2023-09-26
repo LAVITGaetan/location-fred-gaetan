@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { articles } from 'src/assets/files/article';
+import { blogs } from 'src/assets/files/article';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./articledetail.component.css']
 })
 export class ArticledetailComponent {
-  articles = articles
+  articles = blogs
   id_article = 0
   constructor(private route: ActivatedRoute) { }
   ngOnInit() {

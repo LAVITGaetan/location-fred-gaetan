@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { DatabaseService } from 'src/app/database/services/database.service';
 import { Observable } from 'rxjs';
 import { user } from 'src/app/models/user';
+import { CookieService } from 'ngx-cookie-service';
+import { AuthService } from '../../services/auth.service';
+import { LocalStorageService } from 'src/app/shared/services/local-storage.service';
 
 @Component({
   selector: 'app-profil',
@@ -9,11 +12,15 @@ import { user } from 'src/app/models/user';
   styleUrls: ['./profil.component.css']
 })
 export class ProfilComponent {
+  constructor(private db: DatabaseService, private cookieService: CookieService, private afAuth: AuthService, private localStore: LocalStorageService) { }
   user$!: Observable<user>
-  constructor(private db: DatabaseService) { }
+  uid = this.cookieService.get('auth-uid')
+  local_uid: string = ''
+
   ngOnInit() {
-    const uid = '9JXlDzImaDWlqKwTaTYeNKWInef1'
-    this.user$ = this.db.retrieveUser(uid);
+    this.local_uid = localStorage.getItem('auth-token') || ''
+
+    this.user$ = this.db.retrieveUser(this.uid);
     this.user$.subscribe(user => {
       if (user) {
         console.log(user);

@@ -20,6 +20,7 @@ export class DatabaseService {
     const collection = this.getCollection(collectionName);
     return collection.valueChanges();
   }
+  
   retrieveUser(uid: string): Observable<user> {
     const collection = this.getCollection('user').doc(uid);
     return collection.valueChanges();

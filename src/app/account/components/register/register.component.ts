@@ -69,10 +69,10 @@ export class RegisterComponent {
       if (email && password) {
         this.authService.register(email, password)
           .then((userCredentials) => {
-            this.db.addItem('user', {
-              user_id: userCredentials.user?.uid,
-              image_url: this.image_url,
-              created_at: this.defaultDate,
+          this.db.getCollection('user').doc(email).set({
+            user_id: userCredentials.user?.uid,
+            image_url: this.image_url,
+            created_at: this.defaultDate,
           })
           })
           .then(() => {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { articles } from 'src/assets/files/article';
+import { blogs } from 'src/assets/files/article';
 
 @Component({
   selector: 'app-blog',
@@ -8,6 +8,6 @@ import { articles } from 'src/assets/files/article';
 })
 export class BlogComponent {
   articleCount: number = 4;
-  articles = articles.slice(0, this.articleCount);
+  articles = blogs.slice(0, this.articleCount);
 
 }

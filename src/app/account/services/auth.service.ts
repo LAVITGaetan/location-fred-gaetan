@@ -27,6 +27,7 @@ export class AuthService {
     return this.afAuth.authState !== null;
   }
 
+  // Récupérer le statut de l'utilisateur
   getAuthState() {
     return this.afAuth.authState.pipe()
   }

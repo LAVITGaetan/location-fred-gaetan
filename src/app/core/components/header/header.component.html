@@ -14,8 +14,16 @@
     </div>
     <div class="toolbar-group">
         <!-- Si connecté -->
-        <div class="toolbar" *ngIf="isAuth">
-            <button class="cta" (click)="Logout()">Deconnexion</button>
+        <div class="toolbar-profil" *ngIf="isAuth">
+                    <div class="toolbar-profil-container">
+                    <div class="toolbar-profil-figure">G.L</div>
+                    <div class="toolbar-profil-submenu">
+                    <a [routerLink]="['/panier']" class="toolbar-profil-subtext">Panier</a>
+                    <a [routerLink]="['/profil']" class="toolbar-profil-subtext">Mon compte</a>
+                    <p class="toolbar-profil-subtext" (click)="Logout()">Deconnexion</p>
+                </div>
+            </div>
+
         </div>
         <!-- Si non connecté -->
         <div class="toolbar" *ngIf="!isAuth">
@@ -24,10 +32,10 @@
                 <span class="toolbar-login-text">Connexion</span>
             </a>
         </div>
-        <a [routerLink]="['/panier']" class="new-header-cart">
+        <!-- <a [routerLink]="['/panier']" class="new-header-cart">
             <img width="24px" height="24px" src="./assets/images/frontend/icon-cart.svg" alt="cart icon">
             <span class="toolbar-panier-count" *ngIf="panier_length > 0">{{panier_length}}</span>
-        </a>
+        </a> -->
     </div>
 
 </div>

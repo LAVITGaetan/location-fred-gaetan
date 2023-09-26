@@ -1,6 +1,6 @@
-import { Article } from "src/app/models/article"
+import { Blog } from "src/app/models/blog"
 
-export const articles: Article[] = [
+export const blogs: Blog[] = [
     {
         id: 1,
         titre: "Bivouac au cœur de la nature réunionnaise",

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { articles } from 'src/assets/files/article';
+import { blogs } from 'src/assets/files/article';
 import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { SeoService } from '../../../shared/services/seo.service';
 })
 export class ArticlelistcontainerComponent {
   constructor(private seo: SeoService) { }
-  articles = articles
+  articles = blogs
   
   ngOnInit(): void {
     this.seo.setTitle('article-activites-bivouac-ile-de-la-reunion-974');
