@@ -2,7 +2,7 @@
     font-size: 28px;
     color: var(--clr-main-dark);
     font-weight: 700;
-    margin: 20px 7.5% 40px 7.5%;
+    margin: 20px 10% 40px 10%;
 
 }
 
@@ -10,7 +10,7 @@
     font-size: 22px;
     color: var(--clr-main-dark);
     font-weight: 700;
-    margin: 20px 7.5%;
+    margin: 20px 10%;
     border-left: 4px solid var(--clr-cta);
     padding-left: 4px;
 }
@@ -18,6 +18,6 @@
 .cgv-page-text {
     font-size: 16px;
     padding: 8px 0px;
-    margin: 0 7.5%;
+    margin: 0 10%;
     color: #333;
 }

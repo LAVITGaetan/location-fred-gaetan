@@ -1,3 +1,5 @@
+<h1 class="product-page-title">Rechercher un produit</h1>
+
 <form class="search-form" [formGroup]="searchFormComplete">
     <div class="form-group">
         <label class="form-label">Départ</label>
@@ -25,7 +27,6 @@
         <input type="submit" value="Chercher" class="cta">
     </div>
 </form>
-<h1 class="product-page-title">Catalogue de Produits</h1>
 <div class="product-container">
     <div class="product-card-grid" *ngFor="let product of products">
         <div [title]="product.name + ' details'"
@@ -55,7 +56,7 @@
                 Infos
             </a>
         </div>
-        <span class="product-card-price">{{ product.price.day }}€ / j</span>
+        <span class="product-card-price">{{ product.price.day }} €</span>
 
     </div>
 </div>

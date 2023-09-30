@@ -44,7 +44,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     CartshortComponent,
     BlogComponent,
     AnnonceComponent,
-    ProducthomeComponent
+    ProducthomeComponent,
   ],
   exports: [
     HomepageComponent,

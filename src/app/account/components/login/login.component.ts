@@ -3,7 +3,6 @@ import { AuthService } from '../../services/auth.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { CookieService } from 'ngx-cookie-service';
 import { LocalStorageService } from 'src/app/shared/services/local-storage.service';
 
 @Component({
@@ -24,7 +23,6 @@ export class LoginComponent {
     private fb: FormBuilder,
     private router: Router,
     private toastrService: ToastrService,
-    private cookieService: CookieService,
     private localStore: LocalStorageService
   ) { }
 
@@ -40,7 +38,6 @@ export class LoginComponent {
           .then((credentials) => {
             // Redirection vers la page du tableau de bord après une connexion réussie
             if (credentials.user) {
-              this.cookieService.set('auth-uid', credentials.user.uid);
               this.localStore.saveData('auth-token', credentials.user.uid)
             } 
             this.router.navigate(['/profil']);

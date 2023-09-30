@@ -5,6 +5,8 @@ import { user } from 'src/app/models/user';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from '../../services/auth.service';
 import { LocalStorageService } from 'src/app/shared/services/local-storage.service';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-profil',
@@ -12,21 +14,39 @@ import { LocalStorageService } from 'src/app/shared/services/local-storage.servi
   styleUrls: ['./profil.component.css']
 })
 export class ProfilComponent {
-  constructor(private db: DatabaseService, private cookieService: CookieService, private afAuth: AuthService, private localStore: LocalStorageService) { }
+  constructor(private route: Router,
+    private toastrService: ToastrService,
+    private db: DatabaseService,
+    private afAuth: AuthService,) { }
   user$!: Observable<user>
-  uid = this.cookieService.get('auth-uid')
   local_uid: string = ''
 
   ngOnInit() {
+    console.log(this.afAuth.isAuthenticated());
     this.local_uid = localStorage.getItem('auth-token') || ''
 
-    this.user$ = this.db.retrieveUser(this.uid);
-    this.user$.subscribe(user => {
-      if (user) {
-        console.log(user);
-      } else {
-        console.log('Utilisateur non trouvé');
-      }
-    });
+    // Si l'utilisateur est connecté
+    if (this.afAuth.isAuthenticated()) {
+      // Récupération des données depuis Firestore
+      this.user$ = this.db.retrieveUser(this.local_uid);
+      this.user$.subscribe(user => {
+        // Si l'utilisateur existe
+        if (user) {
+          console.log(user);
+        } else {
+          console.log('user data not found');
+          // this.redirectToLogin()
+        }
+      });
+    }
+    // Si l'utilisateur n'est pas connecté
+    else {
+      this.redirectToLogin()
+    }
+  }
+
+  redirectToLogin() {
+    this.toastrService.error('Veuillez vous connecter pour accèder à cette page')
+    this.route.navigate(['/authentification'])
   }
 }

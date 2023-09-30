@@ -2,11 +2,11 @@
     font-size: 28px;
     color: var(--clr-main-dark);
     font-weight: 700;
-    margin: 20px 7.5% 40px 7.5%;
+    margin: 40px 10%;
 }
 
 .contact-page-container {
-    padding: 0 7.5%;
+    padding: 0 10%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -22,6 +22,27 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 64px;
+    box-shadow: 2px 2px 10px 2px #00000010;
+    padding: 32px;
+    position: relative;
+}
+
+.contact-page-form-design {
+    clip-path: polygon(83% 0%, 100% 21%, 100% 42%, 66% 0%);
+    position: absolute;
+    background: linear-gradient(to top left, var(--clr-main-dark-lighter), #537895 400%);
+
+    width: 200px;
+    height: 200px;
+    top: 0;
+    right: 0;
+}
+
+.contact-form-title, .contact-data-title {
+    width: 100%;
+    margin-bottom: 32px;
+    color: var(--clr-main-dark);
+    font-size: 22px;
 }
 
 .contact-page-form-group {
@@ -55,31 +76,44 @@
     font-size: 22px;
     color: var(--clr-main-dark);
     font-weight: 700;
-    margin: 20px 7.5%;
+    margin: 20px 10%;
     border-left: 4px solid var(--clr-cta);
     padding-left: 4px;
 }
 
 .icon-container {
+    transition: .3s;
     width: 48px;
     height: 48px;
     border-radius: 48px;
-    background-color: var(--clr-grey-light);
+    background: linear-gradient(to top left, var(--clr-main-dark), var(--clr-main-dark) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 12px;
 }
 
+.contact-page-coordonnee-group {
+    box-shadow: -0 2px 3px 1px #00000010;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.contact-page-coordonnee-group:hover .icon-container {
+    background: linear-gradient(to top left, var(--clr-cta-lighter), var(--clr-cta) 100%);
+    
+}
+
 .contact-page-coordonnee-text {
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
-    color: #333;
-    margin-bottom: 20px;
+    color: var(--clr-main-dark);
     display: flex;
     align-items: center;
 }
+
+
 
 .invalid {
     border-bottom: 2px solid #db1f1f;
@@ -99,10 +133,16 @@
 }
 
 .required-span {
-    padding: 6px 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: #535a69;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 600;
+        color: #64748B;
+        padding: 10px;
+        width: fit-content;
+        box-shadow: 0 0 5PX 1PX #00000010;
+        margin-top: 10px;
+        border-radius: 2px;
 }
 
 @media screen and (max-width:1250px) {

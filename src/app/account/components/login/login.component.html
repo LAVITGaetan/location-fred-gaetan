@@ -10,10 +10,13 @@
         [class.invalid]="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || isSubmitted)">
       <div *ngIf="contactForm.get('email')?.hasError('required') && (contactForm.get('email')?.touched || isSubmitted)"
         class="error-message">
+        <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
         Ce champ est requis
       </div>
       <div *ngIf="contactForm.get('email')?.hasError('email') && (contactForm.get('email')?.touched || isSubmitted)"
         class="error-message">
+        <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
+
         Format d'e-mail non valide
       </div>
     </div>
@@ -25,6 +28,8 @@
       <div
         *ngIf="contactForm.get('password')?.hasError('required') && (contactForm.get('password')?.touched || isSubmitted)"
         class="error-message">
+        <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
+
         Ce champ est requis
       </div>
     </div>

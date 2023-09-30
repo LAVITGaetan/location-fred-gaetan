@@ -1,7 +1,6 @@
 <h1>login</h1>
 <div *ngIf="user$ | async as user">
     <p>ID d'utilisateur : {{ user.user_id }}</p>
-    <p>Cookie value : {{ uid }}</p>
     <img [src]="user.image_url" width="250px" height="250px" alt="user avatar">
 </div>
 <p>storage value : {{ local_uid }}</p>

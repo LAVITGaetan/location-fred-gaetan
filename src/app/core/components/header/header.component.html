@@ -1,26 +1,37 @@
 <div class="page-header">
     <div class="toolbar">
         <a [routerLink]="['/']">
-            <span>Accueil</span>
+            <img width="48px" height="48px" src="./assets/images/frontend/logo-tent.png" alt="Accueil">
         </a>
     </div>
     <div class="toolbar-group">
-        <div class="toolbar"><a [routerLink]="['/article-bivouac-rando-ile-reunion']"><span>Blog</span></a></div>
-        <div class="toolbar"><a [routerLink]="['/location-bivouac-rando-ile-reunion']"><span>Produits</span></a></div>
-        <div class="toolbar"><a [routerLink]="['/galerie-bivouac-rando-ile-reunion']"><span>Galerie</span></a></div>
+        <div class="toolbar"><a class="toolbar-link"
+                [routerLink]="['/article-bivouac-rando-ile-reunion']"><span>Blog</span></a></div>
+        <div class="toolbar"><a class="toolbar-link"
+                [routerLink]="['/location-bivouac-rando-ile-reunion']"><span>Produits</span></a></div>
+        <div class="toolbar"><a class="toolbar-link"
+                [routerLink]="['/galerie-bivouac-rando-ile-reunion']"><span>Galerie</span></a></div>
         <!-- <div class="toolbar"><a [routerLink]="['/video-bivouac-rando-ile-reunion']"><span>Videos</span></a></div> -->
         <!-- <div class="toolbar"><a [routerLink]="['/map']"><span>Map</span></a></div> -->
-        <div class="toolbar"><a [routerLink]="['/contact']"><span>Nous contacter</span></a></div>
+        <div class="toolbar"><a class="toolbar-link" [routerLink]="['/contact']"><span>Nous contacter</span></a></div>
     </div>
     <div class="toolbar-group">
         <!-- Si connecté -->
         <div class="toolbar-profil" *ngIf="isAuth">
-                    <div class="toolbar-profil-container">
-                    <div class="toolbar-profil-figure">G.L</div>
-                    <div class="toolbar-profil-submenu">
-                    <a [routerLink]="['/panier']" class="toolbar-profil-subtext">Panier</a>
-                    <a [routerLink]="['/profil']" class="toolbar-profil-subtext">Mon compte</a>
-                    <p class="toolbar-profil-subtext" (click)="Logout()">Deconnexion</p>
+            <div class="toolbar-profil-container">
+                <div class="toolbar-profil-figure">G.L</div>
+                <div class="toolbar-profil-submenu">
+                    <a [routerLink]="['/panier']" class="toolbar-profil-subcontainer"><img
+                            class="toolbar-profil-subimage" width="20px" height="20px"
+                            src="./assets/images/frontend/cart-icon.png" alt="cart"><span
+                            class="toolbar-profil-subtext">Panier</span></a>
+                    <a [routerLink]="['/profil']" class="toolbar-profil-subcontainer"><img
+                            class="toolbar-profil-subimage" width="20px" height="20px"
+                            src="./assets/images/frontend/account-icon.png" alt="account"><span
+                            class="toolbar-profil-subtext">Mon compte</span></a>
+                    <div class="toolbar-profil-subcontainer" (click)="Logout()"><img class="toolbar-profil-subimage"
+                            width="20px" height="20px" src="./assets/images/frontend/sign-out-icon.png" alt="exit"><span
+                            class="toolbar-profil-subtext">Déconnexion</span></div>
                 </div>
             </div>
 
@@ -28,14 +39,16 @@
         <!-- Si non connecté -->
         <div class="toolbar" *ngIf="!isAuth">
             <a [routerLink]="['/authentification']" class="toolbar-login">
-                <img width="24px" height="24px" src="./assets/images/frontend/icon-user.svg" alt="login icon">
+                <img width="24px" height="24px" src="./assets/images/frontend/icon-user.png" alt="login icon">
                 <span class="toolbar-login-text">Connexion</span>
             </a>
         </div>
-        <!-- <a [routerLink]="['/panier']" class="new-header-cart">
-            <img width="24px" height="24px" src="./assets/images/frontend/icon-cart.svg" alt="cart icon">
-            <span class="toolbar-panier-count" *ngIf="panier_length > 0">{{panier_length}}</span>
-        </a> -->
+        <div class="toolbar-cart" *ngIf="!isAuth">
+            <a [routerLink]="['/panier']" class="toolbar-cart-link">
+                <img width="24px" height="24px" src="./assets/images/frontend/icon-cart.svg" alt="cart icon">
+                <span class="toolbar-panier-count" *ngIf="panier_length > 0">{{panier_length}}</span>
+            </a>
+        </div>
     </div>
 
 </div>

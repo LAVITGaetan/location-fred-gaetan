@@ -9,17 +9,20 @@
 }
 
 :root {
-    --clr-main-dark: #040B35;
-    --clr-main-dark-lighter: #162445;
+    --clr-main-dark: #0E1D31;
+    --clr-main-dark-lighter: #0E1D31;
     --clr-background: #ffffff;
-    --clr-cta: #2974b8;
-    --clr-grey-dark: #64748B;
+    --clr-cta: #EE4865;
+    --clr-cta-darker: #be3a51;
+    --clr-cta-lighter: #f37f93;
+    --clr-grey-dark: rgb(74, 85, 100);
     --clr-grey-light: #F1F6F9;
-    --clr-error: #DE3A3A;
+    --clr-error: #e8661a;
 }
 
 
- /* ::-webkit-scrollbar {
+
+/* ::-webkit-scrollbar {
     width: 16px;
     height: 16px;
     background: #F1F5F9;
@@ -100,7 +103,7 @@
     width: 100%;
     height: 48px;
     border: 2px solid var(--clr-grey-light);
-    border-bottom: 2px solid var(--clr-cta);
+    border-bottom: 2px solid var(--clr-main-dark);
     padding: 6px;
     border-radius: 4px;
 }
@@ -135,6 +138,31 @@
 }
 
 .toast-top-right {
-    top: 32px;
-    right: 7.5%;
+    top: 100px;
+    right: 10%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.loading-spinner {
+    animation: rotate 2s linear infinite;
+}
+
+
+.loading-text {
+    padding-left: 12px;
 }

@@ -1,0 +1,48 @@
+.notfound-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-column-gap: 4px;
+    grid-row-gap: 10px;
+    padding: 50px 10%;
+}
+
+.notfound-title {
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 30px;
+    color: var(--clr-main-dark);
+}
+
+.notfound-404 {
+    grid-area: 2 / 2 / 3 / 3;
+    color: var(--clr-cta);
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.notfound-text {
+    grid-area: 3 / 2 / 4 / 3;
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #535a69;
+    line-height: 150%;
+}
+
+.notfound-actions {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.notfound-thumbnail {
+    grid-area: 1 / 1 / 4 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notfound-social {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.notfound-image {
+    border-radius: 8px;
+}

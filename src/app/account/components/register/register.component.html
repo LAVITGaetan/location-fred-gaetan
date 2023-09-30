@@ -2,18 +2,49 @@
 <div class="login-form">
     <h1 class="login-title">Inscription</h1>
     <h2 class="login-subtitle">Remplissez le formulaire pour vous inscrire</h2>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
+    <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+        <div class="full-form-group">
             <label for="image" class="form-label">Photo de profil</label>
             <div class="image-figure">
-                <img src="./assets/images/frontend/default_avatar.png" alt="image preview" id="image-preview"
-                    width="128px" height="128px">
+                <img src="./assets/images/frontend/picture.png" alt="image preview" id="image-preview" width="128px"
+                    height="128px">
                 <div class="loading" *ngIf="imageIsLoading">
-                    <div class="loading-spinner"></div><span class="loading-text">Image en cours de traitement</span>
+                    <img class="loading-spinner" width="24px" height="24px" src="./assets/images/frontend/loading-spinner.png" alt="loading spinner">
+                    <span class="loading-text">Image en cours de traitement</span>
                 </div>
             </div>
             <input class="file-input" type="file" id="image" accept=".png" (change)="onFileChange($event)">
         </div>
+        <!-- Nom -->
+        <div class="form-group">
+            <label for="last_name" class="form-label">Nom</label>
+            <input placeholder="Votre nom" type="text" id="last_name" name="last_name" class="form-input"
+                formControlName="last_name"
+                [class.invalid]="registerForm.get('last_name')?.invalid && (registerForm.get('last_name')?.touched || isSubmitted)"
+                autocomplete="on">
+            <div *ngIf="registerForm.get('last_name')?.hasError('required') && (registerForm.get('last_name')?.touched || isSubmitted)"
+                class="error-message">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
+                Ce champ est requis
+            </div>
+        </div>
+
+        <!-- Prénom -->
+        <div class="form-group">
+            <label for="first_name" class="form-label">Prénom</label>
+            <input placeholder="Votre prénom" type="text" id="first_name" name="first_name" class="form-input"
+                formControlName="first_name"
+                [class.invalid]="registerForm.get('first_name')?.invalid && (registerForm.get('first_name')?.touched || isSubmitted)"
+                autocomplete="on">
+            <div *ngIf="registerForm.get('first_name')?.hasError('required') && (registerForm.get('first_name')?.touched || isSubmitted)"
+                class="error-message">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
+                Ce champ est requis
+            </div>
+        </div>
+
+        <!-- Email -->
         <div class="form-group">
             <label for="email" class="form-label">Adresse e-mail</label>
             <input type="email" id="email" name="email" class="form-input" formControlName="email"
@@ -21,43 +52,74 @@
                 [class.invalid]="registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || isSubmitted)">
             <div *ngIf="registerForm.get('email')?.hasError('required') && (registerForm.get('email')?.touched || isSubmitted)"
                 class="error-message">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
                 Ce champ est requis
             </div>
             <div *ngIf="registerForm.get('email')?.hasError('email') && (registerForm.get('email')?.touched || isSubmitted)"
                 class="error-message">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
                 Format d'e-mail non valide
             </div>
         </div>
+
+        <!-- Téléphone -->
+        <div class="form-group">
+            <label for="phone" class="form-label">Numéro de téléphone</label>
+            <input placeholder="0692 00 00 00" type="text" id="phone" name="phone" class="form-input"
+                formControlName="phone"
+                [class.invalid]="registerForm.get('phone')?.invalid && (registerForm.get('phone')?.touched || isSubmitted)"
+                autocomplete="on">
+            <div *ngIf="registerForm.get('phone')?.hasError('required') && (registerForm.get('phone')?.touched || isSubmitted)"
+                class="error-message">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
+                Ce champ est requis
+            </div>
+        </div>
+
+        <!-- Mot de passe -->
         <div class="form-group">
             <label for="password" class="form-label">Mot de passe</label>
-            <input type="password" id="password" name="password" class="form-input" formControlName="password"
+            <input placeholder="********" type="password" id="password" name="password" class="form-input"
+                formControlName="password"
                 [class.invalid]="registerForm.get('password')?.invalid && (registerForm.get('password')?.touched || isSubmitted)"
                 autocomplete="on">
             <div *ngIf="registerForm.get('password')?.hasError('required') && (registerForm.get('password')?.touched || isSubmitted)"
                 class="error-message">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
                 Ce champ est requis
             </div>
             <div *ngIf="registerForm.get('password')?.hasError('minlength') && (registerForm.get('password')?.touched || isSubmitted)"
                 class="error-message">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
                 Le mot de passe doit contenir au moins 8 caractères
             </div>
         </div>
+
+        <!-- Confirmation Mot de passe -->
         <div class="form-group">
             <label for="confirmed_password" class="form-label">Confirmation du Mot de passe</label>
-            <input type="password" id="confirmed_password" name="confirmed_password" class="form-input"
-                formControlName="confirmed_password"
+            <input placeholder="********" type="password" id="confirmed_password" name="confirmed_password"
+                class="form-input" formControlName="confirmed_password"
                 [class.invalid]="registerForm.get('confirmed_password')?.invalid && (registerForm.get('confirmed_password')?.touched || isSubmitted)"
                 autocomplete="on">
             <div *ngIf="registerForm.get('confirmed_password')?.hasError('required') && (registerForm.get('confirmed_password')?.touched || isSubmitted)"
                 class="error-message">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
                 Ce champ est requis
             </div>
             <div *ngIf="registerForm.errors?.['isNotEqualToPassword'] && registerForm.get('password')?.valid && (registerForm.get('confirmed_password')?.touched || isSubmitted)"
                 class="error-message">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
                 Le mot de passe doit être identique
             </div>
         </div>
-        <button type="submit" class="form-submit" [disabled]="isRegistering"><span
-                *ngIf="!isRegistering">S'inscrire</span><span *ngIf="isRegistering">...</span></button>
+
+        <div class="form-rgpd"><span class="rgpd-text">En cliquant sur le bouton "Je m'inscris", j'accepte de partager mes données personnelles avec le site Locpei.re.</span></div>
+        <div class="form-action">
+            <!-- Bouton d' envoi du formulaire -->
+            <button type="submit" class="form-submit" [disabled]="isRegistering"><span *ngIf="!isRegistering">Je m'
+                    inscris</span><span *ngIf="isRegistering"><img class="loading-spinner" width="24px" height="24px" src="./assets/images/frontend/loading-spinner-white.png" alt="loading spinner"></span></button>
+        </div>
+
     </form>
 </div>

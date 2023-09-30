@@ -10,9 +10,7 @@ export interface Blog {
     temps_de_lecture: string,
     date: string,
     contenu: string,
-    hashtags: [
-        id1: string,
-        id2: string,
-        id3: string
-    ];
+    hashtags: string[];
+    author: string;
+    conclusion: string;
 }

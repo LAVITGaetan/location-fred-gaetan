@@ -2,13 +2,18 @@
 
 <div class="contact-page-container">
     <form id="contact-form" (ngSubmit)="onSubmit()" class="contact-page-form" [formGroup]="contactForm">
+        <div class="contact-page-form-design"></div>
+        <h2 class="contact-form-title">Formulaire de contact</h2>
+
         <div class="contact-page-form-group">
             <label for="" class="form-label">Nom complet</label>
             <input type="text" class="form-input" placeholder="..." name="user_name" formControlName="user_name"
                 [class.invalid]="contactForm.get('user_name')?.invalid && (contactForm.get('user_name')?.touched || contactForm.get('user_name')?.dirty || isSubmited)">
             <span
                 *ngIf="contactForm.get('user_name')?.invalid && (contactForm.get('user_name')?.touched || contactForm.get('user_name')?.dirty || isSubmited)"
-                class="required-span">Ce champ est requis</span>
+                class="required-span">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
+                Ce champ est requis</span>
         </div>
         <div class="contact-page-form-group">
             <label for="" class="form-label">Adresse e-mail</label>
@@ -16,7 +21,9 @@
                 [class.invalid]="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty || isSubmited)">
             <span
                 *ngIf="contactForm.get('email')?.hasError('required') && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty || isSubmited)"
-                class="required-span">Ce champ est requis</span>
+                class="required-span">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
+                Ce champ est requis</span>
             <span
                 *ngIf="contactForm.get('email')?.hasError('email') && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty || isSubmited)"
                 class="required-span">Format d'email non valide</span>
@@ -27,7 +34,9 @@
                 [class.invalid]="contactForm.get('telephone')?.invalid && (contactForm.get('telephone')?.touched || contactForm.get('telephone')?.dirty || isSubmited)">
             <span
                 *ngIf="contactForm.get('telephone')?.invalid && (contactForm.get('telephone')?.touched || contactForm.get('telephone')?.dirty || isSubmited)"
-                class="required-span">Ce champ est requis</span>
+                class="required-span">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
+                Ce champ est requis</span>
         </div>
         <div class="contact-page-form-group">
             <label for="" class="form-label">Objet</label>
@@ -35,7 +44,9 @@
                 [class.invalid]="contactForm.get('object')?.invalid && (contactForm.get('object')?.touched || contactForm.get('object')?.dirty || isSubmited)">
             <span
                 *ngIf="contactForm.get('object')?.invalid && (contactForm.get('object')?.touched || contactForm.get('object')?.dirty || isSubmited)"
-                class="required-span">Ce champ est requis</span>
+                class="required-span">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
+                Ce champ est requis</span>
         </div>
 
         <div class="contact-page-form-group-large">
@@ -44,17 +55,21 @@
                 [class.invalid]="contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty || isSubmited)">
             <span
                 *ngIf="contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty || isSubmited)"
-                class="required-span">Ce champ est requis</span>
+                class="required-span">
+                <img width="24px" height="24px" src="./assets/images/frontend/warning-icon.png" alt="warning">
+                Ce champ est requis</span>
         </div>
         <input type="submit" class="form-submit" placeholder="..." value="Envoyer">
 
     </form>
     <div class="contact-data">
+        <h2 class="contact-data-title">Nos coordonnées</h2>
+
         <div class="contact-page-coordonnee-group">
             <a href="tel:0692742958" class="contact-page-coordonnee-text">
                 <div class="icon-container">
-                    <img class="coordonnee-icon" src="./assets/images/frontend/icon-phone.svg" width="24px"
-                        height="24px" alt="telephone">
+                    <img class="coordonnee-icon" src="./assets/images/frontend/icon-smartphone.png" width="44px"
+                        height="44px" alt="telephone">
                 </div>
                 <span>06 92 74 29 58</span>
             </a>
@@ -62,8 +77,8 @@
         <div class="contact-page-coordonnee-group">
             <a href="mailto:location.tente.reunion@gmail.com" class="contact-page-coordonnee-text">
                 <div class="icon-container">
-                    <img class="coordonnee-icon" src="./assets/images/frontend/icon-email.svg" width="20px"
-                        height="20px" alt="email">
+                    <img class="coordonnee-icon" src="./assets/images/frontend/icon-email.png" width="44px"
+                        height="44px" alt="email">
                 </div>
                 <span>location.tente.reunion@gmail.com</span>
             </a>
@@ -72,8 +87,8 @@
             <a target="_blank" href="https://www.google.com/maps/@-21.3602509,55.523351,17z?entry=ttu"
                 class="contact-page-coordonnee-text">
                 <div class="icon-container">
-                    <img class="coordonnee-icon" src="./assets/images/frontend/icon-location.svg" width="24px"
-                        height="24px" alt="adresse">
+                    <img class="coordonnee-icon" src="./assets/images/frontend/icon-location.png" width="44px"
+                        height="44px" alt="adresse">
                 </div>
                 Lizine
                 <span>Usine 97410 Grand Bois - Saint Pierre Ile de la Réunion</span>
