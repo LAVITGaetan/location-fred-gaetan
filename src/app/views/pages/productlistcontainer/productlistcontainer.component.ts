@@ -6,6 +6,7 @@ import { SeoService } from '../../../shared/services/seo.service';
 import { ActivatedRoute } from '@angular/router';
 import { AbstractControl, FormBuilder, ValidationErrors, Validators } from '@angular/forms';
 import { relais } from 'src/assets/files/relai';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -26,6 +27,7 @@ export class ProductlistcontainerComponent {
     private cartService: CartService,
     private route: ActivatedRoute,
     private fb: FormBuilder,
+    private toaster: ToastrService,
   ) { }
 
   // Structure du formulaire de recherche
@@ -68,6 +70,8 @@ export class ProductlistcontainerComponent {
   }
 
   ajouterItem(product: any) {
+    // Ajouter logique modale
+    this.toaster.success('Produit ajouté au panier')
     this.cartService.addProduct(product, 1)
   }
 

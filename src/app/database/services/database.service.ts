@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Observable, map } from 'rxjs';
-import { user } from 'src/app/models/user';
+import { User } from 'src/app/models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,7 @@ export class DatabaseService {
     return collection.valueChanges();
   }
   
-  retrieveUser(uid: string): Observable<user> {
+  retrieveUser(uid: string): Observable<User> {
     const collection = this.getCollection('user').doc(uid);
     return collection.valueChanges();
   }

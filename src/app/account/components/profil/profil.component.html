@@ -1,6 +1,15 @@
-<h1>login</h1>
-<div *ngIf="user$ | async as user">
-    <p>ID d'utilisateur : {{ user.user_id }}</p>
-    <img [src]="user.image_url" width="250px" height="250px" alt="user avatar">
+<h1 class="page-title">Mon profil</h1>
+<div class="layout" *ngIf="user$ | async as user">
+
+    <form [formGroup]="profilForm" (ngSubmit)="submitForm()">
+        <h2>Nom: {{user.last_name}}</h2>
+        <h2>Prénom: {{user.first_name}}</h2>
+        <img [src]="user.image_url" width="250px" height="250px" alt="user avatar">
+        <div>Prénom : <input type="text" formControlName="first_name"></div>
+        <div>Nom : <input type="text" formControlName="last_name"></div>
+        <button type="submit" class="form-submit" [disabled]="isSubmited"><span *ngIf="!isSubmited">Modifier mes
+                données</span><span *ngIf="isSubmited"><img class="loading-spinner" width="24px" height="24px"
+                    src="./assets/images/frontend/loading-spinner-white.png" alt="loading spinner"></span></button>
+
+    </form>
 </div>
-<p>storage value : {{ local_uid }}</p>

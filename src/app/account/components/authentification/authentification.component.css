@@ -47,9 +47,13 @@
 .toggle-text {
   font-size: 16px;
   color: var(--clr-main-dark);
-  margin-bottom: 12px;
   font-weight: 500;
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+.toggle-action {
+  margin-left: 10px;
 }
 
 @media screen and (max-width:960px) {

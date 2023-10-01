@@ -84,7 +84,6 @@
   z-index: 100;
   border: 2px solid var(--clr-grey-light);
   padding: 8px;
-
 }
 
 
@@ -111,10 +110,15 @@
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.03em;
+  width: max-content;
 }
 
 .toolbar-profil-subcontainer:hover {
   text-decoration: underline solid var(--clr-cta) 2px;
+}
+
+.short-name {
+  text-transform: uppercase;
 }
 
 

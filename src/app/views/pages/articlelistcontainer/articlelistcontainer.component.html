@@ -1,4 +1,4 @@
-<h1 class="article-page-title">Nos articles sur la Réunion</h1>
+<h1 class="page-title">Nos articles sur la Réunion</h1>
 <div class="article-page-tag-container">
     <div class="article-page-tag-item">Tous</div>
     <div class="article-page-tag-item">Bivouac</div>
@@ -10,17 +10,15 @@
         <div class="article-card-header">
             <img class="article-card-header-image" src="./assets/images/frontend/{{ article.image_large}}"
                 alt="hiking image">
-            <div class="article-card-timer"> {{ article.temps_de_lecture }}</div>
+            <div class="article-card-timer"> {{ article.read_time }}</div>
             <div class="article-card-tags">
-                <div class="article-card-tags-item" *ngIf="article.hashtags[0]">{{article.hashtags[0] }}</div>
-                <div class="article-card-tags-item" *ngIf="article.hashtags[1]">{{ article.hashtags[1] }}</div>
-                <div class="article-card-tags-item" *ngIf="article.hashtags[2]">{{ article.hashtags[2] }}</div>
+                <div class="article-card-tags-item" *ngFor="let hashtag of article.hashtags">{{ hashtag }}</div>
             </div>
         </div>
-        <h3 class="article-card-title">{{ article.titre }}</h3>
+        <h3 class="article-card-title">{{ article.title }}</h3>
         <div class="text-wrapper">
             <p class="article-card-description">{{ article.description }}</p>
-            <a class="article-card-link" [title]="article.titre + ' details'"
+            <a class="article-card-link" [title]="article.title + ' details'"
                 [routerLink]="['/article-bivouac-rando-ile-reunion', article.nameRoute, article.id]">
                 Lire l'article
             </a>

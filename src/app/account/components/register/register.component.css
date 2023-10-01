@@ -32,12 +32,12 @@
 .login-form:after {
   position: absolute;
   content: "";
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-color: var(--clr-cta-lighter);
   top: 0;
   right: 0;
-  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  clip-path: circle(50% at 100% 0);
   border-top-right-radius: 2px;
 }
 

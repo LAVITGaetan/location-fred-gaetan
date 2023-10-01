@@ -1,15 +1,15 @@
 export interface Blog {
     id: number,
-    titre: string,
+    title: string,
     nameRoute: string,
     description: string,
     publier_a_la_une: boolean,
-    publier: boolean,
+    isPublished: boolean,
     image_small: string,
     image_large: string,
-    temps_de_lecture: string,
+    read_time: string,
     date: string,
-    contenu: string,
+    content: string,
     hashtags: string[];
     author: string;
     conclusion: string;

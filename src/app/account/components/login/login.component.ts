@@ -18,6 +18,7 @@ export class LoginComponent {
   });
 
   isSubmitted = false;
+  isLogining = false;
 
   constructor(private authService: AuthService,
     private fb: FormBuilder,
@@ -28,8 +29,8 @@ export class LoginComponent {
 
   onSubmit() {
     this.isSubmitted = true;
-
     if (this.contactForm.valid) {
+      this.isLogining = true;
       const email = this.contactForm.get('email')?.value;
       const password = this.contactForm.get('password')?.value;
 
@@ -39,11 +40,13 @@ export class LoginComponent {
             // Redirection vers la page du tableau de bord après une connexion réussie
             if (credentials.user) {
               this.localStore.saveData('auth-token', credentials.user.uid)
-            } 
+            }
             this.router.navigate(['/profil']);
             this.toastrService.success(`Connexion réussi`)
           })
           .catch((error) => {
+            this.isLogining = false;
+
             this.toastrService.error(`Connexion impossible`)
             console.error('Erreur de connexion :', error);
             // Gérer les erreurs d'authentification ici, par exemple, afficher un message d'erreur.

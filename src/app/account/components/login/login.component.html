@@ -33,6 +33,6 @@
         Ce champ est requis
       </div>
     </div>
-    <input type="submit" value="Me connecter" class="form-submit">
+    <button type="submit" class="form-submit" [disabled]="isLogining"><span *ngIf="!isLogining">Me connecter</span><span *ngIf="isLogining"><img class="loading-spinner" width="24px" height="24px" src="./assets/images/frontend/loading-spinner-white.png" alt="loading spinner"></span></button>
   </form>
 </div>

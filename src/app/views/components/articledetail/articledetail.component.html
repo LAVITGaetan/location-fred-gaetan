@@ -1,33 +1,30 @@
-<div class="article-detail-container" *ngFor="let article of articles">
-    <div *ngIf="(article.id == id_article)">
-
-        <div class="article-box">
-        <h1 class="article-detail-title">{{ article.titre }}</h1>
+<div class="article-detail-container" *ngIf="article">
+    <div class="article-box">
+        <!-- Titre de l'article -->
+        <h1 class="article-detail-title">{{ article.title }}</h1>
         <div class="article-detail-header">
-            <img src="./assets/images/frontend/{{article.image_large}}"
-                    width="200px" height="200px" alt="article cover">
-                    <div class="article-detail-infobar">
-                        <div class="article-detail-infobar-row">
-                            <span>Temps de lecture : {{ article.temps_de_lecture }}</span>
-                        </div>
-                        <div class="article-detail-infobar-item">
-                            <span>{{ article.hashtags[0] }}</span>
-                        </div>
-                        <div class="article-detail-infobar-item">
-                            <span>{{ article.hashtags[1] }}</span>
-                        </div>
-                        <div class="article-detail-infobar-item">
-                            <span>{{ article.hashtags[2] }}</span>
-                        </div>
-                    </div>
+            <!-- Image de l'article -->
+            <img src="./assets/images/frontend/{{article.image_large}}" width="200px" height="200px"
+                alt="article cover">
+            <div class="article-detail-infobar">
+                <!-- Temps de lecture -->
+                <div class="article-detail-infobar-row">
+                    <span>Temps de lecture : {{ article.read_time }}</span>
                 </div>
-
-            <h2 class="article-detail-subtitle">{{ article.description }}</h2>
-            <div class="article-text">
-                {{article.contenu}}
-
+                <!-- Hashtags -->
+                <div class="article-detail-infobar-item" *ngFor="let hashtag of article.hashtags">
+                    <span>{{ hashtag }}</span>
+                </div>
             </div>
         </div>
 
+        <h2 class="article-detail-subtitle">{{ article.description }}</h2>
+        <!-- Contenu -->
+        <div class="article-text">
+            {{article.content}}
+        </div>
+        <!-- Conclusion -->
+        <div class="article-conclusion">{{article.conclusion}}</div>
     </div>
+
 </div>
